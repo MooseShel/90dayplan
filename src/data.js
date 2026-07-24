@@ -38,8 +38,8 @@ export const PILLARS = [
   {
     num: "3",
     title: "Technology",
-    posture: "Agentic-first OSDU + Non-OSDU Path · Six-Agent Portfolio · Sovereign Trio",
-    proof: "Reference architecture ratified; 1 sovereign NOC PoC scoped",
+    posture: "Agentic OSDU & Non-OSDU Path · Gemini 3.5/3.6 Reasoning · Subsurface HPC Supercomputing · Sovereign Trio & Earth Engine",
+    proof: "Reference architecture ratified; 1 sovereign NOC PoC scoped; HPC burst architecture validated with operator benchmarks",
     color: "purple",
   },
   {
@@ -60,26 +60,27 @@ export const PILLARS = [
 
 export const ACCOUNTS = [
   // Tier 1A — Public Independents
-  { id: "eqt",        name: "EQT / Expand Energy",   tier: "1A", priority: "P1", incumbent: "None", posture: "Lead",    dataReady: true,  tv: 28, sponsor: 27, friction: 25, repeat: 15 },
+  { id: "eqt",        name: "EQT / Expand Energy",   tier: "1A", priority: "P1", incumbent: "Greenfield", posture: "Lead",    dataReady: true,  tv: 28, sponsor: 27, friction: 25, repeat: 15 },
   { id: "devon",      name: "Devon Energy",           tier: "1A", priority: "P1", incumbent: "Azure",posture: "Lead",    dataReady: true,  tv: 30, sponsor: 28, friction: 20, repeat: 14 },
-  { id: "diamondback",name: "Diamondback",            tier: "1A", priority: "P1", incumbent: "None", posture: "Lead",    dataReady: true,  tv: 29, sponsor: 25, friction: 24, repeat: 13 },
-  { id: "harbour",    name: "Harbour Energy",         tier: "1A", priority: "P1", incumbent: "None", posture: "Lead",    dataReady: true,  tv: 26, sponsor: 24, friction: 24, repeat: 15 },
+  { id: "diamondback",name: "Diamondback",            tier: "1A", priority: "P1", incumbent: "Greenfield", posture: "Lead",    dataReady: true,  tv: 29, sponsor: 25, friction: 24, repeat: 13 },
+  { id: "harbour",    name: "Harbour Energy",         tier: "1A", priority: "P1", incumbent: "Greenfield", posture: "Lead",    dataReady: true,  tv: 26, sponsor: 24, friction: 24, repeat: 15 },
+  { id: "tgs",        name: "TGS Energy Data (Win-Back)", tier: "1A", priority: "P1", incumbent: "AWS",  posture: "Win-Back", dataReady: true,  tv: 29, sponsor: 30, friction: 23, repeat: 15 },
   { id: "eog",        name: "EOG Resources",          tier: "1A", priority: "P2", incumbent: "AWS",  posture: "Wedge",   dataReady: true,  tv: 22, sponsor: 20, friction: 18, repeat: 13 },
   { id: "conoco",     name: "ConocoPhillips",         tier: "1A", priority: "P2", incumbent: "Azure",posture: "Wedge",   dataReady: false, tv: 18, sponsor: 18, friction: 15, repeat: 12 },
   { id: "akerbp",     name: "Aker BP",                tier: "1A", priority: "P2", incumbent: "AWS",  posture: "Wedge",   dataReady: true,  tv: 24, sponsor: 22, friction: 17, repeat: 14 },
   // Tier 1B — PE-Backed Sponsors
-  { id: "quantum",    name: "Quantum Capital Group",  tier: "1B", priority: "P1", incumbent: "None", posture: "Lead",    dataReady: true,  tv: 28, sponsor: 30, friction: 25, repeat: 14 },
-  { id: "encap",      name: "EnCap Investments",      tier: "1B", priority: "P2", incumbent: "None", posture: "Lead",    dataReady: true,  tv: 22, sponsor: 24, friction: 24, repeat: 13 },
+  { id: "quantum",    name: "Quantum Capital Group",  tier: "1B", priority: "P1", incumbent: "Greenfield", posture: "Lead",    dataReady: true,  tv: 28, sponsor: 30, friction: 25, repeat: 14 },
+  { id: "encap",      name: "EnCap Investments",      tier: "1B", priority: "P2", incumbent: "Greenfield", posture: "Lead",    dataReady: true,  tv: 22, sponsor: 24, friction: 24, repeat: 13 },
   // Tier 1C — Large Privates
-  { id: "continental",name: "Continental Resources",  tier: "1C", priority: "P1", incumbent: "None", posture: "Lead",    dataReady: true,  tv: 27, sponsor: 29, friction: 25, repeat: 14 },
-  { id: "mewbourne",  name: "Mewbourne Oil",          tier: "1C", priority: "P2", incumbent: "None", posture: "Lead",    dataReady: true,  tv: 23, sponsor: 22, friction: 24, repeat: 12 },
+  { id: "continental",name: "Continental Resources",  tier: "1C", priority: "P1", incumbent: "Greenfield", posture: "Lead",    dataReady: true,  tv: 27, sponsor: 29, friction: 25, repeat: 14 },
+  { id: "mewbourne",  name: "Mewbourne Oil",          tier: "1C", priority: "P2", incumbent: "Greenfield", posture: "Lead",    dataReady: true,  tv: 23, sponsor: 22, friction: 24, repeat: 12 },
   // Tier 2 — Gulf & Sovereign NOCs + APAC NOCs
   { id: "aramco",     name: "Saudi Aramco",           tier: "2",  priority: "P1", incumbent: "CNTXT",posture: "Lead",    dataReady: true,  tv: 24, sponsor: 30, friction: 22, repeat: 15 },
-  { id: "koc",        name: "KOC / KPC",              tier: "2",  priority: "P1", incumbent: "None", posture: "Lead",    dataReady: true,  tv: 20, sponsor: 28, friction: 23, repeat: 15 },
+  { id: "koc",        name: "KOC / KPC",              tier: "2",  priority: "P1", incumbent: "Greenfield", posture: "Lead",    dataReady: true,  tv: 20, sponsor: 28, friction: 23, repeat: 15 },
   { id: "pertamina",  name: "Pertamina",              tier: "2",  priority: "P1", incumbent: "GCP",  posture: "Lead",    dataReady: true,  tv: 24, sponsor: 26, friction: 23, repeat: 15 },
   { id: "pttep",      name: "PTTEP",                  tier: "2",  priority: "P1", incumbent: "GCP",  posture: "Lead",    dataReady: true,  tv: 26, sponsor: 24, friction: 25, repeat: 14 },
-  { id: "inpex",      name: "Inpex",                  tier: "2",  priority: "P2", incumbent: "None", posture: "Lead",    dataReady: true,  tv: 20, sponsor: 22, friction: 24, repeat: 14 },
-  { id: "qatar",      name: "QatarEnergy",            tier: "2",  priority: "P2", incumbent: "None", posture: "Lead",    dataReady: false, tv: 18, sponsor: 24, friction: 22, repeat: 14 },
+  { id: "inpex",      name: "Inpex",                  tier: "2",  priority: "P2", incumbent: "Greenfield", posture: "Lead",    dataReady: true,  tv: 20, sponsor: 22, friction: 24, repeat: 14 },
+  { id: "qatar",      name: "QatarEnergy",            tier: "2",  priority: "P2", incumbent: "Greenfield", posture: "Lead",    dataReady: false, tv: 18, sponsor: 24, friction: 22, repeat: 14 },
   { id: "petronas",   name: "Petronas",               tier: "2",  priority: "P2", incumbent: "Azure",posture: "Wedge",   dataReady: true,  tv: 20, sponsor: 22, friction: 16, repeat: 14 },
   { id: "adnoc",      name: "ADNOC",                  tier: "2",  priority: "P2", incumbent: "Azure",posture: "Co-Exist",dataReady: true,  tv: 18, sponsor: 24, friction: 10, repeat: 14 },
   // Tier 3 — Affinity Majors & Global Scale
@@ -328,7 +329,7 @@ export const EXECUTIVE_DECISIONS = [
   },
   {
     title: "Authorize ADIPEC 2026 and CERAWeek 2027 announcement and demo workstreams",
-    detail: "ADIPEC (Nov 2–5): approve 2–3 customer-approved announceable targets and demo build. CERAWeek (Mar 8–12 2027): approve 180-day proof narrative and Houston-audience content strategy.",
+    detail: "ADIPEC (Nov 2–5): approve 2–3 customer-approved announceable targets and demo build. CERAWeek 2027 (dates TBC, typically March): approve 180-day proof narrative and Houston-audience content strategy.",
     owner: "",
     status: "pending",
   },
@@ -336,16 +337,16 @@ export const EXECUTIVE_DECISIONS = [
 
 export const COMPETITIVE_ACCOUNTS = [
   // Lead posture — clean-slate opportunity
-  { name: "EQT / Expand",    incumbent: "None",  googlePosture: "Lead",     wedge: "Production surveillance agents · power-demand analytics",          expand: "Energy Exchange CEO dialogue" },
+  { name: "EQT / Expand",    incumbent: "Greenfield",  googlePosture: "Lead",     wedge: "Production surveillance agents · power-demand analytics",          expand: "Energy Exchange CEO dialogue" },
   { name: "Devon Energy",    incumbent: "Azure", googlePosture: "Lead",     wedge: "Merger data & process integration agents · common asset ontology", expand: "Fervo clean-power synergy" },
-  { name: "Diamondback",     incumbent: "None",  googlePosture: "Lead",     wedge: "Agentic Subsurface Starter · D&C optimization",                   expand: "Full Permian asset fleet" },
+  { name: "Diamondback",     incumbent: "Greenfield",  googlePosture: "Lead",     wedge: "Agentic Subsurface Starter · D&C optimization",                   expand: "Full Permian asset fleet" },
   { name: "Saudi Aramco",    incumbent: "CNTXT", googlePosture: "Lead",     wedge: "Sovereign Industrial Agent Platform in Class C Dammam",           expand: "Enterprise-wide agentic rollout" },
   { name: "TotalEnergies",   incumbent: "Multi", googlePosture: "Lead",     wedge: "Gemini agents on Cognite estate + Energy Exchange reciprocity",    expand: "Global upstream + new-energy portfolio" },
-  { name: "Harbour Energy",  incumbent: "None",  googlePosture: "Lead",     wedge: "M&A integration agents · Wintershall Dea asset ontology merger",   expand: "Global asset fleet across 9 countries" },
+  { name: "Harbour Energy",  incumbent: "Greenfield",  googlePosture: "Lead",     wedge: "M&A integration agents · Wintershall Dea asset ontology merger",   expand: "Global asset fleet across 9 countries" },
   { name: "Reliance Ind.",   incumbent: "GCP",   googlePosture: "Lead",     wedge: "Jamnagar AI Region · refinery optimization · process safety agents",expand: "Full O2C + new-energy portfolio" },
   { name: "Pertamina",       incumbent: "GCP",   googlePosture: "Lead",     wedge: "Digital Hub agents across 6 sub-holdings · MoU since Mar 2026",    expand: "Geothermal green data center · sovereign APAC" },
   { name: "PTTEP",           incumbent: "GCP",   googlePosture: "Lead",     wedge: "Gemini agents on existing Apigee/BigQuery/GKE estate",            expand: "Net Zero analytics · Bangkok sovereign region" },
-  { name: "Inpex",           incumbent: "None",  googlePosture: "Lead",     wedge: "Sovereign LNG plant optimization · CCUS monitoring agents",        expand: "Japan sovereign AI — Tokyo/Osaka regions" },
+  { name: "Inpex",           incumbent: "Greenfield",  googlePosture: "Lead",     wedge: "Sovereign LNG plant optimization · CCUS monitoring agents",        expand: "Japan sovereign AI — Tokyo/Osaka regions" },
   // Co-Exist posture — wedge doctrine, no migration
   { name: "Shell",           incumbent: "AWS",   googlePosture: "Co-Exist", wedge: "Seismic intelligence · exploration knowledge · geospatial OA",   expand: "Trading & power analytics" },
   { name: "Oxy",             incumbent: "AWS",   googlePosture: "Co-Exist", wedge: "Drilling perf · NPT · DAC operations · methane-detection MRV",   expand: "1PointFive carbon-MRV · Alphabet carbon stack" },
@@ -372,3 +373,177 @@ export const ALPHABET_CAPABILITIES = [
   { name: "Energy Procurement", icon: "☀️", app: "Replicable procurement blueprints: nuclear, geothermal, storage, solar PPAs", play: "Energy-procurement leaders join EQT/TotalEnergies exec sessions — the two-badge meeting no competitor can convene" },
   { name: "Carbon & Environment",icon:"🌱", app: "MRV agents for CCUS · carbon-market intelligence · methane-detection · ESG automation", play: "Carbon-MRV module in Oxy wedge (1PointFive adjacency); carbon-intelligence for trading desks" },
 ];
+
+export const GOOGLE_AI_DIFFERENTIATORS = [
+  {
+    title: "Gemini 3.5 Pro — 2M Token Multimodal Context Window",
+    badge: "Reasoning Lead",
+    color: "blue",
+    headline: "Zero-Chunking Subsurface Reasoning",
+    description: "Gemini 3.5 Pro's native 2M-token context allows entire 30-year well logs, high-resolution seismic slice images, mud logs, and MOC document history to be ingested into a single prompt without chunking loss or vector database retrieval collapse. Flash models support up to 1M tokens for cost-optimized workloads.",
+    metric: "2× larger context window than AWS/Azure frontier models (2M vs 1M tokens)",
+    proof: "Applicable to operators using Delfi/OSDU workflows on Google Cloud for cross-domain subsurface interpretation."
+  },
+  {
+    title: "6th-Gen Trillium (v6e) & 5th-Gen TPU v5p — Custom Energy AI Silicon",
+    badge: "Silicon Economics",
+    color: "teal",
+    headline: "Superior Inference & Training TCO",
+    description: "Google's 6th-gen Trillium (v6e) and 5th-gen TPU v5p chips offer strong price-performance for training specialized domain models (reservoir physics ML, seismic velocity estimation, automated fault detection) compared to GPU-only cloud providers.",
+    metric: "Up to 50% TCO savings for optimized inference workloads (workload-dependent; CUDA migration costs may apply)",
+    proof: "Empowers operators to run domain-tuned foundation models at massive scale."
+  },
+  {
+    title: "Vertex AI Agent Builder & Multimodal RAG",
+    badge: "Agent Platform",
+    color: "purple",
+    headline: "Governed Enterprise Agentic Engine",
+    description: "Built-in grounding over structured OSDU data, unstructured LAS/DLIS well files, and SCADA historians with real-time tool calling, deterministic human approval gates, and automated audit logging.",
+    metric: "Low-latency agent execution with built-in governance",
+    proof: "Powers the 6-agent reference architecture across upstream and midstream."
+  },
+  {
+    title: "Google DeepMind Science Engine",
+    badge: "Fundamental AI",
+    color: "amber",
+    headline: "AlphaFold 3 & GNoME for Energy Transition",
+    description: "Leverages DeepMind frontier science breakthroughs (GNoME, AlphaFold) for computational chemistry, advanced solvent design for CCUS (Carbon Capture, Utilization & Storage), battery material discovery, and pipeline corrosion prevention.",
+    metric: "Accelerated molecular discovery enabled by DeepMind research",
+    proof: "Unlocks R&D breakthroughs for national energy labs & major NOC R&D centers."
+  }
+];
+
+export const HPC_ENERGY_STACK = [
+  {
+    capability: "Subsurface Seismic Processing (RTM & FWI)",
+    stack: "A3 Mega / Ultra (NVIDIA H100/H200/B200) + TPU Clusters",
+    advantage: "High-density compute nodes with 3.2 Tbps GPUDirect RDMA networking for petabyte-scale Reverse Time Migration (RTM) and Full Waveform Inversion (FWI).",
+    benchmark: "Significant wall-clock time reduction for seismic RTM processing (operator-specific; depends on architecture and data volume)"
+  },
+  {
+    capability: "Ultra-High IOPS Storage (Parallelstore & GCS FUSE)",
+    stack: "Parallelstore (DAOS) + Hyperdisk Extreme + GCS FUSE",
+    advantage: "Delivers sub-millisecond latency with high aggregate throughput, preventing storage I/O bottlenecks during massive seismic runs.",
+    benchmark: "Significantly higher aggregate throughput compared to standard cloud parallel filesystems"
+  },
+  {
+    capability: "Hybrid HPC Cloud Bursting",
+    stack: "Google Cloud HPC Toolkit + Slurm Integrator",
+    advantage: "Enables operators with legacy on-prem supercomputers (e.g. TotalEnergies Pangea, Shell HPC) to seamlessly burst peak seismic workloads to GCP in minutes.",
+    benchmark: "Zero idle infrastructure cost; 10,000+ core instant burst scaling"
+  }
+];
+
+export const BEYOND_OSDU_SERVICES = [
+  {
+    name: "Google Earth Engine Enterprise",
+    icon: "🌍",
+    category: "Geospatial & ESG AI",
+    summary: "40+ years of satellite catalog paired with native ML for automated Methane plume detection, Pipeline Right-of-Way (ROW) encroachment, flaring audits, and CCUS storage site selection.",
+    publicReference: "Powering UNEP / International Methane Emissions Observatory (IMEO) & EDF MethaneSAT"
+  },
+  {
+    name: "Mandiant & Chronicle OT/ICS Security",
+    icon: "🔐",
+    category: "Operational Cybersecurity",
+    summary: "Specialized threat intelligence and zero-trust monitoring designed for Operational Technology (OT), SCADA networks, remote drilling rigs, and refinery control systems.",
+    publicReference: "Energy ISAC threat sharing & national critical infrastructure defense"
+  },
+  {
+    name: "Google Quantum AI Engine",
+    icon: "⚛️",
+    category: "Quantum Energy Chemistry",
+    summary: "Quantum algorithms for solving molecular simulation barriers in refining catalysts, hydrogen storage, and carbon capture solvent efficiency.",
+    publicReference: "Joint research frameworks with leading national labs and energy majors"
+  },
+  {
+    name: "Google Maps & Supply Chain AI",
+    icon: "🚚",
+    category: "Logistics & Fleet Ops",
+    summary: "Real-time routing optimization for haul trucks, water management fleets, sand logistics in hydraulic fracturing, and LNG marine shipping routes.",
+    publicReference: "Used by global logistics fleets to reduce fuel consumption across industries (Google Maps case studies)"
+  }
+];
+
+export const COMPETITIVE_MATRIX_GRID = [
+  {
+    feature: "GenAI Context Window",
+    gcp: "Gemini 3.5 Pro (2M tokens multimodal)",
+    aws: "Bedrock (up to 1M via Claude; most native models 128k–200k)",
+    azure: "Azure OpenAI (up to 1M via GPT-4.1; standard models 128k)",
+    winner: "Google Cloud (2× larger context window with Gemini 3.5 Pro)"
+  },
+  {
+    feature: "Custom AI Silicon TCO",
+    gcp: "Trillium v6e & TPU v5p (up to 50% TCO for optimized workloads)",
+    aws: "Inferentia / Trainium (Limited O&G support)",
+    azure: "GPU-only (High cost & strict quotas)",
+    winner: "Google Cloud (Custom TPU economics — workload-dependent)"
+  },
+  {
+    feature: "HPC Seismic Storage I/O",
+    gcp: "Parallelstore (DAOS) sub-ms sub-surface throughput",
+    aws: "FSx for LUSTRE (Complex tiering & latency)",
+    azure: "Azure NetApp Files (Constrained IOPS scale)",
+    winner: "Google Cloud (Parallelstore speed)"
+  },
+  {
+    feature: "Geospatial Satellite AI",
+    gcp: "Google Earth Engine (Native 40-yr imagery + ML)",
+    aws: "Ground Station + SageMaker (requires custom pipeline assembly)",
+    azure: "Azure Orbital Analytics (growing but limited native energy ML catalog)",
+    winner: "Google Cloud (Unmatched satellite data & ML)"
+  },
+  {
+    feature: "Sovereignty & Air-Gap",
+    gcp: "Sovereign Trio (Residency, EKM, Distributed Cloud)",
+    aws: "AWS Outposts (Hardware locked to AWS control plane)",
+    azure: "Azure Stack (Complex multi-region governance)",
+    winner: "Google Cloud (Unified NOC decision framework)"
+  }
+];
+
+export const TGS_WINBACK_PLAYBOOK = {
+  customer: "TGS (Global Energy Data & Subsurface Intelligence)",
+  incumbent: "AWS (Under Escalation & Quota Failure)",
+  posture: "P1 Priority AWS Win-Back Campaign",
+  headline: "Replacing AWS Capacity Bottlenecks with Contractual GPU/TPU Guarantees & Joint GTM RFP Alliance",
+  painPoints: [
+    {
+      title: "Weekly AWS Capacity Escalations",
+      detail: "AWS routinely runs out of GPU/HPC compute availability in key global regions (US South/East, Europe, Middle East), causing constant weekly operational escalations for TGS's heavy Reverse Time Migration (RTM) and Full Waveform Inversion (FWI) seismic processing."
+    },
+    {
+      title: "Failed AWS RFP GTM Campaigns",
+      detail: "AWS lacks formal capacity reservation processes and regional GPU allocations for TGS customer tenders, causing TGS to miss RFP commitments and customer adoption targets."
+    },
+    {
+      title: "Storage I/O Bottlenecks",
+      detail: "AWS FSx for LUSTRE storage bottlenecks during multi-petabyte seismic re-processing runs, delaying client data deliveries."
+    }
+  ],
+  googleCounterStrategy: [
+    {
+      title: "Guaranteed Regional GPU/TPU Quota & SLAs",
+      detail: "Contractually reserved A3 Ultra (NVIDIA H100/H200/B200) & TPU Trillium clusters across Houston, Europe, Middle East, and APAC with guaranteed SLA capacity backstops for TGS client RFPs.",
+      pillar: "Capacity Guarantee"
+    },
+    {
+      title: "HPC Parallelstore (DAOS) Speed Engine",
+      detail: "Sub-millisecond IOPS with Parallelstore + Hyperdisk Extreme, reducing seismic processing wall-clock time by up to 40% compared to AWS FSx for LUSTRE.",
+      pillar: "Compute Performance"
+    },
+    {
+      title: "Joint RFP Co-Selling Alliance",
+      detail: "Dedicated Google Cloud Energy GTM team co-bidding on customer RFPs with TGS, attaching Google GPU capacity guarantees directly to TGS client proposals.",
+      pillar: "GTM Partnership"
+    },
+    {
+      title: "Gemini 3.5 Pro Agentic Data Marketplace",
+      detail: "Ingest TGS multi-client seismic and well data libraries into Gemini 3.5 Pro 2M-token multimodal context RAG engines, enabling TGS customers to query global subsurface datasets in natural language.",
+      pillar: "AI Differentiation"
+    }
+  ]
+};
+
+

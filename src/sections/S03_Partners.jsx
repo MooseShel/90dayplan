@@ -57,17 +57,24 @@ const ISVS = [
     accounts: ['Reliance Industries (Jamnagar)', 'Pertamina (refinery & petrochemical)', 'TotalEnergies (refining)'],
     day90: 'AspenTech integration architecture defined; Reliance Jamnagar refinery optimization pilot scoped',
   },
+  {
+    name: 'TGS (Subsurface Data & Intelligence)', layer: 'L1 · Domain ISV', badge: 'pill-amber',
+    role: 'World leader in multi-client seismic, well logs, and energy data libraries. Primary AWS Win-Back opportunity stemming from AWS GPU capacity deficits in key regions and failed RFP GTM support.',
+    play: 'Guaranteed HPC GPU/TPU Capacity & Parallelstore sub-ms IOPS for global seismic processing (RTM/FWI). Joint GTM RFP Co-Selling alliance + Gemini 3.5/3.6 Agentic TGS Data Marketplace.',
+    accounts: ['TGS Global Operations (AWS Win-Back)', 'Global E&P operators', 'Subsurface exploration teams'],
+    day90: 'TGS AWS Win-Back engagement initiated; GCP HPC regional GPU/TPU capacity SLA ratified; joint RFP co-selling framework launched',
+  },
 ];
 
 const GSIS = [
   {
     name: 'EPAM Systems', tier: 'Anchor', badge: 'pill-blue',
-    standing: '2025 Industry Solutions Partner of the Year for O&G. Premier partner. 2,000+ GCP-certified engineers. OSDU co-builders since 2019 with deep energy-domain IP.',
+    standing: 'Premier Partner with a large GCP-certified engineering cohort. 2025 Industry Solutions Partner of the Year for O&G. OSDU co-builders since 2019 with deep energy-domain IP.',
     role: 'Lead OSDU + agentic delivery partner. Co-own the agentic OSDU reference architecture. Certify the first delivery cohort. Operate production-readiness QA gates on Tier 1A lighthouses. EPAM is the delivery execution engine behind the 90-day targets.',
   },
   {
     name: 'Accenture', tier: 'Anchor', badge: 'pill-blue',
-    standing: '2026 Global Services Partner of the Year (4th consecutive). 450+ GenAI agents on Marketplace. Gemini Enterprise Acceleration Program participant.',
+    standing: '2026 Global Services Partner of the Year (4th consecutive). Hundreds of GenAI agents and solutions on Google Cloud Marketplace. Gemini Enterprise Acceleration Program participant.',
     role: 'Global scale + C-suite reach for majors, NOCs, and transformation programs. Drive fortress-account change management and Aramco/KOC sovereign build-out. Accenture brings the board-room relationships; EPAM brings the technical delivery depth.',
   },
   {
@@ -77,12 +84,12 @@ const GSIS = [
   },
   {
     name: 'CNTXT', tier: 'Sovereign', badge: 'pill-teal',
-    standing: "Google Cloud's exclusive in-Kingdom partner (Aramco/Google joint venture). Operator of Sovereign Controls by Google in KSA (Class C, me-central2/Dammam).",
+    standing: "Aramco/Cognite JV; Google Cloud's exclusive KSA reseller. Operator of Sovereign Controls by CNTXT in KSA (Class C, me-central2/Dammam).",
     role: 'Mandatory sovereign-delivery partner for ALL KSA workloads. Co-delivers the Aramco Sovereign Industrial Agent Platform. Any engagement with Saudi Aramco that touches in-Kingdom data must flow through CNTXT. No exceptions.',
   },
   {
     name: 'TCS · Infosys · Wipro', tier: 'Scale (APAC)', badge: 'pill-muted',
-    standing: 'Top-tier Google Cloud service partners with massive APAC delivery footprints. TCS: Premier Partner, 12,000+ GCP-certified. Infosys: Cobalt/Google Cloud CoE. Wipro: Google Cloud Business Unit.',
+    standing: 'Top-tier Google Cloud service partners with massive APAC delivery footprints. TCS: Premier Partner with large GCP-certified workforce. Infosys: Cobalt/Google Cloud CoE. Wipro: Google Cloud Business Unit.',
     role: 'APAC delivery engine for Reliance Industries, Pertamina, PTTEP, and Inpex engagements. Provide in-region delivery teams, local language capability, and established relationships with APAC NOCs. Activated for implementation once lighthouse architectures are proven.',
   },
 ];

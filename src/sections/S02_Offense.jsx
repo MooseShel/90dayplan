@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ACCOUNTS, WEDGE_STEPS } from '../data';
+import { ACCOUNTS, WEDGE_STEPS, TGS_WINBACK_PLAYBOOK } from '../data';
 
 const TIER_LABELS = {
   '1A': 'Tier 1A · Public Independents (Lead & Wedge Postures)',
@@ -14,6 +14,7 @@ const POSTURE_COLOR = {
   Lead: 'var(--green)',
   'Co-Exist': 'var(--google-blue)',
   Wedge: 'var(--amber)',
+  'Win-Back': 'var(--amber)',
   Cede: 'var(--text-muted)',
 };
 
@@ -122,6 +123,9 @@ export default function S02Offense() {
             ))}
           </tbody>
         </table>
+      </div>
+      <div style={{ fontSize: '10.5px', color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: '24px', paddingLeft: '14px' }}>
+        Note: Composite scores are author-estimated based on public signals and industry assessment. They are not derived from Google internal CRM data and should be validated with account teams before use in external presentations.
       </div>
 
 
