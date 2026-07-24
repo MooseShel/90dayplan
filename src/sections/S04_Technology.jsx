@@ -87,7 +87,7 @@ export default function S04Technology() {
       </div>
 
       {/* Top Tabbed Navigation Bar */}
-      <div className="academia-toggle mb-24" style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+      <div className="tech-tabs academia-toggle mb-24" style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
         <button className={activeTab === 'agentic' ? 'active' : ''} onClick={() => setActiveTab('agentic')}>
           ⚡ Agentic OSDU &amp; Dual Entry
         </button>
@@ -339,8 +339,8 @@ export default function S04Technology() {
           <div className="sep mb-24" />
           <div className="section-eyebrow mb-12">Head-to-Head Competitive Battlecard (GCP vs AWS vs Azure)</div>
 
-          <div style={{ overflowX: 'auto' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '12px', textAlign: 'left' }}>
+          <div className="table-responsive">
+            <table className="data-table" style={{ width: '100%', minWidth: '650px', borderCollapse: 'collapse', fontSize: '12px', textAlign: 'left' }}>
               <thead>
                 <tr style={{ background: 'rgba(255,255,255,0.05)', borderBottom: '1px solid var(--border)' }}>
                   <th style={{ padding: '10px' }}>Dimension</th>

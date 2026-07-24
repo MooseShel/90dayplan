@@ -26,27 +26,29 @@ export default function S06Exchange() {
       </div>
 
       <div className="section-eyebrow mb-16">Exchange Framework</div>
-      <div className="card" style={{padding:0,overflow:'hidden',marginBottom:'24px'}}>
-        <table className="data-table">
-          <thead>
-            <tr>
-              <th>Customer Asset</th>
-              <th>Accounts</th>
-              <th>Google Need / Capability</th>
-              <th>Joint Value Created</th>
-            </tr>
-          </thead>
-          <tbody>
-            {EXCHANGES.map(e => (
-              <tr key={e.asset}>
-                <td><strong>{e.asset}</strong></td>
-                <td><span style={{fontSize:'11.5px',color:'var(--text-muted)'}}>{e.accounts}</span></td>
-                <td style={{fontSize:'12px'}}>{e.googleNeed}</td>
-                <td style={{fontSize:'12px',color:'var(--green)'}}>{e.joint}</td>
+      <div className="table-responsive">
+        <div className="card" style={{padding:0,overflow:'hidden',marginBottom:'24px'}}>
+          <table className="data-table" style={{ minWidth: '550px' }}>
+            <thead>
+              <tr>
+                <th>Customer Asset</th>
+                <th>Accounts</th>
+                <th>Google Need / Capability</th>
+                <th>Joint Value Created</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {EXCHANGES.map(e => (
+                <tr key={e.asset}>
+                  <td><strong>{e.asset}</strong></td>
+                  <td><span style={{fontSize:'11.5px',color:'var(--text-muted)'}}>{e.accounts}</span></td>
+                  <td style={{fontSize:'12px'}}>{e.googleNeed}</td>
+                  <td style={{fontSize:'12px',color:'var(--green)'}}>{e.joint}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div className="grid-2">

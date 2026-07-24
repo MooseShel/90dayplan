@@ -90,39 +90,41 @@ export default function S02Offense() {
 
       {/* Account Table */}
       <div className="section-eyebrow mb-16">Named Account Heat Map</div>
-      <div className="card" style={{ padding: 0, overflow: 'hidden', marginBottom: '24px' }}>
-        <table className="data-table" style={{ width: '100%', tableLayout: 'fixed' }}>
-          <colgroup>
-            <col style={{ width: '22%' }} />
-            <col style={{ width: '8%' }} />
-            <col style={{ width: '10%' }} />
-            <col style={{ width: '28%' }} />
-            <col style={{ width: '12%' }} />
-            <col style={{ width: '20%' }} />
-          </colgroup>
-          <thead>
-            <tr>
-              <th>Account</th><th>Tier</th><th>Priority</th><th>Score / Gate</th><th>Posture</th><th>Incumbent</th>
-            </tr>
-          </thead>
+      <div className="table-responsive">
+        <div className="card" style={{ padding: 0, overflow: 'hidden', marginBottom: '8px' }}>
+          <table className="data-table" style={{ width: '100%', minWidth: '650px', tableLayout: 'fixed' }}>
+            <colgroup>
+              <col style={{ width: '22%' }} />
+              <col style={{ width: '8%' }} />
+              <col style={{ width: '10%' }} />
+              <col style={{ width: '28%' }} />
+              <col style={{ width: '12%' }} />
+              <col style={{ width: '20%' }} />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Account</th><th>Tier</th><th>Priority</th><th>Score / Gate</th><th>Posture</th><th>Incumbent</th>
+              </tr>
+            </thead>
 
-          <tbody>
-            {tiers.map(tier => (
-              <React.Fragment key={tier}>
-                <tr>
-                  <td colSpan={6} style={{
-                    background: 'var(--bg-elevated)', color: 'var(--text-label)',
-                    fontSize: '10.5px', fontWeight: 700, letterSpacing: '0.8px',
-                    textTransform: 'uppercase', padding: '8px 14px',
-                  }}>
-                    {TIER_LABELS[tier] || tier}
-                  </td>
-                </tr>
-                {ACCOUNTS.filter(a => a.tier === tier).map(a => <AccountRow key={a.id} a={a} />)}
-              </React.Fragment>
-            ))}
-          </tbody>
-        </table>
+            <tbody>
+              {tiers.map(tier => (
+                <React.Fragment key={tier}>
+                  <tr>
+                    <td colSpan={6} style={{
+                      background: 'var(--bg-elevated)', color: 'var(--text-label)',
+                      fontSize: '10.5px', fontWeight: 700, letterSpacing: '0.8px',
+                      textTransform: 'uppercase', padding: '8px 14px',
+                    }}>
+                      {TIER_LABELS[tier] || tier}
+                    </td>
+                  </tr>
+                  {ACCOUNTS.filter(a => a.tier === tier).map(a => <AccountRow key={a.id} a={a} />)}
+                </React.Fragment>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
       <div style={{ fontSize: '10.5px', color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: '24px', paddingLeft: '14px' }}>
         Note: Composite scores are author-estimated based on public signals and industry assessment. They are not derived from Google internal CRM data and should be validated with account teams before use in external presentations.

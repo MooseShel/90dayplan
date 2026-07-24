@@ -154,20 +154,22 @@ export default function S03Partners() {
         accreditation of unqualified partners is the fastest way to produce a failed lighthouse customer.
         Every GSI must pass the production-readiness QA gate before any customer-facing delivery.
       </div>
-      <div className="card" style={{ padding: 0, overflow: 'hidden', marginBottom: '32px' }}>
-        <table className="data-table">
-          <thead><tr><th>GSI</th><th>Tier</th><th>Google Cloud Standing</th><th>O&amp;G Delivery Role</th></tr></thead>
-          <tbody>
-            {GSIS.map(g => (
-              <tr key={g.name}>
-                <td><strong>{g.name}</strong></td>
-                <td><span className={`pill ${g.badge}`}>{g.tier}</span></td>
-                <td style={{ fontSize: '12px' }}>{g.standing}</td>
-                <td style={{ fontSize: '12px' }}>{g.role}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="table-responsive">
+        <div className="card" style={{ padding: 0, overflow: 'hidden', marginBottom: '32px' }}>
+          <table className="data-table" style={{ minWidth: '550px' }}>
+            <thead><tr><th>GSI</th><th>Tier</th><th>Google Cloud Standing</th><th>O&amp;G Delivery Role</th></tr></thead>
+            <tbody>
+              {GSIS.map(g => (
+                <tr key={g.name}>
+                  <td><strong>{g.name}</strong></td>
+                  <td><span className={`pill ${g.badge}`}>{g.tier}</span></td>
+                  <td style={{ fontSize: '12px' }}>{g.standing}</td>
+                  <td style={{ fontSize: '12px' }}>{g.role}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div className="sep" />

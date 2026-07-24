@@ -13,7 +13,7 @@ export default function S05Alphabet() {
         </p>
       </div>
 
-      <div className="grid-2 mb-24" style={{ gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+      <div className="grid-2 mb-24" style={{ gap: '16px' }}>
         <div className="highlight-block" style={{ height: '100%', margin: 0 }}>
           "AWS sells energy companies infrastructure. Azure sells them software. Google shows up as a fellow
           builder of the energy system — with the whole of Alphabet behind it — then sells them intelligence."

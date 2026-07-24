@@ -55,19 +55,59 @@ function ThemeToggle({ theme, onToggle }) {
 }
 
 export default function App() {
-  const [active, setActive] = useState('thesis');
-  const { theme, toggle }   = useTheme();
-  const ActiveSection       = SECTION_MAP[active];
+  const [active, setActive]       = useState('thesis');
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const { theme, toggle }         = useTheme();
+  const ActiveSection             = SECTION_MAP[active];
 
-  // Reset scroll position whenever the section changes
-  useEffect(() => {
+  const currentNav = NAV_ITEMS.find(n => n.id === active);
+
+  // Reset scroll position and close mobile drawer whenever the section changes
+  const handleNavClick = (id) => {
+    setActive(id);
+    setMobileOpen(false);
     window.scrollTo({ top: 0, behavior: 'instant' });
-  }, [active]);
+  };
+
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [mobileOpen]);
 
   return (
     <div className="app-shell">
-      {/* ── Sidebar ── */}
-      <aside className="sidebar">
+      {/* ── Mobile Top Header ── */}
+      <header className="mobile-header">
+        <button
+          className="mobile-menu-btn"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle navigation menu"
+        >
+          {mobileOpen ? '✕' : '☰'}
+        </button>
+        <div className="mobile-header-brand">
+          <span className="mobile-header-tag">Google Cloud</span>
+          <span className="mobile-header-section">{currentNav?.num} · {currentNav?.label}</span>
+        </div>
+        <div className="mobile-header-theme">
+          <ThemeToggle theme={theme} onToggle={toggle} />
+        </div>
+      </header>
+
+      {/* ── Mobile Backdrop Overlay ── */}
+      {mobileOpen && (
+        <div
+          className="sidebar-backdrop"
+          onClick={() => setMobileOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* ── Sidebar / Drawer ── */}
+      <aside className={`sidebar${mobileOpen ? ' mobile-open' : ''}`}>
         <div className="sidebar-logo">
           <span className="logo-tag">Google Cloud</span>
           <div className="logo-title">Global Oil &amp; Gas<br/>Strategy Dashboard</div>
@@ -80,7 +120,7 @@ export default function App() {
             <div
               key={item.id}
               className={`nav-item${active === item.id ? ' active' : ''}`}
-              onClick={() => setActive(item.id)}
+              onClick={() => handleNavClick(item.id)}
             >
               <span className="nav-num">{item.num}</span>
               <div>
@@ -90,7 +130,6 @@ export default function App() {
             </div>
           ))}
         </nav>
-
 
         <div className="sidebar-footer">
           <strong>{META.author}</strong>

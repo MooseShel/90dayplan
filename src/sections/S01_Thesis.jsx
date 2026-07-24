@@ -1,5 +1,5 @@
+import React, { useState } from 'react';
 import { PILLARS, COMPETITIVE_ACCOUNTS } from '../data';
-import { useState } from 'react';
 
 const POSTURE_PILL = {
   Lead: 'pill-green', 'Co-Exist': 'pill-blue', Wedge: 'pill-amber', Cede: 'pill-muted',
@@ -36,7 +36,7 @@ export default function S01Thesis() {
 
       {/* Why Now — 3-col grid */}
       <div className="section-eyebrow mb-16">Why Google · Why Oil &amp; Gas · Why Now</div>
-      <div className="grid-3 mb-24" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+      <div className="grid-3 mb-24">
         {WHY_NOW.map(w => (
           <div key={w.trigger} className="card" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <div className="row gap-10">
@@ -52,7 +52,7 @@ export default function S01Thesis() {
 
       {/* Pillars — 2+3 layout: text on left, cards spanning full */}
       <div className="section-eyebrow mb-16">Five-Pillar Framework — Day-90 Proof Points</div>
-      <div className="grid-main-sidebar mb-24" style={{ gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
+      <div className="grid-2 mb-24" style={{ gap: '14px' }}>
         {PILLARS.map(p => (
           <div key={p.num} className="card">
             <div className="row-between mb-8">
@@ -84,34 +84,36 @@ export default function S01Thesis() {
         </div>
       </div>
 
-      <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-        <table className="data-table" style={{ width: '100%' }}>
-          <thead>
-            <tr>
-              <th>Account</th><th>Incumbent</th><th>Posture</th><th>Entry Wedge</th><th>Expansion Vector</th>
-            </tr>
-          </thead>
-          <tbody>
-            {COMPETITIVE_ACCOUNTS.map(a => (
-              <>
-                <tr key={a.name} style={{ cursor: 'pointer' }} onClick={() => setSelected(selected === a.name ? null : a.name)}>
-                  <td><strong>{a.name}</strong></td>
-                  <td><span className="tag">{a.incumbent}</span></td>
-                  <td><span className={`pill ${POSTURE_PILL[a.googlePosture] || 'pill-muted'}`}>{a.googlePosture}</span></td>
-                  <td style={{ fontSize: '12px' }}>{a.wedge}</td>
-                  <td style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{a.expand}</td>
-                </tr>
-                {selected === a.name && (
-                  <tr key={`${a.name}-d`}>
-                    <td colSpan={5} style={{ background: 'rgba(66,133,244,0.05)', padding: '10px 14px', fontSize: '12px', color: 'var(--text-secondary)', borderLeft: '3px solid var(--google-blue)' }}>
-                      <strong style={{ color: 'var(--text-primary)' }}>Play for {a.name}:</strong> Lead with <em>{a.wedge}</em>, then expand to <em>{a.expand}</em>. Incumbent ({a.incumbent}) stays in place — no migration conversation required.
-                    </td>
+      <div className="table-responsive">
+        <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+          <table className="data-table" style={{ width: '100%', minWidth: '600px' }}>
+            <thead>
+              <tr>
+                <th>Account</th><th>Incumbent</th><th>Posture</th><th>Entry Wedge</th><th>Expansion Vector</th>
+              </tr>
+            </thead>
+            <tbody>
+              {COMPETITIVE_ACCOUNTS.map(a => (
+                <React.Fragment key={a.name}>
+                  <tr style={{ cursor: 'pointer' }} onClick={() => setSelected(selected === a.name ? null : a.name)}>
+                    <td><strong>{a.name}</strong></td>
+                    <td><span className="tag">{a.incumbent}</span></td>
+                    <td><span className={`pill ${POSTURE_PILL[a.googlePosture] || 'pill-muted'}`}>{a.googlePosture}</span></td>
+                    <td style={{ fontSize: '12px' }}>{a.wedge}</td>
+                    <td style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{a.expand}</td>
                   </tr>
-                )}
-              </>
-            ))}
-          </tbody>
-        </table>
+                  {selected === a.name && (
+                    <tr>
+                      <td colSpan={5} style={{ background: 'rgba(66,133,244,0.05)', padding: '10px 14px', fontSize: '12px', color: 'var(--text-secondary)', borderLeft: '3px solid var(--google-blue)' }}>
+                        <strong style={{ color: 'var(--text-primary)' }}>Play for {a.name}:</strong> Lead with <em>{a.wedge}</em>, then expand to <em>{a.expand}</em>. Incumbent ({a.incumbent}) stays in place — no migration conversation required.
+                      </td>
+                    </tr>
+                  )}
+                </React.Fragment>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div className="highlight-block teal mt-16">
