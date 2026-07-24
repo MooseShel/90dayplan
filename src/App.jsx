@@ -5,6 +5,7 @@ import S02Offense    from './sections/S02_Offense';
 import S03Partners   from './sections/S03_Partners';
 import S04Technology from './sections/S04_Technology';
 import S05Alphabet   from './sections/S05_Alphabet';
+import S08Enablement from './sections/S08_Enablement';
 import S06Exchange   from './sections/S06_Exchange';
 import S07Roadmap    from './sections/S07_Roadmap';
 import S08OKR        from './sections/S08_OKR';
@@ -17,6 +18,7 @@ const SECTION_MAP = {
   partners:   S03Partners,
   technology: S04Technology,
   alphabet:   S05Alphabet,
+  enablement: S08Enablement,
   exchange:   S06Exchange,
   roadmap:    S07Roadmap,
   okr:        S08OKR,

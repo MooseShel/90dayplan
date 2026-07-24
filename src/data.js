@@ -16,8 +16,9 @@ export const NAV_ITEMS = [
   { id: "alphabet",    num: "05", label: "Alphabet Advantage",        sub: "Cross-Portfolio Plays" },
   { id: "exchange",    num: "06", label: "Energy Exchange",           sub: "Energy-for-Intelligence" },
   { id: "roadmap",     num: "07", label: "30-60-90 Roadmap",          sub: "ADIPEC · CERAWeek Anchors" },
-  { id: "okr",         num: "08", label: "OKR Scorecard",             sub: "O1–O5 · Day 90 KRs" },
-  { id: "decisions",   num: "09", label: "Executive Decisions",       sub: "6 Asks · First 30 Days" },
+  { id: "enablement",  num: "08", label: "Sales Enablement & GTM",    sub: "Scaling the Machine" },
+  { id: "okr",         num: "09", label: "OKR Scorecard",             sub: "O1–O5 · Day 90 KRs" },
+  { id: "decisions",   num: "10", label: "Executive Decisions",       sub: "6 Asks · First 30 Days" },
 ];
 
 export const PILLARS = [
@@ -546,4 +547,175 @@ export const TGS_WINBACK_PLAYBOOK = {
   ]
 };
 
+export const GTM_OPERATING_MODEL = [
+  {
+    id: "sales",
+    function: "Sales",
+    subtitle: "Account Executives & Regional Leads",
+    icon: "📊",
+    role: "Named account ownership, quota carry, deal execution across Tier 1–4 and Fortress accounts",
+    multiplier: "Arm sellers with scored account playbooks, competitive battle cards, pricing frameworks, and joint-call support for every P1/P2 account",
+    deliverable: "25+ sellers enabled with O&G account kits; weekly Deal Council operational; 6+ customer-validated opportunities",
+    color: "blue"
+  },
+  {
+    id: "bd",
+    function: "Business Development",
+    subtitle: "Strategic Partnerships & Alliances",
+    icon: "🤝",
+    role: "ISV/GSI partner origination, co-sell motions, joint business plans, partner-sourced pipeline generation",
+    multiplier: "Co-author JBPs with Cognite/SLB/Baker Hughes/Kongsberg, structure partner incentives, route partner-sourced leads into qualified pipeline",
+    deliverable: "4 ISV JBPs signed; 2 anchor GSIs certified; ≥30% partner-originated pipeline by Day 90",
+    color: "teal"
+  },
+  {
+    id: "solutions",
+    function: "Solutions Engineering",
+    subtitle: "Solution Architects & Technical Specialists",
+    icon: "🔧",
+    role: "Technical validation, PoC execution, reference architecture delivery, customer solution design",
+    multiplier: "Define 6 agent reference architectures, staff PoC teams, create reusable demo assets, run SA bootcamps on agentic OSDU & sovereign patterns",
+    deliverable: "6 agent patterns published; 3 PoC kits deployed; SA bootcamp delivered to 40+ practitioners",
+    color: "purple"
+  },
+  {
+    id: "gtm",
+    function: "GTM & Marketing",
+    subtitle: "Campaigns, Events & Demand Generation",
+    icon: "📣",
+    role: "Industry narrative ownership, event strategy (ADIPEC/CERAWeek), analyst & media relations, demand-gen campaigns",
+    multiplier: "Own the industry narrative; build event playbooks, customer storytelling frameworks, demand-gen campaigns, and analyst briefing programs",
+    deliverable: "ADIPEC playbook locked; 2 demand-gen campaigns live; analyst briefing program launched with 8+ briefings",
+    color: "amber"
+  },
+  {
+    id: "engineering",
+    function: "Engineering & Product",
+    subtitle: "Cloud Product, AI/ML & Infrastructure Teams",
+    icon: "⚙️",
+    role: "Product roadmap influence, feature prioritization, sovereign/HPC capability delivery, reference architecture ratification",
+    multiplier: "Translate field signals into product requirements; run joint design-authority sessions with NOCs; close feedback loop from PoC learnings to product backlog",
+    deliverable: "6 agent reference architectures ratified by engineering; sovereign framework validated across 6 regions; HPC burst architecture validated",
+    color: "green"
+  }
+];
 
+export const ENABLEMENT_KITS = [
+  {
+    name: "Account Attack Playbook",
+    audience: "Account Executives",
+    contents: "Scored account cards (from S02), competitive positioning vs. AWS/Azure, pricing guidance, champion mapping, executive engagement templates",
+    timeline: "Days 1–30",
+    phase: 1,
+    status: "not-started"
+  },
+  {
+    name: "Agentic OSDU Battle Card",
+    audience: "Sales + Solutions",
+    contents: "1-pager: what it is, why it wins, competitive kill points, customer proof points, objection handling, demo request flow",
+    timeline: "Days 1–30",
+    phase: 1,
+    status: "not-started"
+  },
+  {
+    name: "Multicloud Wedge Pitch Kit",
+    audience: "Sales + BD",
+    contents: "Fortress account positioning guide, BigQuery Omni architecture deck, co-existence messaging (no-migration framing), demo script, customer objection matrix",
+    timeline: "Days 15–45",
+    phase: 1,
+    status: "not-started"
+  },
+  {
+    name: "Sovereign NOC Decision Framework",
+    audience: "Sales + Solutions + BD",
+    contents: "Region-by-region sovereign playbook (Dammam/Doha/Jakarta/Bangkok/Tokyo/GDC), compliance matrix, partner delivery model, pricing frameworks",
+    timeline: "Days 30–60",
+    phase: 2,
+    status: "not-started"
+  },
+  {
+    name: "Partner Co-Sell Playbook",
+    audience: "BD + Partner Managers",
+    contents: "ISV-by-ISV co-sell guide (Cognite, SLB, Baker Hughes, Kongsberg), GSI engagement model, certification path, co-sell incentive structures",
+    timeline: "Days 30–60",
+    phase: 2,
+    status: "not-started"
+  },
+  {
+    name: "ADIPEC Event Playbook",
+    audience: "GTM + Sales + Exec",
+    contents: "Demo scripts, customer meeting guides, media/analyst prep, announceable status tracker, booth strategy, executive briefing schedule",
+    timeline: "Days 45–75",
+    phase: 2,
+    status: "not-started"
+  },
+  {
+    name: "HPC & Seismic Win Kit",
+    audience: "Solutions + Sales",
+    contents: "TGS win-back case study, Parallelstore benchmarks, GPU/TPU capacity guarantee positioning, competitive storage I/O comparison, RFP response templates",
+    timeline: "Days 30–60",
+    phase: 2,
+    status: "not-started"
+  }
+];
+
+export const SCALING_MECHANISMS = [
+  {
+    name: "Global O&G Deal Council",
+    cadence: "Weekly",
+    participants: "Market Lead, Sales Leads, Solutions, BD",
+    purpose: "Pipeline review, deal strategy, blocker removal, resource allocation, competitive intelligence sharing",
+    icon: "📋",
+    color: "blue"
+  },
+  {
+    name: "Product & Engineering Sync",
+    cadence: "Bi-weekly",
+    participants: "Market Lead, Product Managers, Engineering Leads",
+    purpose: "Field signal → product roadmap; feature requests, PoC learnings, sovereign requirements, gap analysis",
+    icon: "⚙️",
+    color: "purple"
+  },
+  {
+    name: "Partner Ecosystem Review",
+    cadence: "Bi-weekly",
+    participants: "Market Lead, BD, Partner Managers",
+    purpose: "JBP progress, co-sell pipeline, certification status, partner escalations, co-marketing alignment",
+    icon: "🤝",
+    color: "teal"
+  },
+  {
+    name: "GTM Campaign War Room",
+    cadence: "Monthly",
+    participants: "Market Lead, GTM, Marketing, Comms",
+    purpose: "Event prep, demand-gen performance, analyst/media relations, content calendar, customer storytelling",
+    icon: "📣",
+    color: "amber"
+  },
+  {
+    name: "Executive Briefing Council",
+    cadence: "Monthly",
+    participants: "Market Lead, Regional VPs, Industry VP",
+    purpose: "Account health, competitive intelligence, strategic pivots, resource asks, escalation review",
+    icon: "👔",
+    color: "red"
+  },
+  {
+    name: "SA & Solutions Bootcamp",
+    cadence: "Quarterly",
+    participants: "Market Lead, Solutions Engineering, Product",
+    purpose: "Deep-dive training on new agent patterns, sovereign architectures, competitive updates, hands-on lab sessions",
+    icon: "🎓",
+    color: "green"
+  }
+];
+
+export const FIELD_MULTIPLIER_METRICS = [
+  { metric: "Sellers enabled with O&G kits",  day0: 0, day30: 25, day60: 40, day90: 50, unit: "",  color: "blue" },
+  { metric: "Partner practitioners certified", day0: 0, day30: 10, day60: 25, day90: 40, unit: "",  color: "teal" },
+  { metric: "Active co-sell motions",           day0: 0, day30: 3,  day60: 8,  day90: 12, unit: "",  color: "purple" },
+  { metric: "PoC kits deployed to SAs",        day0: 0, day30: 2,  day60: 4,  day90: 6,  unit: "",  color: "green" },
+  { metric: "Demand-gen campaigns live",        day0: 0, day30: 0,  day60: 1,  day90: 2,  unit: "",  color: "amber" },
+  { metric: "Analyst / media briefings",       day0: 0, day30: 2,  day60: 5,  day90: 8,  unit: "+", color: "blue" },
+  { metric: "Pipeline coverage ratio",          day0: 0, day30: 2,  day60: 3,  day90: 4,  unit: "×", color: "green" }
+];
