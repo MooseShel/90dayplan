@@ -26,8 +26,8 @@ export default function S06Exchange() {
       </div>
 
       <div className="section-eyebrow mb-16">Exchange Framework</div>
-      <div className="table-responsive">
-        <div className="card" style={{padding:0,overflow:'hidden',marginBottom:'24px'}}>
+      <div className="card" style={{padding:0,overflow:'hidden',marginBottom:'24px',width:'100%'}}>
+        <div className="table-responsive" style={{ marginBottom: 0 }}>
           <table className="data-table" style={{ minWidth: '550px' }}>
             <thead>
               <tr>

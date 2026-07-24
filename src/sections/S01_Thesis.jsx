@@ -84,8 +84,8 @@ export default function S01Thesis() {
         </div>
       </div>
 
-      <div className="table-responsive">
-        <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+      <div className="card" style={{ padding: 0, overflow: 'hidden', width: '100%' }}>
+        <div className="table-responsive" style={{ marginBottom: 0 }}>
           <table className="data-table" style={{ width: '100%', minWidth: '600px' }}>
             <thead>
               <tr>

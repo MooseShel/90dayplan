@@ -339,29 +339,31 @@ export default function S04Technology() {
           <div className="sep mb-24" />
           <div className="section-eyebrow mb-12">Head-to-Head Competitive Battlecard (GCP vs AWS vs Azure)</div>
 
-          <div className="table-responsive">
-            <table className="data-table" style={{ width: '100%', minWidth: '650px', borderCollapse: 'collapse', fontSize: '12px', textAlign: 'left' }}>
-              <thead>
-                <tr style={{ background: 'rgba(255,255,255,0.05)', borderBottom: '1px solid var(--border)' }}>
-                  <th style={{ padding: '10px' }}>Dimension</th>
-                  <th style={{ padding: '10px', color: 'var(--google-blue)' }}>Google Cloud (GCP)</th>
-                  <th style={{ padding: '10px', color: 'var(--text-muted)' }}>AWS</th>
-                  <th style={{ padding: '10px', color: 'var(--text-muted)' }}>Microsoft Azure</th>
-                  <th style={{ padding: '10px', color: 'var(--teal)' }}>Winning Advantage</th>
-                </tr>
-              </thead>
-              <tbody>
-                {COMPETITIVE_MATRIX_GRID.map((r, i) => (
-                  <tr key={i} style={{ borderBottom: '1px solid var(--border)' }}>
-                    <td style={{ padding: '10px', fontWeight: 600, color: 'var(--text-primary)' }}>{r.feature}</td>
-                    <td style={{ padding: '10px', color: 'var(--text-primary)', background: 'rgba(66,133,244,0.06)', fontWeight: 500 }}>{r.gcp}</td>
-                    <td style={{ padding: '10px', color: 'var(--text-muted)' }}>{r.aws}</td>
-                    <td style={{ padding: '10px', color: 'var(--text-muted)' }}>{r.azure}</td>
-                    <td style={{ padding: '10px', color: 'var(--teal)', fontWeight: 600 }}>{r.winner}</td>
+          <div className="card" style={{ padding: 0, overflow: 'hidden', width: '100%' }}>
+            <div className="table-responsive" style={{ marginBottom: 0 }}>
+              <table className="data-table" style={{ width: '100%', minWidth: '650px', borderCollapse: 'collapse', fontSize: '12px', textAlign: 'left' }}>
+                <thead>
+                  <tr style={{ background: 'rgba(255,255,255,0.05)', borderBottom: '1px solid var(--border)' }}>
+                    <th style={{ padding: '10px' }}>Dimension</th>
+                    <th style={{ padding: '10px', color: 'var(--google-blue)' }}>Google Cloud (GCP)</th>
+                    <th style={{ padding: '10px', color: 'var(--text-muted)' }}>AWS</th>
+                    <th style={{ padding: '10px', color: 'var(--text-muted)' }}>Microsoft Azure</th>
+                    <th style={{ padding: '10px', color: 'var(--teal)' }}>Winning Advantage</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {COMPETITIVE_MATRIX_GRID.map((r, i) => (
+                    <tr key={i} style={{ borderBottom: '1px solid var(--border)' }}>
+                      <td style={{ padding: '10px', fontWeight: 600, color: 'var(--text-primary)' }}>{r.feature}</td>
+                      <td style={{ padding: '10px', color: 'var(--text-primary)', background: 'rgba(66,133,244,0.06)', fontWeight: 500 }}>{r.gcp}</td>
+                      <td style={{ padding: '10px', color: 'var(--text-muted)' }}>{r.aws}</td>
+                      <td style={{ padding: '10px', color: 'var(--text-muted)' }}>{r.azure}</td>
+                      <td style={{ padding: '10px', color: 'var(--teal)', fontWeight: 600 }}>{r.winner}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       )}

@@ -154,8 +154,8 @@ export default function S03Partners() {
         accreditation of unqualified partners is the fastest way to produce a failed lighthouse customer.
         Every GSI must pass the production-readiness QA gate before any customer-facing delivery.
       </div>
-      <div className="table-responsive">
-        <div className="card" style={{ padding: 0, overflow: 'hidden', marginBottom: '32px' }}>
+      <div className="card" style={{ padding: 0, overflow: 'hidden', marginBottom: '32px', width: '100%' }}>
+        <div className="table-responsive" style={{ marginBottom: 0 }}>
           <table className="data-table" style={{ minWidth: '550px' }}>
             <thead><tr><th>GSI</th><th>Tier</th><th>Google Cloud Standing</th><th>O&amp;G Delivery Role</th></tr></thead>
             <tbody>

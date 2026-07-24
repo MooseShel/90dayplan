@@ -90,8 +90,8 @@ export default function S02Offense() {
 
       {/* Account Table */}
       <div className="section-eyebrow mb-16">Named Account Heat Map</div>
-      <div className="table-responsive">
-        <div className="card" style={{ padding: 0, overflow: 'hidden', marginBottom: '8px' }}>
+      <div className="card" style={{ padding: 0, overflow: 'hidden', marginBottom: '8px', width: '100%' }}>
+        <div className="table-responsive" style={{ marginBottom: 0 }}>
           <table className="data-table" style={{ width: '100%', minWidth: '650px', tableLayout: 'fixed' }}>
             <colgroup>
               <col style={{ width: '22%' }} />
