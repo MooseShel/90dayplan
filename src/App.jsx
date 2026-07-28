@@ -10,6 +10,7 @@ import S06Exchange   from './sections/S06_Exchange';
 import S07Roadmap    from './sections/S07_Roadmap';
 import S08OKR        from './sections/S08_OKR';
 import S09Decisions  from './sections/S09_Decisions';
+import S11ThinkBig   from './sections/S11_ThinkBig';
 import './index.css';
 
 const SECTION_MAP = {
@@ -23,6 +24,7 @@ const SECTION_MAP = {
   roadmap:    S07Roadmap,
   okr:        S08OKR,
   decisions:  S09Decisions,
+  thinkbig:   S11ThinkBig,
 };
 
 // ── Theme Hook ─────────────────────────────────────────────────────────

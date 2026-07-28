@@ -25,7 +25,7 @@ export default function S01Thesis() {
     <div className="section-page">
       <div className="section-header">
         <div className="section-eyebrow">01 · Strategic Foundation</div>
-        <h1 className="section-title">The Five-Pillar Operating Thesis</h1>
+        <h1 className="section-title">The Six-Pillar Operating Thesis</h1>
         <p className="section-desc">{THESIS_CONTEXT}</p>
       </div>
 
@@ -51,7 +51,7 @@ export default function S01Thesis() {
       <div className="sep" />
 
       {/* Pillars — 2+3 layout: text on left, cards spanning full */}
-      <div className="section-eyebrow mb-16">Five-Pillar Framework — Day-90 Proof Points</div>
+      <div className="section-eyebrow mb-16">Six-Pillar Framework — Day-90 Proof Points</div>
       <div className="grid-2 mb-24" style={{ gap: '14px' }}>
         {PILLARS.map(p => (
           <div key={p.num} className="card">

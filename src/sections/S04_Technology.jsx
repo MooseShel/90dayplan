@@ -5,7 +5,8 @@ import {
   HPC_ENERGY_STACK, 
   BEYOND_OSDU_SERVICES, 
   COMPETITIVE_MATRIX_GRID,
-  TGS_WINBACK_PLAYBOOK
+  TGS_WINBACK_PLAYBOOK,
+  OAG_FOUNDATION_MODELS
 } from '../data';
 
 const AGENTS = [
@@ -93,6 +94,9 @@ export default function S04Technology() {
         </button>
         <button className={activeTab === 'ai' ? 'active' : ''} onClick={() => setActiveTab('ai')}>
           🧠 Gemini 3.5/3.6 &amp; AI Silicon
+        </button>
+        <button className={activeTab === 'fm' ? 'active' : ''} onClick={() => setActiveTab('fm')}>
+          🏗️ Industry Foundation Models
         </button>
         <button className={activeTab === 'hpc' ? 'active' : ''} onClick={() => setActiveTab('hpc')}>
           🖥️ HPC Subsurface Supercomputing
@@ -364,6 +368,80 @@ export default function S04Technology() {
                 </tbody>
               </table>
             </div>
+          </div>
+        </div>
+      )}
+      {/* TAB 5: INDUSTRY FOUNDATION MODELS */}
+      {activeTab === 'fm' && (
+        <div style={{ animation: 'fadeSlideIn 0.25s ease' }}>
+          <div className="section-eyebrow mb-8">GCP-Hosted Oil &amp; Gas Foundation Models</div>
+          <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '20px', lineHeight: '1.6' }}>
+            Pre-trained domain foundation models for <strong style={{ color: 'var(--text-primary)' }}>Timeseries Telemetry</strong> (drilling,
+            production, industrial operations) and <strong style={{ color: 'var(--text-primary)' }}>Subsurface Intelligence</strong> (seismic,
+            well logs, reservoir simulation) — co-developed with leading ISV data partners and hosted natively on Google Cloud.
+          </p>
+
+          <div className="highlight-block purple mb-24">
+            <strong style={{ color: 'var(--purple)' }}>IP Framework (Non-Negotiable):</strong> {OAG_FOUNDATION_MODELS.ipFramework}
+          </div>
+
+          <div className="highlight-block blue mb-24">
+            <strong style={{ color: 'var(--google-blue)' }}>Infrastructure:</strong> {OAG_FOUNDATION_MODELS.infrastructure}
+          </div>
+
+          {/* FM Category Cards */}
+          <div className="section-eyebrow mb-12">Foundation Model Categories</div>
+          <div className="grid-2 mb-24">
+            {OAG_FOUNDATION_MODELS.categories.map(cat => (
+              <div key={cat.id} className="card" style={{ borderColor: `var(--${cat.color})` }}>
+                <div className="row gap-8 mb-8" style={{ justifyContent: 'space-between' }}>
+                  <div className="row gap-8">
+                    <span style={{ fontSize: '20px' }}>{cat.icon}</span>
+                    <div>
+                      <div style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text-primary)' }}>{cat.title}</div>
+                      <div style={{ fontSize: '11px', color: `var(--${cat.color})` }}>{cat.subtitle}</div>
+                    </div>
+                  </div>
+                  <span className={`pill pill-${cat.color}`}>Domain FM</span>
+                </div>
+                <p style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.5', marginBottom: '12px' }}>
+                  {cat.scope}
+                </p>
+                <div style={{ fontSize: '11.5px', color: 'var(--text-muted)' }}>
+                  <strong style={{ color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>Use Cases:</strong>
+                  <ul style={{ margin: 0, paddingLeft: '16px', lineHeight: '1.8' }}>
+                    {cat.useCases.map((uc, i) => <li key={i}>{uc}</li>)}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="sep mb-24" />
+
+          {/* ISV Data Partner Coalition */}
+          <div className="section-eyebrow mb-12">ISV Data &amp; Domain Partner Coalition</div>
+          <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
+            Six ISV data partners contribute domain datasets and algorithms. Models are hosted on GCP with
+            <strong style={{ color: 'var(--text-primary)' }}> zero joint IP</strong> between Google and ISVs.
+          </p>
+          <div className="grid-2 mb-24" style={{ gap: '12px' }}>
+            {OAG_FOUNDATION_MODELS.partners.map(p => (
+              <div key={p.name} className="card" style={{ borderColor: `var(--${p.color})` }}>
+                <div className="row gap-8 mb-8">
+                  <span style={{ fontSize: '18px' }}>{p.icon}</span>
+                  <div style={{ flex: 1 }}>
+                    <div className="row-between">
+                      <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text-primary)' }}>{p.name}</span>
+                      <span className={`pill pill-${p.color}`}>{p.fmCategory}</span>
+                    </div>
+                  </div>
+                </div>
+                <div style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+                  {p.contribution}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       )}

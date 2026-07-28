@@ -15,6 +15,7 @@ const OKR_CONTEXT = {
   O3: "Gulf and APAC NOCs control the world's lowest-cost barrels at national-infrastructure scale. Winning across Aramco, Pertamina, PTTEP, Inpex, and Gulf sovereigns requires deployment capability no other hyperscaler can match.",
   O4: "≥30% partner-originated pipeline is the multiplier on Google's direct sales force. Without it, the market coverage model breaks — there are not enough direct sellers for 300+ global operators.",
   O5: "The Alphabet advantage is the one thing AWS and Azure cannot replicate. Not embedded in live pursuits by Day 90 = brand claim, not commercial differentiator.",
+  O6: "Project Interchange and DeepMind Energy Lab are transformative, Alphabet-only initiatives that no competitor can replicate. Interchange converts Google's own power procurement needs into a bilateral partnership engine. DeepMind Energy Lab applies frontier science to energy R&D problems. Together they position Google as the energy industry's indispensable strategic partner — not a transactional cloud vendor.",
 };
 
 export default function S08OKR() {
@@ -52,10 +53,10 @@ export default function S08OKR() {
   return (
     <div className="section-page">
       <div className="section-header">
-        <div className="section-eyebrow">08 · OKR Dashboard</div>
+        <div className="section-eyebrow">09 · OKR Dashboard</div>
         <h1 className="section-title">Day-90 OKR Scorecard</h1>
         <p className="section-desc">
-          Five objectives, 15 key results. Click any KR status pill to cycle: Not Started → On Track → At Risk → Complete.
+          Six objectives, 20 key results. Click any KR status pill to cycle: Not Started → On Track → At Risk → Complete.
           Click an objective heading to expand its strategic rationale. This scorecard drives the weekly Deal &amp; Product Council and the Day-90 board review.
         </p>
       </div>

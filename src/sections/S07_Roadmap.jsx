@@ -72,6 +72,8 @@ export default function S07Roadmap() {
             'APAC sovereign proof — Pertamina / PTTEP expansion live',
             'Multicloud fortress proof — Shell or Oxy wedge live',
             'ISV co-innovation reveal — Cognite / SLB / Kongsberg joint',
+            'Project Interchange bilateral — 1 MOU/LOI signed',
+            'DeepMind Energy Lab — 1 Tier 1 research partnership + GNoME demo',
           ]}
         />
         <CountdownClock
@@ -85,6 +87,8 @@ export default function S07Roadmap() {
             'PE sponsor-platform expansion (Quantum / EnCap)',
             'APAC Lead expansion — Reliance / Inpex / Harbour Energy',
             'North American reference wins — ≥4x pipeline coverage',
+            'Interchange portfolio expansion — bilateral OS at scale',
+            'DeepMind Energy Lab research results & new vertical reveals',
           ]}
         />
       </div>
@@ -109,7 +113,7 @@ export default function S07Roadmap() {
           {phase.workstreams.map(ws => (
             <div key={ws.name} className="card">
               <div className="card-title mb-10">{ws.name}</div>
-              <div className="stack-sm mb-14">
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }} className="mb-14">
                 {ws.actions.map(a => (
                   <div key={a} className="row gap-8" style={{ alignItems: 'flex-start' }}>
                     <span style={{ color: 'var(--google-blue)', fontSize: '12px', minWidth: '10px', marginTop: '2px' }}>›</span>

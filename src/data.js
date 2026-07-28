@@ -9,7 +9,7 @@ export const META = {
 };
 
 export const NAV_ITEMS = [
-  { id: "thesis",      num: "01", label: "Strategic Thesis",          sub: "Five-Pillar Framework" },
+  { id: "thesis",      num: "01", label: "Strategic Thesis",          sub: "Six-Pillar Framework" },
   { id: "offense",     num: "02", label: "Market Offense",            sub: "Named Account Tiers" },
   { id: "partners",    num: "03", label: "Partner Coalition",         sub: "ISVs · GSIs · Academia" },
   { id: "technology",  num: "04", label: "Technology Stack",          sub: "Agentic OSDU · Sovereign Trio" },
@@ -17,8 +17,9 @@ export const NAV_ITEMS = [
   { id: "exchange",    num: "06", label: "Energy Exchange",           sub: "Energy-for-Intelligence" },
   { id: "roadmap",     num: "07", label: "30-60-90 Roadmap",          sub: "ADIPEC · CERAWeek Anchors" },
   { id: "enablement",  num: "08", label: "Sales Enablement & GTM",    sub: "Scaling the Machine" },
-  { id: "okr",         num: "09", label: "OKR Scorecard",             sub: "O1–O5 · Day 90 KRs" },
-  { id: "decisions",   num: "10", label: "Executive Decisions",       sub: "6 Asks · First 30 Days" },
+  { id: "okr",         num: "09", label: "OKR Scorecard",             sub: "O1–O6 · Day 90 KRs" },
+  { id: "decisions",   num: "10", label: "Executive Decisions",       sub: "10 Asks · First 30 Days" },
+  { id: "thinkbig",    num: "11", label: "THINK BIG",                  sub: "Interchange · DeepMind Lab" },
 ];
 
 export const PILLARS = [
@@ -32,15 +33,15 @@ export const PILLARS = [
   {
     num: "2",
     title: "Ecosystem Coalition",
-    posture: "Domain ISVs · Google-native AI · Energy GSIs · Academia",
-    proof: "3 ISV charters; 2 GSIs certified; ≥30% partner-originated pipeline",
+    posture: "Domain ISVs · Google-native AI · Energy GSIs · Academia · Google Startup Enablement · HUMAIN AI (KSA)",
+    proof: "3 ISV charters; 2 GSIs certified; ≥30% partner-originated pipeline; ≥3 startups onboarded; HUMAIN AI engagement initiated",
     color: "teal",
   },
   {
     num: "3",
     title: "Technology",
-    posture: "Agentic OSDU & Non-OSDU Path · Gemini 3.5/3.6 Reasoning · Subsurface HPC Supercomputing · Sovereign Trio & Earth Engine",
-    proof: "Reference architecture ratified; 1 sovereign NOC PoC scoped; HPC burst architecture validated with operator benchmarks",
+    posture: "Agentic OSDU & Non-OSDU Path · Gemini 3.5/3.6 Reasoning · GCP-Hosted Industry Foundation Models (Timeseries + Subsurface) · Subsurface HPC Supercomputing · Sovereign Trio & Earth Engine",
+    proof: "Reference architecture ratified; 1 sovereign NOC PoC scoped; HPC burst architecture validated; 1 FM in ISV validation; 6 ISV data partnerships scoped (TGS/SLB/Baker Hughes/Siemens/AspenTech/Enverus)",
     color: "purple",
   },
   {
@@ -56,6 +57,13 @@ export const PILLARS = [
     posture: "Bilateral industrial partnerships: firm power ↔ AI-native operations",
     proof: "2 CEO-level dialogues opened; ADIPEC + CERAWeek narratives locked",
     color: "amber",
+  },
+  {
+    num: "6",
+    title: "THINK BIG",
+    posture: "Project Interchange (Energy-AI bilateral OS) · DeepMind Energy Lab (frontier R&D engine)",
+    proof: "1 Interchange MOU/LOI signed; 1 DeepMind research partnership; ADIPEC marquee announcements",
+    color: "red",
   },
 ];
 
@@ -183,13 +191,18 @@ export const TIMELINE_PHASES = [
       },
       {
         name: "Ecosystem",
-        actions: ["Executive workshops with Cognite, SLB, Baker Hughes, Kongsberg Digital", "Convert Baker Hughes power collaboration into upstream expansion charter", "Open EPAM, Accenture, and TCS/Infosys/Wipro certification tracks", "Activate Palantir/C3.ai for fortress wedge; AspenTech for refinery play"],
-        exit: "4 ISV joint-business-plan drafts; 3 GSIs in certification; APAC delivery model defined",
+        actions: ["Executive workshops with Cognite, SLB, Baker Hughes, Kongsberg Digital", "Convert Baker Hughes power collaboration into upstream expansion charter", "Open EPAM, Accenture, and TCS/Infosys/Wipro certification tracks", "Activate Palantir/C3.ai for fortress wedge; AspenTech for refinery play", "Initiate Foundation Model co-development scoping with TGS, SLB, Baker Hughes, Siemens, AspenTech, Enverus — identify first ISV dataset for Timeseries FM pilot", "Qualify initial startup cohort (Highwood, Qube, Carbon Direct, Corva, ResFrac) for Google for Startups Cloud Program", "Open HUMAIN AI executive engagement for KSA sovereign AI enablement on Dammam me-central2"],
+        exit: "4 ISV joint-business-plan drafts; 3 GSIs in certification; APAC delivery model defined; FM co-dev scoping initiated with ≥2 ISVs; startup cohort shortlisted; HUMAIN AI engagement opened",
       },
       {
         name: "Narrative & Alphabet",
         actions: ["Publish agentic OSDU point of view", "Lock ADIPEC keynote/panel slots and demo storyline", "Brief DeepMind, Geo, Workspace, Security, Energy Procurement on module packaging", "Initiate Rice Baker Institute + UH Energy Transition Center MOU conversations"],
         exit: "ADIPEC plan approved; PoV in market; 3 Alphabet modules staffed with owners; Academia MOU drafts initiated",
+      },
+      {
+        name: "THINK BIG",
+        actions: ["Brief Google Energy Procurement leadership on Project Interchange bilateral framework", "Identify 2 Interchange pilot accounts (EQT + Pertamina) and initiate CEO-level 'two-badge' dialogues", "Internal credibility-building phase for DeepMind Energy Lab — establish stakeholder relationships before engaging DeepMind leadership"],
+        exit: "Interchange framework drafted; 2 pilot account dialogues initiated; internal groundwork laid for DeepMind engagement",
       },
     ],
   },
@@ -215,8 +228,13 @@ export const TIMELINE_PHASES = [
       },
       {
         name: "Product & Enablement",
-        actions: ["Harden agentic OSDU reference architecture with engineering", "Publish solution architectures with 3 ISVs", "Train first GSI cohorts; operationalize production-readiness review"],
-        exit: "Architecture ratified; 3 packaged ISV offers; 2 GSI kits; 25 sellers + 40 partner practitioners enabled",
+        actions: ["Harden agentic OSDU reference architecture with engineering", "Publish solution architectures with 3 ISVs", "Train first GSI cohorts; operationalize production-readiness review", "First ISV dataset onboarded to Vertex AI for Foundation Model pre-training validation (Timeseries FM)", "3 O&G/carbon startups receiving Google for Startups Cloud Program credits & Vertex AI grants", "HUMAIN AI architecture design session completed on Dammam sovereign region; joint Aramco scope drafted"],
+        exit: "Architecture ratified; 3 packaged ISV offers; 2 GSI kits; 25 sellers + 40 partner practitioners enabled; FM pre-training validation underway; 3 startups active on GCP; HUMAIN AI sovereign design complete",
+      },
+      {
+        name: "THINK BIG",
+        actions: ["Draft bilateral MOU template with legal for Project Interchange; scope power capacity & GCP consumption economics for EQT + Pertamina", "Brief DeepMind leadership on Energy Lab concept; identify 1-2 Tier 1 research partners (Aramco R&D, TotalEnergies R&D, Oxy 1PointFive)", "Scope first DeepMind Energy Lab pilot: CCUS molecular discovery or pipeline corrosion alloy screening", "Initiate Rice Baker Institute / KAUST academic advisory board conversations for DeepMind Energy Lab"],
+        exit: "Interchange MOU template drafted; DeepMind leadership briefed; 1-2 Tier 1 research candidates identified; first pilot scope defined",
       },
     ],
   },
@@ -227,8 +245,8 @@ export const TIMELINE_PHASES = [
     workstreams: [
       {
         name: "Industrialize",
-        actions: ["Convert strongest independent launchpad into repeatable field offering", "Certify both anchor GSIs (EPAM, Accenture)", "Publish blueprints, evaluation suites, governance controls for 6 agent patterns"],
-        exit: "3 kits shipped; 6 production-ready patterns; GSI certification complete",
+        actions: ["Convert strongest independent launchpad into repeatable field offering", "Certify both anchor GSIs (EPAM, Accenture)", "Publish blueprints, evaluation suites, governance controls for 6 agent patterns", "Foundation Model validation results published; Subsurface FM scoping initiated with TGS multi-client data", "≥1 startup listed on Google Cloud Marketplace; remaining cohort in onboarding pipeline", "HUMAIN AI PoC scope ratified with Aramco; joint KSA GTM framework in place"],
+        exit: "3 kits shipped; 6 production-ready patterns; GSI certification complete; 1 FM validated; ≥1 startup on Marketplace; HUMAIN AI Aramco scope signed",
       },
       {
         name: "Pipeline",
@@ -245,6 +263,11 @@ export const TIMELINE_PHASES = [
         actions: ["Codify cross-functional industry operating model v2", "Launch executive advisory council (operators, ISVs, GSIs, Google product leaders)", "Present 90-day review and FY27 plan"],
         exit: "90-day board review delivered; FY27 plan endorsed; council seated",
       },
+      {
+        name: "THINK BIG",
+        actions: ["Present Project Interchange framework at ADIPEC 2026 as marquee announcement; target 1 signed MOU or LOI", "Announce DeepMind Energy Lab at ADIPEC 2026; target 1 signed Tier 1 research partnership (Aramco or TotalEnergies)", "GNoME corrosion screening demo live for ADIPEC audience", "Academic advisory board (Rice/KAUST) constituted; position both initiatives for CERAWeek 2027 scale"],
+        exit: "1 Interchange MOU/LOI signed; 1 DeepMind research partnership signed; both announced at ADIPEC; CERAWeek 2027 expansion plan locked",
+      },
     ],
   },
 ];
@@ -257,6 +280,7 @@ export const OKRS = [
       { text: "3–5 Tier 1 accounts signed (public independents + private operators); ≥1 live in production", status: "not-started" },
       { text: "1 PE sponsor-platform framework (Quantum-class) in negotiation, unlocking portfolio-wide replication", status: "not-started" },
       { text: "Six-agent reference portfolio published; ADIPEC keynote with 2–3 customer-approved announceables", status: "not-started" },
+      { text: "1 GCP-hosted industry foundation model (Timeseries or Subsurface) in partner validation with ≥1 ISV dataset (TGS/SLB/Baker Hughes)", status: "not-started" },
     ],
   },
   {
@@ -275,6 +299,7 @@ export const OKRS = [
       { text: "1 Gulf NOC (Aramco or KOC) PoC scope ratification and joint architecture sign-off", status: "not-started" },
       { text: "Sovereign framework validated across 6 regions (Dammam/Doha/Jakarta/Bangkok/Tokyo/GDC); CNTXT + APAC GSI blueprints complete", status: "not-started" },
       { text: "Pertamina/PTTEP expansion live; Inpex scoping initiated; commercial framework targeted for CERAWeek 2027", status: "not-started" },
+      { text: "HUMAIN AI platform enablement initiated on Dammam me-central2; joint Aramco sovereign AI scope defined and ratified", status: "not-started" },
     ],
   },
   {
@@ -284,6 +309,7 @@ export const OKRS = [
       { text: "3 ISV charters signed; 1 Google-native innovator (Palantir/C3.ai) embedded in a fortress wedge", status: "not-started" },
       { text: "2 anchor GSIs certified (EPAM for OSDU/agentic delivery, Accenture for scale); readiness review operational", status: "not-started" },
       { text: "≥30% of qualified pipeline partner-originated or co-sold", status: "not-started" },
+      { text: "≥3 O&G/carbon startups onboarded to Google for Startups Cloud Program; ≥1 listed on Google Cloud Marketplace with enterprise procurement pathway", status: "not-started" },
     ],
   },
   {
@@ -293,6 +319,17 @@ export const OKRS = [
       { text: "3 Alphabet modules (geospatial, security, WeatherNext) embedded in live pursuits with owners and pricing", status: "not-started" },
       { text: "TotalEnergies reciprocity pursuit active; Baker Hughes collaboration extended upstream", status: "not-started" },
       { text: "2 CEO-level Energy Exchange dialogues opened (EQT/Expand class); Rice + UH MOUs signed", status: "not-started" },
+    ],
+  },
+  {
+    id: "O6",
+    title: "Launch THINK BIG: Interchange & DeepMind Energy Lab",
+    krs: [
+      { text: "Project Interchange framework presented to Google Energy Procurement leadership; 2 pilot accounts (EQT + Pertamina) identified with CEO-level dialogues initiated", status: "not-started" },
+      { text: "1 Interchange bilateral MOU or LOI signed; power capacity & GCP consumption economics scoped for pilot accounts", status: "not-started" },
+      { text: "DeepMind Energy Lab concept briefed to DeepMind leadership (Day 31-60); 1-2 Tier 1 research partner candidates identified (Aramco R&D, TotalEnergies R&D, or Oxy 1PointFive)", status: "not-started" },
+      { text: "1 signed DeepMind Tier 1 research partnership; GNoME corrosion screening demo live; academic advisory board (Rice/KAUST) constituted", status: "not-started" },
+      { text: "Both initiatives announced as marquee ADIPEC 2026 reveals; positioned for CERAWeek 2027 scale", status: "not-started" },
     ],
   },
 ];
@@ -334,6 +371,30 @@ export const EXECUTIVE_DECISIONS = [
     owner: "",
     status: "pending",
   },
+  {
+    title: "Authorize GCP-hosted Foundation Model co-development framework with ISV data partners",
+    detail: "Confirm zero-joint-IP policy between Google and ISVs (TGS, SLB, Baker Hughes, Siemens, AspenTech, Enverus). Joint IP reserved exclusively for tripartite engagements with customer/operator participation. Approve Vertex AI Model Garden hosting architecture and Trillium TPU / A3 Ultra GPU compute allocation for FM pre-training.",
+    owner: "",
+    status: "pending",
+  },
+  {
+    title: "Approve Google for Startups Cloud Program cohort for O&G/carbon startups and authorize HUMAIN AI sovereign enablement",
+    detail: "Confirm initial startup cohort (Highwood Emissions, Qube Technologies, Carbon Direct, Planet/MethaneSAT, Corva, ResFrac, Subsurface AI) for up to $200k GCP credits + Vertex AI grants + Marketplace fast-tracking. Separately authorize HUMAIN AI platform enablement on Dammam me-central2 sovereign region and joint GTM with Saudi Aramco.",
+    owner: "",
+    status: "pending",
+  },
+  {
+    title: "Authorize Project Interchange bilateral framework with Google Energy Procurement",
+    detail: "Approve the Energy-AI bilateral operating framework where energy operators provide firm power for Google data centers in exchange for preferential Alphabet AI stack access. Requires alignment with Google Energy Procurement leadership, legal decoupling of power off-take and cloud licensing, and identification of 2 pilot accounts (EQT + Pertamina). This is a Google-level strategic initiative championed by the Market Lead.",
+    owner: "",
+    status: "pending",
+  },
+  {
+    title: "Authorize DeepMind Energy Lab joint research program",
+    detail: "Approve the structured DeepMind Energy Lab program applying frontier science (GNoME materials discovery, AlphaFold molecular simulation, TORAX physics, AlphaEvolve) to energy R&D. Requires DeepMind leadership alignment (Day 31-60 after internal credibility established), scoping of Tier 1 research partnerships ($10-50M multi-year), and identification of first pilot (CCUS solvent design or corrosion alloy discovery). Academic advisory board (Rice Baker Institute, KAUST) to be constituted.",
+    owner: "",
+    status: "pending",
+  },
 ];
 
 export const COMPETITIVE_ACCOUNTS = [
@@ -341,7 +402,7 @@ export const COMPETITIVE_ACCOUNTS = [
   { name: "EQT / Expand",    incumbent: "Greenfield",  googlePosture: "Lead",     wedge: "Production surveillance agents · power-demand analytics",          expand: "Energy Exchange CEO dialogue" },
   { name: "Devon Energy",    incumbent: "Azure", googlePosture: "Lead",     wedge: "Merger data & process integration agents · common asset ontology", expand: "Fervo clean-power synergy" },
   { name: "Diamondback",     incumbent: "Greenfield",  googlePosture: "Lead",     wedge: "Agentic Subsurface Starter · D&C optimization",                   expand: "Full Permian asset fleet" },
-  { name: "Saudi Aramco",    incumbent: "CNTXT", googlePosture: "Lead",     wedge: "Sovereign Industrial Agent Platform in Class C Dammam",           expand: "Enterprise-wide agentic rollout" },
+  { name: "Saudi Aramco",    incumbent: "CNTXT", googlePosture: "Lead",     wedge: "Sovereign Industrial Agent Platform in Class C Dammam + HUMAIN AI sovereign enablement",           expand: "Enterprise-wide agentic rollout; HUMAIN AI joint GTM across Kingdom entities" },
   { name: "TotalEnergies",   incumbent: "Multi", googlePosture: "Lead",     wedge: "Gemini agents on Cognite estate + Energy Exchange reciprocity",    expand: "Global upstream + new-energy portfolio" },
   { name: "Harbour Energy",  incumbent: "Greenfield",  googlePosture: "Lead",     wedge: "M&A integration agents · Wintershall Dea asset ontology merger",   expand: "Global asset fleet across 9 countries" },
   { name: "Reliance Ind.",   incumbent: "GCP",   googlePosture: "Lead",     wedge: "Jamnagar AI Region · refinery optimization · process safety agents",expand: "Full O2C + new-energy portfolio" },
@@ -366,13 +427,13 @@ export const COMPETITIVE_ACCOUNTS = [
 
 
 export const ALPHABET_CAPABILITIES = [
-  { name: "Google DeepMind",    icon: "🧬", app: "Operational weather risk · materials discovery · R&D acceleration",   play: "WeatherNext ops-risk agent in trading evaluation; DeepMind science briefing for Aramco/TotalEnergies R&D" },
+  { name: "Google DeepMind",    icon: "🧬", app: "Operational weather risk · materials discovery · R&D acceleration · FM pre-training architecture collaboration",   play: "WeatherNext ops-risk agent in trading evaluation; DeepMind science briefing for Aramco/TotalEnergies R&D; DeepMind architecture guidance for O&G domain FM pre-training" },
   { name: "Geospatial Stack",   icon: "🌍", app: "Pipeline ROW monitoring · methane/flaring analytics · CCUS site selection", play: "Earth Engine ROW module in Williams/Kinder Morgan pitch; geospatial layer in every OSDU demo" },
   { name: "Workspace + Gemini", icon: "📋", app: "Fastest change-management path: agents inside tools engineers already use", play: "Bundle Workspace-with-Gemini into every independent starter as the adoption layer; KOC clean-slate productivity track" },
   { name: "Mandiant · Wiz",     icon: "🔐", app: "OT/ICS threat intel · sovereign SOC models · securing the agent estate", play: "Security briefing as non-threatening door-opener at fortress accounts; sovereign SOC module in Aramco/KOC frameworks" },
   { name: "Tapestry (Grid)",    icon: "⚡", app: "AI-powered grid planning · interconnection intelligence for energy operators", play: "Tapestry dimension in EQT/Williams demand-thesis dialogues; grid-planning module for Gulf national-infrastructure" },
   { name: "Energy Procurement", icon: "☀️", app: "Replicable procurement blueprints: nuclear, geothermal, storage, solar PPAs", play: "Energy-procurement leaders join EQT/TotalEnergies exec sessions — the two-badge meeting no competitor can convene" },
-  { name: "Carbon & Environment",icon:"🌱", app: "MRV agents for CCUS · carbon-market intelligence · methane-detection · ESG automation", play: "Carbon-MRV module in Oxy wedge (1PointFive adjacency); carbon-intelligence for trading desks" },
+  { name: "Carbon & Environment",icon:"🌱", app: "MRV agents for CCUS · carbon-market intelligence · methane-detection · ESG automation · Startup Accelerator pipeline", play: "Carbon-MRV module in Oxy wedge (1PointFive adjacency); carbon-intelligence for trading desks; Startup accelerator cohort (Highwood, Qube, Carbon Direct, MethaneSAT) enabled on GCP" },
 ];
 
 export const GOOGLE_AI_DIFFERENTIATORS = [
@@ -501,6 +562,13 @@ export const COMPETITIVE_MATRIX_GRID = [
     aws: "AWS Outposts (Hardware locked to AWS control plane)",
     azure: "Azure Stack (Complex multi-region governance)",
     winner: "Google Cloud (Unified NOC decision framework)"
+  },
+  {
+    feature: "Industry Foundation Models",
+    gcp: "GCP-hosted domain FMs (Timeseries + Subsurface) with TGS/SLB/Baker Hughes/Siemens/AspenTech/Enverus data",
+    aws: "No energy-specific FMs; generic SageMaker JumpStart models",
+    azure: "No energy-specific FMs; generic Azure AI Studio",
+    winner: "Google Cloud (only hyperscaler with domain ISV FM coalition)"
   }
 ];
 
@@ -656,6 +724,22 @@ export const ENABLEMENT_KITS = [
     timeline: "Days 30–60",
     phase: 2,
     status: "not-started"
+  },
+  {
+    name: "Industry Foundation Models Sales Kit",
+    audience: "Sales + Solutions",
+    contents: "FM architecture overview (Timeseries + Subsurface), ISV partner data contributions (TGS/SLB/Baker Hughes/Siemens/AspenTech/Enverus), customer deployment playbook, TCO comparison vs custom-trained models, competitive positioning vs AWS/Azure",
+    timeline: "Days 30–60",
+    phase: 2,
+    status: "not-started"
+  },
+  {
+    name: "Startup & HUMAIN AI Ecosystem Kit",
+    audience: "BD + Sales",
+    contents: "Google for Startups Cloud Program details ($200k credits, Vertex AI grants, Marketplace fast-track), curated startup profiles (Carbon/Methane MRV + Drilling AI), GCP Marketplace procurement workflow for enterprise operators, HUMAIN AI sovereign positioning for KSA accounts",
+    timeline: "Days 30–60",
+    phase: 2,
+    status: "not-started"
   }
 ];
 
@@ -718,4 +802,234 @@ export const FIELD_MULTIPLIER_METRICS = [
   { metric: "Demand-gen campaigns live",        day0: 0, day30: 0,  day60: 1,  day90: 2,  unit: "",  color: "amber" },
   { metric: "Analyst / media briefings",       day0: 0, day30: 2,  day60: 5,  day90: 8,  unit: "+", color: "blue" },
   { metric: "Pipeline coverage ratio",          day0: 0, day30: 2,  day60: 3,  day90: 4,  unit: "×", color: "green" }
+];
+
+// ── Oil & Gas Industry Foundation Models ────────────────────────────────
+export const OAG_FOUNDATION_MODELS = {
+  ipFramework: "GCP-Hosted Partner FMs — Zero joint IP between Google and ISVs. Joint IP reserved exclusively for tripartite engagements with customer/operator participation. Operator-customized fine-tuned weights belong exclusively to the operator.",
+  infrastructure: "Vertex AI Model Garden / GKE clusters + Trillium TPUs + A3 Ultra GPUs + Parallelstore (DAOS) sub-ms I/O",
+  categories: [
+    {
+      id: "timeseries",
+      title: "Timeseries Foundation Models",
+      subtitle: "Production, Drilling & Operations",
+      icon: "📈",
+      color: "blue",
+      scope: "Pre-trained on high-frequency sensor streams: WITSML, SCADA, mud logging, surface/downhole pressure, ESP/gas-lift diagnostics, refinery process dynamics, compressor telemetry.",
+      useCases: [
+        "Real-time stick-slip & vibration anomaly detection",
+        "Automated Rate-Transient Analysis (RTA) & decline curve forecasting",
+        "Proactive artificial lift failure prediction (ESP, gas-lift, rod pump)",
+        "Predictive maintenance for turbomachinery & compressors",
+        "Refinery yield optimization & process safety monitoring",
+      ],
+    },
+    {
+      id: "subsurface",
+      title: "Subsurface & Basin Foundation Models",
+      subtitle: "Seismic, Reservoir & Market Intelligence",
+      icon: "🌐",
+      color: "purple",
+      scope: "Multimodal spatial models trained on 2D/3D/4D seismic volumes, acoustic impedance, borehole image logs, core data, and Enverus basin analytics.",
+      useCases: [
+        "Zero-shot seismic horizon picking & automated fault identification",
+        "Acoustic velocity inversion & impedance estimation",
+        "Multi-well LAS/DLIS log correlation across basins",
+        "Fast proxy reservoir simulation (10–100× faster than physics sim)",
+        "Basin-wide well performance forecasting & benchmarking",
+      ],
+    },
+  ],
+  partners: [
+    { name: "TGS", icon: "🗺️", contribution: "Multi-client seismic volumes, well log data, borehole image libraries, basin analytics", fmCategory: "Subsurface FM", color: "amber" },
+    { name: "SLB (Delfi)", icon: "🔬", contribution: "Subsurface interpretation engines, reservoir fluid dynamics, drilling automation data, Petrel integration", fmCategory: "Subsurface + Timeseries FM", color: "teal" },
+    { name: "Baker Hughes", icon: "⚙️", contribution: "Real-time downhole drilling telemetry (WITSML), artificial lift diagnostics, turbomachinery health streams, Cordant IET data", fmCategory: "Timeseries FM", color: "blue" },
+    { name: "Siemens / Siemens Energy", icon: "🏭", contribution: "Industrial SCADA telemetry, gas turbine & compressor digital twin time-series, power infrastructure telemetry", fmCategory: "Timeseries FM", color: "purple" },
+    { name: "AspenTech", icon: "🧪", contribution: "Refining process simulation models, chemical APM data, yield optimization datasets", fmCategory: "Timeseries FM", color: "green" },
+    { name: "Enverus", icon: "📊", contribution: "Basin-level completion & production data, land/lease boundaries, energy market intelligence, cost benchmarking", fmCategory: "Subsurface + Market FM", color: "amber" },
+  ],
+};
+
+// ── Startup Accelerator Portfolio ────────────────────────────────────────
+export const STARTUP_ACCELERATOR_PORTFOLIO = {
+  program: {
+    name: "Google for Startups Cloud Program",
+    credits: "Up to $200,000 in GCP credits over 2 years ($100k Year 1; 20% match up to $100k Year 2)",
+    aiGrants: "Vertex AI, Gemini Flash & Pro API credits, GPU/TPU accelerator quotas",
+    marketplace: "Streamlined onboarding to Google Cloud Marketplace — enterprise operators can procure startup solutions against GCP commitment drawdowns",
+    vcNetwork: "Energy Impact Partners, Climate Investment, Equinor Ventures, Chevron Technology Ventures",
+  },
+  hubs: [
+    { region: "Houston, TX", icon: "🇺🇸", focus: "Permian Basin, Gulf Coast independents, US majors" },
+    { region: "Western Europe", icon: "🇪🇺", focus: "London / Aberdeen / Oslo — Offshore North Sea, Net Zero CCS, Equinor/Aker BP ecosystems" },
+    { region: "Dubai / Abu Dhabi", icon: "🇦🇪", focus: "UAE energy transition, ADNOC digitalization, regional NOC hub" },
+  ],
+  startups: [
+    { name: "Highwood Emissions", category: "Carbon Management & Methane MRV", icon: "🌿", capability: "Methane abatement planning and regulatory emissions intelligence", color: "green" },
+    { name: "Qube Technologies", category: "Carbon Management & Methane MRV", icon: "📡", capability: "Continuous optical/sensor methane emissions detection at wellsite scale", color: "green" },
+    { name: "Carbon Direct", category: "Carbon Management & Methane MRV", icon: "💨", capability: "Carbon management software and CCUS site verification platform", color: "green" },
+    { name: "Planet Labs / MethaneSAT", category: "Carbon Management & Methane MRV", icon: "🛰️", capability: "High-resolution satellite methane plume detection integrated with Google Earth Engine Enterprise", color: "green" },
+    { name: "Corva", category: "Drilling & Subsurface AI", icon: "🛢️", capability: "Real-time drilling and completions operational analytics platform", color: "blue" },
+    { name: "ResFrac", category: "Drilling & Subsurface AI", icon: "⛏️", capability: "Coupled geomechanics and fluid-flow hydraulic fracturing simulation", color: "blue" },
+    { name: "Subsurface AI", category: "Drilling & Subsurface AI", icon: "🧠", capability: "Automated seismic and geological interpretation using deep learning", color: "blue" },
+  ],
+};
+
+// ── HUMAIN AI Strategic Partnership (KSA) ───────────────────────────────
+export const HUMAIN_AI_PARTNERSHIP = {
+  name: "HUMAIN AI",
+  flag: "🇸🇦",
+  region: "Saudi Arabia (Dammam me-central2 / GDC Air-Gapped)",
+  headline: "Strategic KSA AI Enablement Partner for Sovereign Energy Workloads",
+  pillars: [
+    {
+      title: "Platform Enablement",
+      icon: "🏗️",
+      detail: "Deploy and optimize HUMAIN AI enterprise platform natively on Google Cloud within Saudi Arabia — Dammam me-central2 sovereign region and Google Distributed Cloud Air-Gapped for classified OT/ICS workloads.",
+    },
+    {
+      title: "Joint Aramco & Kingdom GTM",
+      icon: "🤝",
+      detail: "Co-sell HUMAIN AI solution suites into Saudi Aramco, Ministry of Energy, and local Saudi industrial entities. Leverage CNTXT sovereign controls and HUMAIN AI domain capabilities for in-Kingdom delivery.",
+    },
+    {
+      title: "In-Kingdom Value Addition (IKVA)",
+      icon: "🏛️",
+      detail: "Align with Saudi Vision 2030 by establishing localized AI enablement for sovereign energy workloads — workforce development, local data center utilization, and technology transfer programs.",
+    },
+  ],
+  targetAccounts: ["Saudi Aramco", "Ministry of Energy (KSA)", "SABIC", "Ma'aden", "Gulf NOCs with KSA operations"],
+};
+
+// ── THINK BIG: Transformative Alphabet-Only Energy Initiatives ──────────
+export const THINK_BIG_INITIATIVES = {
+  headline: "Two strategic initiatives uniquely possible only through the full Alphabet portfolio — ideas that no other hyperscaler can replicate.",
+  initiatives: [
+    {
+      id: "interchange",
+      title: "Project Interchange",
+      subtitle: "The Energy-AI Bilateral Operating System",
+      icon: "⚡",
+      color: "amber",
+      thesis: "Google is spending $195–205B in CapEx in 2026 with $811B in contracted future spending — the largest infrastructure build in history. The dominant cost driver is power. Energy operators hold the world's largest portfolio of firm, dispatchable, 24/7 power assets. No other hyperscaler is simultaneously the world's largest AI company AND a company that needs to buy energy at industrial scale.",
+      mechanism: "A formal bilateral framework where energy companies enter structured partnerships with Google/Alphabet: operators provide firm power (gas, geothermal, nuclear SMR, battery storage) for Google data centers, and in return gain preferential access to the full Alphabet AI stack — DeepMind science, Tapestry grid planning, WeatherNext, and Gemini autonomous operations.",
+      positioning: "Google-level strategic initiative championed and architected by the Market Lead",
+      onlyGoogle: [
+        { dimension: "Power procurement org", google: "Dedicated Energy Procurement; acquired Intersect Power ($4.75B)", competitor: "Standard PPA desk" },
+        { dimension: "Grid intelligence", google: "Tapestry (Alphabet X moonshot) — 'Google Maps for electrons'", competitor: "Nothing comparable" },
+        { dimension: "Fusion R&D", google: "DeepMind + CFS; TORAX simulator; 200MW fusion PPA", competitor: "None" },
+        { dimension: "DC power optimization", google: "DeepMind cooling optimization (30%+ reduction proven)", competitor: "Standard engineering" },
+        { dimension: "Weather prediction", google: "WeatherNext — state-of-the-art probabilistic forecasting", competitor: "None" },
+        { dimension: "Load flexibility", google: "Active demand-response pilots with TVA, I&M, OPPD", competitor: "Minimal" },
+      ],
+      targetAccounts: [
+        { name: "EQT / Expand Energy", powerAsset: "Largest US natural gas producer; Fervo geothermal adjacency", googleNeed: "Firm gas-fired power for US data centers", play: "Co-develop data-center-adjacent gas generation; Fervo geothermal JV; full Alphabet AI stack for Appalachian basin operations" },
+        { name: "TotalEnergies", powerAsset: "40GW global renewable + gas portfolio; largest European energy trader", googleNeed: "European & global data center power", play: "Bilateral power-for-AI framework; Cognite-on-GCP for global ops; Tapestry for grid interconnection planning" },
+        { name: "Pertamina", powerAsset: "2GW+ geothermal portfolio (largest in world); existing GCP customer", googleNeed: "APAC data center clean power (Jakarta region)", play: "Geothermal-powered data center campus in Java; sovereign AI platform for all 6 sub-holdings; DeepMind geothermal optimization" },
+        { name: "Reliance Industries", powerAsset: "Jamnagar refinery (world's largest); massive power generation", googleNeed: "India data center power", play: "AI Region at Jamnagar; refinery optimization + process safety agents; co-located power infrastructure" },
+        { name: "Saudi Aramco", powerAsset: "World's largest hydrocarbon producer; KSA grid operator", googleNeed: "Middle East sovereign data center power", play: "Sovereign industrial AI on Dammam me-central2; HUMAIN AI joint GTM; power-for-intelligence bilateral with Kingdom entities" },
+      ],
+      commercialStructure: {
+        operatorGives: ["Firm power commitment (gas / geo / nuclear SMR)", "Power-adjacent land & permits", "Grid interconnection rights", "Operational expertise"],
+        googleGives: ["GCP consumption credits at anchor pricing tier", "DeepMind Science Engine access", "Tapestry grid planning module", "WeatherNext ops intelligence", "Gemini autonomous operations suite", "Priority GPU/TPU capacity guarantees"],
+        operatorValue: ["GCP at 20-40% below list", "DeepMind R&D partnership", "Revenue from power sales", "Grid modernization (Tapestry)", "Talent & workforce upskilling"],
+        googleValue: ["Firm 24/7 power", "Faster DC buildout", "$1B+ anchor deals", "Industry credibility"],
+      },
+    },
+    {
+      id: "deepmind-lab",
+      title: "DeepMind Energy Lab",
+      subtitle: "The Frontier Science Engine for Energy R&D",
+      icon: "🧬",
+      color: "purple",
+      thesis: "The energy industry spends $80B+ annually on R&D. Yet fundamental bottlenecks — CCUS solvent design, corrosion-resistant alloys, catalytic optimization, reservoir simulation — remain locked behind decades-old approaches. Google DeepMind is the only AI lab that has simultaneously solved protein folding (AlphaFold), discovered 2.2M new materials (GNoME), built an automated science lab, created a differentiable plasma simulator (TORAX), and committed $40M to the DOE Genesis Mission.",
+      mechanism: "A structured joint research program where Google partners with energy majors, NOCs, and national labs to apply DeepMind's frontier science capabilities to the hardest unsolved problems in energy. This converts Google from a cloud vendor into the energy industry's indispensable R&D partner — creating generational lock-in, not transactional relationships.",
+      positioning: "Day 31-60 initiative after internal credibility is established; requires DeepMind leadership alignment",
+      onlyGoogle: [
+        { dimension: "Materials discovery", google: "GNoME (2.2M materials) + Automated Science Lab", competitor: "None" },
+        { dimension: "Molecular simulation", google: "AlphaFold 3", competitor: "None" },
+        { dimension: "Differentiable physics", google: "TORAX (JAX-native plasma simulator)", competitor: "None" },
+        { dimension: "Algorithmic discovery", google: "AlphaEvolve", competitor: "None" },
+        { dimension: "RL for physical control", google: "DeepMind (plasma control, DC cooling)", competitor: "Limited" },
+        { dimension: "DOE National Lab partnership", google: "Genesis Mission ($40M)", competitor: "Minimal" },
+      ],
+    },
+  ],
+};
+
+export const DEEPMIND_RESEARCH_VERTICALS = [
+  {
+    id: "molecular",
+    title: "Molecular Discovery for Energy Transition",
+    icon: "🧪",
+    color: "green",
+    tools: "GNoME (materials discovery) · AlphaFold 3 (molecular simulation) · Automated Science Lab (physical synthesis & testing)",
+    problems: [
+      { problem: "CCUS solvent design", current: "Trial-and-error chemistry; 5-10 year cycles", approach: "GNoME + AlphaFold screen 100,000+ candidate molecules for CO₂ binding affinity, thermal stability, and degradation resistance in weeks", targets: "Oxy (1PointFive DAC), Equinor (Northern Lights CCS), Aramco (Jubail CCS hub)" },
+      { problem: "Pipeline corrosion alloys", current: "Expensive field testing; limited options", approach: "GNoME discovers novel corrosion-resistant alloys optimized for H₂-blend, CO₂, and sour gas environments", targets: "Williams, Kinder Morgan, ADNOC (hydrogen blending)" },
+      { problem: "Catalyst optimization", current: "Iterative lab experiments", approach: "Computational screening of catalytic surfaces for higher selectivity and lower coking rates", targets: "Reliance (Jamnagar), TotalEnergies, Repsol, ENI" },
+      { problem: "Battery storage materials", current: "Limited cathode/anode options for grid-scale", approach: "GNoME-driven discovery of next-gen solid-state and sodium-ion battery chemistries", targets: "EQT (grid adjacency), Pertamina (EV transition), Gulf NOCs" },
+    ],
+  },
+  {
+    id: "physics",
+    title: "Physics Simulation at Frontier Scale",
+    icon: "⚛️",
+    color: "blue",
+    tools: "TORAX (plasma simulation, JAX-based) · Gemini multimodal reasoning · TPU supercomputing clusters",
+    problems: [
+      { problem: "Neural reservoir simulation", current: "Full-physics sim takes weeks; limited scenarios", approach: "Differentiable neural proxy simulators (TORAX architecture) — 10,000× faster scenario sweeps", targets: "Devon, Diamondback, EOG, Harbour Energy" },
+      { problem: "Enhanced Oil Recovery (EOR)", current: "Limited molecular-scale CO₂-flood modeling", approach: "GNoME (surfactant/polymer screening) + neural reservoir sim for optimized EOR", targets: "Oxy (CO₂-EOR leader), Petrobras (pre-salt), Aramco" },
+      { problem: "Geothermal system modeling", current: "Sparse subsurface data; high drilling risk", approach: "Transfer TORAX differentiable framework to geothermal modeling; couple with Earth Engine", targets: "Pertamina, Fervo/EQT, Chevron (Indonesia)" },
+      { problem: "LNG process optimization", current: "Fixed operating envelopes; limited real-time optimization", approach: "Gemini multimodal agents + DeepMind RL for liquefaction train optimization", targets: "QatarEnergy, Inpex (Ichthys), PTTEP" },
+    ],
+  },
+  {
+    id: "autonomous",
+    title: "Autonomous Operations Science",
+    icon: "🤖",
+    color: "teal",
+    tools: "AlphaEvolve (algorithm design) · Reinforcement Learning (control policies) · Gemini agentic reasoning",
+    problems: [
+      { problem: "Autonomous drilling", current: "Human-supervised with basic automation", approach: "RL-trained drilling control agents (inspired by plasma control) optimizing WOB, RPM, flow in real-time", targets: "Baker Hughes (Cordant), Devon, Diamondback" },
+      { problem: "Autonomous production management", current: "Rule-based optimization; manual well testing", approach: "Multi-agent RL for field-wide production allocation, artificial lift, and water handling", targets: "EQT/Expand, Continental Resources, Mewbourne" },
+      { problem: "Process safety prediction", current: "Reactive safety systems; bow-tie analysis", approach: "AlphaEvolve-designed anomaly detection discovering novel precursor patterns invisible to humans", targets: "Reliance, TotalEnergies, ENI, Repsol" },
+    ],
+  },
+];
+
+export const DEEPMIND_LAB_TIERS = [
+  {
+    tier: "Tier 1",
+    name: "Strategic Research Partners",
+    count: "3–5 accounts",
+    icon: "🔬",
+    color: "purple",
+    offering: "$10-50M multi-year joint research agreements; dedicated DeepMind research liaison; access to automated science laboratory; co-authored publications & shared IP on pre-competitive science; exclusive early access to energy-domain models",
+    targets: "Aramco, TotalEnergies, Oxy, Reliance",
+  },
+  {
+    tier: "Tier 2",
+    name: "Applied Science Customers",
+    count: "10–15 accounts",
+    icon: "⚙️",
+    color: "blue",
+    offering: "Packaged DeepMind-derived models on Vertex AI; GNoME Materials API for energy applications; neural reservoir simulation as managed service; standard GCP commercial terms",
+    targets: "Devon, Diamondback, Harbour, QatarEnergy, Inpex, PTTEP",
+  },
+  {
+    tier: "Tier 3",
+    name: "Ecosystem Enablement",
+    count: "ISVs & Startups",
+    icon: "🌐",
+    color: "teal",
+    offering: "DeepMind-derived APIs exposed through ISV platforms (SLB Delfi, Baker Hughes Cordant, Cognite Data Fusion); startup cohort builds on DeepMind APIs",
+    targets: "TGS, SLB, Baker Hughes, ResFrac, Corva",
+  },
+];
+
+export const THINK_BIG_TIMELINE = [
+  { phase: "Days 1–30", interchange: "Brief Google Energy Procurement leadership on Interchange framework; identify 2 pilot accounts (EQT + Pertamina); initiate CEO-level 'two-badge' dialogues", deepmind: "Internal credibility-building phase — establish relationships with Paula Natoli, Anil Jain, and key stakeholders before engaging DeepMind" },
+  { phase: "Days 31–60", interchange: "Draft bilateral MOU template with legal; scope power capacity & GCP consumption economics for pilot accounts; brief DeepMind on energy R&D module packaging", deepmind: "Brief DeepMind leadership on Energy Lab concept; identify 1-2 Tier 1 research partners (Aramco R&D, TotalEnergies R&D, Oxy 1PointFive); scope first CCUS molecular discovery pilot; initiate Rice/KAUST academic conversations" },
+  { phase: "Days 61–90", interchange: "Present Interchange framework at ADIPEC 2026 as marquee announcement; one signed MOU or LOI; position for CERAWeek 2027 expansion", deepmind: "Announce DeepMind Energy Lab at ADIPEC 2026; 1 signed Tier 1 research partnership (target: Aramco or TotalEnergies); GNoME corrosion screening demo live; academic advisory board constituted" },
 ];

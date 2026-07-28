@@ -16,6 +16,10 @@ const STALL_RISK = [
   { decision: 4, stalls: 'Aramco/KOC/QatarEnergy/Pertamina/PTTEP/Inpex engagement — NOCs will not proceed without a unified sovereign story' },
   { decision: 5, stalls: 'ISV joint business plans (Cognite, SLB, Baker Hughes, Kongsberg, AspenTech), GSI training, partner pipeline targets' },
   { decision: 6, stalls: 'ADIPEC content team, demo engineering, customer approval workflows for both events' },
+  { decision: 7, stalls: 'Foundation Model co-development with ISVs, Vertex AI pre-training pipeline, IP framework negotiations' },
+  { decision: 8, stalls: 'Startup cohort onboarding, GCP credits and Vertex AI grants allocation, Marketplace listing, HUMAIN AI sovereign enablement on Dammam me-central2' },
+  { decision: 9, stalls: 'Project Interchange bilateral MOU, EQT/Pertamina pilot scoping, Google Energy Procurement alignment, ADIPEC Interchange announcement' },
+  { decision: 10, stalls: 'DeepMind Energy Lab research partnerships, GNoME/AlphaFold pilot scoping, ADIPEC DeepMind announcement, academic advisory board constitution' },
 ];
 
 export default function S09Decisions() {
@@ -33,10 +37,10 @@ export default function S09Decisions() {
   return (
     <div className="section-page">
       <div className="section-header">
-        <div className="section-eyebrow">09 · Governance</div>
+        <div className="section-eyebrow">10 · Governance</div>
         <h1 className="section-title">Executive Decisions Required — First 30 Days</h1>
         <p className="section-desc">
-          Six decisions that must come from Google Cloud leadership in the first 30 days. These are not
+          Ten decisions that must come from Google Cloud leadership in the first 30 days. These are not
           requests for guidance — they are hard dependencies for specific workstreams. Each decision
           unresolved past Day 30 becomes a named blocker in the weekly Global O&amp;G Deal &amp; Product Council.
           Click status to cycle. Add owner and target date inline.
@@ -71,9 +75,9 @@ export default function S09Decisions() {
         </div>
       )}
 
-      {decided === 6 && (
+      {decided === EXECUTIVE_DECISIONS.length && (
         <div className="highlight-block mb-24" style={{ borderLeftColor: 'var(--green)', background: 'rgba(52,168,83,0.07)' }}>
-          <strong style={{ color: 'var(--green)' }}>All 6 decisions resolved.</strong> The 90-day plan is fully
+          <strong style={{ color: 'var(--green)' }}>All {EXECUTIVE_DECISIONS.length} decisions resolved.</strong> The 90-day plan is fully
           unblocked. Proceed to Day-30 board review and FY27 planning.
         </div>
       )}

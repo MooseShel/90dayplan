@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { STARTUP_ACCELERATOR_PORTFOLIO, HUMAIN_AI_PARTNERSHIP } from '../data';
 
 const ISVS = [
   {
@@ -260,6 +261,107 @@ export default function S03Partners() {
         belongs to the operator. The university receives a defined research fee, not royalties or equity. Google
         receives platform revenue as operators scale the solutions on GCP. No tie-in language; each component is
         independently structured.
+      </div>
+
+      <div className="sep" style={{ margin: '32px 0' }} />
+
+      {/* Layer 5 — Startup Accelerator & Enablement */}
+      <div className="section-eyebrow mb-8">Layer 5 · Energy &amp; Sustainability Startup Accelerator</div>
+      <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.65' }}>
+        Google's <strong style={{ color: 'var(--text-primary)' }}>Google for Startups Cloud Program</strong> is one of the most
+        generous in the industry — enabling high-promise energy and carbon management startups to go live on GCP
+        and become enterprise-procurable for our customers via Google Cloud Marketplace drawdown.
+      </p>
+
+      {/* Program Benefits */}
+      <div className="card mb-16" style={{ borderColor: 'var(--google-blue)', boxShadow: 'var(--shadow-glow-blue)' }}>
+        <div className="row gap-8 mb-12">
+          <span style={{ fontSize: '20px' }}>🚀</span>
+          <span className="card-title" style={{ margin: 0 }}>{STARTUP_ACCELERATOR_PORTFOLIO.program.name}</span>
+          <span className="pill pill-blue">Enablement Engine</span>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+          <div style={{ borderLeft: '2px solid var(--google-blue)', paddingLeft: '10px' }}>
+            <strong style={{ color: 'var(--text-primary)', display: 'block', marginBottom: '2px' }}>💰 Cloud Credits</strong>
+            {STARTUP_ACCELERATOR_PORTFOLIO.program.credits}
+          </div>
+          <div style={{ borderLeft: '2px solid var(--teal)', paddingLeft: '10px' }}>
+            <strong style={{ color: 'var(--text-primary)', display: 'block', marginBottom: '2px' }}>🧠 AI Compute Grants</strong>
+            {STARTUP_ACCELERATOR_PORTFOLIO.program.aiGrants}
+          </div>
+          <div style={{ borderLeft: '2px solid var(--purple)', paddingLeft: '10px' }}>
+            <strong style={{ color: 'var(--text-primary)', display: 'block', marginBottom: '2px' }}>🏪 Marketplace Acceleration</strong>
+            {STARTUP_ACCELERATOR_PORTFOLIO.program.marketplace}
+          </div>
+          <div style={{ borderLeft: '2px solid var(--green)', paddingLeft: '10px' }}>
+            <strong style={{ color: 'var(--text-primary)', display: 'block', marginBottom: '2px' }}>🤝 VC Network</strong>
+            {STARTUP_ACCELERATOR_PORTFOLIO.program.vcNetwork}
+          </div>
+        </div>
+      </div>
+
+      {/* Regional Hubs */}
+      <div className="row gap-12 mb-16" style={{ flexWrap: 'wrap' }}>
+        {STARTUP_ACCELERATOR_PORTFOLIO.hubs.map(h => (
+          <div key={h.region} className="card" style={{ flex: '1 1 200px', minWidth: '200px' }}>
+            <div className="row gap-8 mb-4">
+              <span style={{ fontSize: '18px' }}>{h.icon}</span>
+              <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-primary)' }}>{h.region}</span>
+            </div>
+            <div style={{ fontSize: '11.5px', color: 'var(--text-muted)' }}>{h.focus}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Curated Startup Grid */}
+      <div className="section-eyebrow mb-12">Curated Startup Cohort</div>
+      <div className="grid-2 mb-24" style={{ gap: '12px' }}>
+        {STARTUP_ACCELERATOR_PORTFOLIO.startups.map(s => (
+          <div key={s.name} className="card" style={{ borderColor: `var(--${s.color})` }}>
+            <div className="row gap-8 mb-6">
+              <span style={{ fontSize: '18px' }}>{s.icon}</span>
+              <div style={{ flex: 1 }}>
+                <div className="row-between">
+                  <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-primary)' }}>{s.name}</span>
+                  <span className={`pill pill-${s.color}`} style={{ fontSize: '10px' }}>{s.category}</span>
+                </div>
+              </div>
+            </div>
+            <div style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+              {s.capability}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="sep" style={{ margin: '32px 0' }} />
+
+      {/* HUMAIN AI Partnership */}
+      <div className="section-eyebrow mb-8">Strategic KSA Partnership · HUMAIN AI</div>
+      <div className="card mb-24" style={{ borderColor: 'var(--amber)', boxShadow: '0 0 12px rgba(244,180,26,0.1)' }}>
+        <div className="row gap-12 mb-12">
+          <span style={{ fontSize: '24px' }}>{HUMAIN_AI_PARTNERSHIP.flag}</span>
+          <div>
+            <div style={{ fontSize: '16px', fontWeight: 700, color: 'var(--text-primary)' }}>{HUMAIN_AI_PARTNERSHIP.name}</div>
+            <div style={{ fontSize: '12px', color: 'var(--amber)' }}>{HUMAIN_AI_PARTNERSHIP.headline}</div>
+          </div>
+          <span className="pill pill-amber" style={{ marginLeft: 'auto' }}>Sovereign KSA</span>
+        </div>
+        <div style={{ fontSize: '12px', color: 'var(--text-muted)', marginBottom: '14px', borderLeft: '2px solid var(--amber)', paddingLeft: '10px' }}>
+          <strong style={{ color: 'var(--text-secondary)' }}>Region: </strong>{HUMAIN_AI_PARTNERSHIP.region}
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '12px', marginBottom: '14px' }}>
+          {HUMAIN_AI_PARTNERSHIP.pillars.map(p => (
+            <div key={p.title} style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+              <div style={{ fontSize: '16px', marginBottom: '4px' }}>{p.icon}</div>
+              <strong style={{ color: 'var(--text-primary)', display: 'block', marginBottom: '4px' }}>{p.title}</strong>
+              {p.detail}
+            </div>
+          ))}
+        </div>
+        <div className="row gap-8" style={{ flexWrap: 'wrap' }}>
+          {HUMAIN_AI_PARTNERSHIP.targetAccounts.map(a => <span key={a} className="tag">{a}</span>)}
+        </div>
       </div>
     </div>
   );

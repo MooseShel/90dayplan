@@ -1,0 +1,413 @@
+import { useState } from 'react';
+import {
+  THINK_BIG_INITIATIVES,
+  DEEPMIND_RESEARCH_VERTICALS,
+  DEEPMIND_LAB_TIERS,
+  THINK_BIG_TIMELINE,
+} from '../data';
+
+const COLOR_MAP = {
+  amber: 'var(--amber)',
+  purple: 'var(--purple)',
+  blue: 'var(--google-blue)',
+  teal: 'var(--teal)',
+  green: 'var(--green)',
+  red: 'var(--red)',
+};
+
+function InterchangeSection({ data }) {
+  const cs = data.commercialStructure;
+  return (
+    <div className="flex-col" style={{ gap: '16px' }}>
+      {/* Thesis */}
+      <div className="highlight-block amber">
+        <strong style={{ color: 'var(--amber)', display: 'block', marginBottom: '6px' }}>
+          The Strategic Insight
+        </strong>
+        {data.thesis}
+      </div>
+
+      {/* Mechanism */}
+      <div className="card" style={{ borderColor: 'var(--amber)', boxShadow: '0 0 0 1px rgba(251,188,4,0.25)' }}>
+        <div className="card-title mb-8" style={{ fontSize: '15px' }}>
+          ⚡ How It Works
+        </div>
+        <div style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: '1.65' }}>
+          {data.mechanism}
+        </div>
+        <div style={{
+          marginTop: '12px', padding: '8px 12px',
+          background: 'var(--bg-elevated)', borderRadius: 'var(--radius-sm)',
+          fontSize: '11.5px', color: 'var(--amber)',
+        }}>
+          <strong>Positioning:</strong> {data.positioning}
+        </div>
+      </div>
+
+      {/* Why Only Google — competitive moat */}
+      <div className="section-eyebrow mb-8">Competitive Moat — Why Only Google Can Do This</div>
+      <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+        <div className="table-responsive" style={{ marginBottom: 0 }}>
+          <table className="data-table" style={{ minWidth: '500px' }}>
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th style={{ color: 'var(--google-blue)' }}>Google / Alphabet</th>
+                <th style={{ color: 'var(--red)' }}>AWS / Azure</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.onlyGoogle.map(row => (
+                <tr key={row.dimension}>
+                  <td><strong>{row.dimension}</strong></td>
+                  <td style={{ fontSize: '12px', color: 'var(--green)' }}>{row.google}</td>
+                  <td style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{row.competitor}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Target Accounts */}
+      <div className="section-eyebrow mb-8">Interchange Target Accounts</div>
+      <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+        <div className="table-responsive" style={{ marginBottom: 0 }}>
+          <table className="data-table" style={{ minWidth: '600px' }}>
+            <thead>
+              <tr>
+                <th>Account</th>
+                <th>Power Asset</th>
+                <th>Google Need</th>
+                <th>Interchange Play</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.targetAccounts.map(a => (
+                <tr key={a.name}>
+                  <td><strong>{a.name}</strong></td>
+                  <td style={{ fontSize: '12px' }}>{a.powerAsset}</td>
+                  <td style={{ fontSize: '12px', color: 'var(--google-blue)' }}>{a.googleNeed}</td>
+                  <td style={{ fontSize: '12px', color: 'var(--green)' }}>{a.play}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Commercial Structure */}
+      <div className="section-eyebrow mb-8">Bilateral Commercial Structure</div>
+      <div className="grid-2" style={{ gap: '14px' }}>
+        <div className="card" style={{ borderColor: 'var(--teal)' }}>
+          <div className="card-title mb-8" style={{ color: 'var(--teal)', fontSize: '14px' }}>
+            Energy Operator Provides
+          </div>
+          {cs.operatorGives.map(item => (
+            <div key={item} className="row gap-8 mt-8">
+              <span style={{ color: 'var(--teal)', fontSize: '12px' }}>→</span>
+              <span style={{ fontSize: '12.5px', color: 'var(--text-secondary)' }}>{item}</span>
+            </div>
+          ))}
+          <div style={{ marginTop: '16px', borderTop: '1px solid var(--border)', paddingTop: '12px' }}>
+            <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Value Received</div>
+            {cs.operatorValue.map(item => (
+              <div key={item} className="row gap-8 mt-4">
+                <span style={{ color: 'var(--green)', fontSize: '12px' }}>✓</span>
+                <span style={{ fontSize: '12px', color: 'var(--green)' }}>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="card" style={{ borderColor: 'var(--google-blue)' }}>
+          <div className="card-title mb-8" style={{ color: 'var(--google-blue)', fontSize: '14px' }}>
+            Google / Alphabet Provides
+          </div>
+          {cs.googleGives.map(item => (
+            <div key={item} className="row gap-8 mt-8">
+              <span style={{ color: 'var(--google-blue)', fontSize: '12px' }}>→</span>
+              <span style={{ fontSize: '12.5px', color: 'var(--text-secondary)' }}>{item}</span>
+            </div>
+          ))}
+          <div style={{ marginTop: '16px', borderTop: '1px solid var(--border)', paddingTop: '12px' }}>
+            <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Value Received</div>
+            {cs.googleValue.map(item => (
+              <div key={item} className="row gap-8 mt-4">
+                <span style={{ color: 'var(--amber)', fontSize: '12px' }}>✓</span>
+                <span style={{ fontSize: '12px', color: 'var(--amber)' }}>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DeepMindLabSection({ data }) {
+  const [activeVertical, setActiveVertical] = useState('molecular');
+  const activeV = DEEPMIND_RESEARCH_VERTICALS.find(v => v.id === activeVertical);
+
+  return (
+    <div className="flex-col" style={{ gap: '16px' }}>
+      {/* Thesis */}
+      <div className="highlight-block" style={{ borderLeftColor: 'var(--purple)' }}>
+        <strong style={{ color: 'var(--purple)', display: 'block', marginBottom: '6px' }}>
+          The Strategic Insight
+        </strong>
+        {data.thesis}
+      </div>
+
+      {/* Mechanism */}
+      <div className="card" style={{ borderColor: 'var(--purple)', boxShadow: '0 0 0 1px rgba(161,66,244,0.2)' }}>
+        <div className="card-title mb-8" style={{ fontSize: '15px' }}>
+          🧬 How It Works
+        </div>
+        <div style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: '1.65' }}>
+          {data.mechanism}
+        </div>
+        <div style={{
+          marginTop: '12px', padding: '8px 12px',
+          background: 'var(--bg-elevated)', borderRadius: 'var(--radius-sm)',
+          fontSize: '11.5px', color: 'var(--purple)',
+        }}>
+          <strong>Positioning:</strong> {data.positioning}
+        </div>
+      </div>
+
+      {/* Competitive Moat */}
+      <div className="section-eyebrow mb-8">Competitive Moat — No Competitor Can Replicate</div>
+      <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+        <div className="table-responsive" style={{ marginBottom: 0 }}>
+          <table className="data-table" style={{ minWidth: '500px' }}>
+            <thead>
+              <tr>
+                <th>Capability</th>
+                <th style={{ color: 'var(--purple)' }}>Google DeepMind</th>
+                <th style={{ color: 'var(--red)' }}>AWS / Azure</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.onlyGoogle.map(row => (
+                <tr key={row.dimension}>
+                  <td><strong>{row.dimension}</strong></td>
+                  <td style={{ fontSize: '12px', color: 'var(--green)' }}>{row.google}</td>
+                  <td style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{row.competitor}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Research Verticals — tabbed interface */}
+      <div className="section-eyebrow mb-8">Research Verticals</div>
+      <div className="row gap-8 mb-16" style={{ flexWrap: 'wrap' }}>
+        {DEEPMIND_RESEARCH_VERTICALS.map(v => (
+          <button
+            key={v.id}
+            onClick={() => setActiveVertical(v.id)}
+            style={{
+              padding: '8px 16px',
+              borderRadius: 'var(--radius-md)',
+              border: activeVertical === v.id ? `2px solid ${COLOR_MAP[v.color]}` : '1px solid var(--border)',
+              background: activeVertical === v.id ? 'var(--bg-elevated)' : 'transparent',
+              color: activeVertical === v.id ? COLOR_MAP[v.color] : 'var(--text-secondary)',
+              cursor: 'pointer',
+              fontSize: '12.5px',
+              fontWeight: activeVertical === v.id ? 600 : 400,
+              transition: 'all 0.2s ease',
+            }}
+          >
+            {v.icon} {v.title}
+          </button>
+        ))}
+      </div>
+
+      {activeV && (
+        <div className="card" style={{ borderColor: COLOR_MAP[activeV.color] }}>
+          <div className="row gap-10 mb-8">
+            <span style={{ fontSize: '22px' }}>{activeV.icon}</span>
+            <div>
+              <div className="card-title" style={{ margin: 0, color: COLOR_MAP[activeV.color] }}>{activeV.title}</div>
+              <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginTop: '2px' }}>{activeV.tools}</div>
+            </div>
+          </div>
+          <div style={{ overflow: 'auto' }}>
+            <table className="data-table" style={{ minWidth: '600px' }}>
+              <thead>
+                <tr>
+                  <th>Problem</th>
+                  <th>Current State</th>
+                  <th>DeepMind Approach</th>
+                  <th>Target Accounts</th>
+                </tr>
+              </thead>
+              <tbody>
+                {activeV.problems.map(p => (
+                  <tr key={p.problem}>
+                    <td><strong>{p.problem}</strong></td>
+                    <td style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{p.current}</td>
+                    <td style={{ fontSize: '12px', color: 'var(--green)' }}>{p.approach}</td>
+                    <td style={{ fontSize: '11.5px', color: 'var(--text-secondary)' }}>{p.targets}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
+      {/* Program Tiers */}
+      <div className="section-eyebrow mb-8">Program Structure — Three Engagement Tiers</div>
+      <div className="grid-3" style={{ gap: '14px' }}>
+        {DEEPMIND_LAB_TIERS.map(tier => (
+          <div key={tier.tier} className="card" style={{ borderColor: COLOR_MAP[tier.color], display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <div className="row gap-8">
+              <span style={{ fontSize: '20px' }}>{tier.icon}</span>
+              <div>
+                <div style={{ fontSize: '13px', fontWeight: 700, color: COLOR_MAP[tier.color] }}>{tier.tier}: {tier.name}</div>
+                <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>{tier.count}</div>
+              </div>
+            </div>
+            <div style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.55', flex: 1 }}>
+              {tier.offering}
+            </div>
+            <div style={{
+              fontSize: '11px', borderTop: '1px solid var(--border)',
+              paddingTop: '8px', color: 'var(--text-muted)',
+            }}>
+              <strong style={{ color: COLOR_MAP[tier.color] }}>Targets:</strong> {tier.targets}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function S11ThinkBig() {
+  const [activeTab, setActiveTab] = useState('interchange');
+  const { initiatives } = THINK_BIG_INITIATIVES;
+  const interchange = initiatives[0];
+  const deepmindLab = initiatives[1];
+
+  return (
+    <div className="section-page">
+      <div className="section-header">
+        <div className="section-eyebrow">11 · THINK BIG</div>
+        <h1 className="section-title">Transformative Alphabet-Only Energy Initiatives</h1>
+        <p className="section-desc">
+          {THINK_BIG_INITIATIVES.headline}
+        </p>
+      </div>
+
+      {/* Initiative Selector */}
+      <div className="grid-2 mb-24" style={{ gap: '16px' }}>
+        {[interchange, deepmindLab].map(init => (
+          <div
+            key={init.id}
+            className="card"
+            onClick={() => setActiveTab(init.id)}
+            style={{
+              cursor: 'pointer',
+              borderColor: activeTab === init.id ? COLOR_MAP[init.color] : 'var(--border)',
+              boxShadow: activeTab === init.id ? `0 0 0 1px ${COLOR_MAP[init.color]}40, 0 4px 16px ${COLOR_MAP[init.color]}15` : 'var(--shadow-card)',
+              transition: 'all 0.3s ease',
+              transform: activeTab === init.id ? 'translateY(-2px)' : 'none',
+            }}
+          >
+            <div className="row gap-10 mb-8">
+              <span style={{ fontSize: '28px' }}>{init.icon}</span>
+              <div>
+                <div style={{ fontSize: '16px', fontWeight: 700, color: COLOR_MAP[init.color] }}>{init.title}</div>
+                <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{init.subtitle}</div>
+              </div>
+            </div>
+            <div style={{
+              fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.5',
+              display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden',
+            }}>
+              {init.thesis.substring(0, 180)}…
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Active Initiative Detail */}
+      {activeTab === 'interchange' && <InterchangeSection data={interchange} />}
+      {activeTab === 'deepmind-lab' && <DeepMindLabSection data={deepmindLab} />}
+
+      {/* Shared Timeline */}
+      <div style={{ marginTop: '32px' }}>
+        <div className="section-eyebrow mb-8">Integration Timeline — Both Initiatives</div>
+        <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+          <div className="table-responsive" style={{ marginBottom: 0 }}>
+            <table className="data-table" style={{ minWidth: '600px' }}>
+              <thead>
+                <tr>
+                  <th>Phase</th>
+                  <th style={{ color: 'var(--amber)' }}>⚡ Project Interchange</th>
+                  <th style={{ color: 'var(--purple)' }}>🧬 DeepMind Energy Lab</th>
+                </tr>
+              </thead>
+              <tbody>
+                {THINK_BIG_TIMELINE.map(row => (
+                  <tr key={row.phase}>
+                    <td><strong>{row.phase}</strong></td>
+                    <td style={{ fontSize: '12px' }}>{row.interchange}</td>
+                    <td style={{ fontSize: '12px' }}>{row.deepmind}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      {/* Transformative Callout */}
+      <div className="card mt-24" style={{
+        borderColor: 'var(--google-blue)',
+        boxShadow: 'var(--shadow-glow-blue)',
+        background: 'linear-gradient(135deg, var(--bg-card) 0%, var(--bg-elevated) 100%)',
+      }}>
+        <div className="grid-2" style={{ gap: '24px', alignItems: 'center' }}>
+          <div>
+            <div className="card-title mb-8" style={{ fontSize: '15px', color: 'var(--google-blue)' }}>
+              Why These Ideas Are Unreplicable
+            </div>
+            <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: '1.65' }}>
+              <strong style={{ color: 'var(--text-primary)' }}>Project Interchange</strong> works because Google is
+              simultaneously the world's largest AI company and an industrial-scale power buyer — a position neither
+              AWS nor Azure occupies.{' '}
+              <strong style={{ color: 'var(--text-primary)' }}>DeepMind Energy Lab</strong> works because Google owns
+              the only frontier science engine (GNoME, AlphaFold, TORAX, AlphaEvolve) that can solve the molecular and
+              physics problems blocking the energy transition.
+            </p>
+            <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: '1.65', marginTop: '8px' }}>
+              Together, they convert Google from a <em>cloud vendor</em> into the energy industry's{' '}
+              <strong style={{ color: 'var(--amber)' }}>indispensable strategic partner</strong> — creating
+              relationships that are generational, not transactional.
+            </p>
+          </div>
+          <div className="flex-col" style={{ gap: '12px' }}>
+            {[
+              { label: 'Pillar 4 · Alphabet Advantage', detail: 'DeepMind Energy Lab elevates from module to platform', color: 'var(--purple)' },
+              { label: 'Pillar 5 · Energy Exchange', detail: 'Project Interchange formalizes into bilateral OS', color: 'var(--amber)' },
+              { label: 'ADIPEC 2026', detail: 'Both announced as marquee reveals', color: 'var(--google-blue)' },
+              { label: 'CERAWeek 2027', detail: 'Scale from pilot to portfolio-wide', color: 'var(--green)' },
+            ].map(item => (
+              <div key={item.label} className="row gap-8">
+                <span style={{ color: item.color, fontSize: '14px', minWidth: '12px' }}>▸</span>
+                <div>
+                  <div style={{ fontSize: '12px', fontWeight: 600, color: item.color }}>{item.label}</div>
+                  <div style={{ fontSize: '11.5px', color: 'var(--text-muted)' }}>{item.detail}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
