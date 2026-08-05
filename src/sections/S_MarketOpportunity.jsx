@@ -36,7 +36,7 @@ function DonutChart({ data, size = 220 }) {
   );
 }
 
-/* ── Stacked Bar Chart with Y-Axis Grid & Interactive Tooltip ─────── */
+/* ── Stacked Bar Chart with Y-Axis Grid & Stable Info Box ─────── */
 const WORKLOAD_COLORS = {
   aiml: '#4285F4',
   hpc: '#34A853',
@@ -59,7 +59,15 @@ function formatRevenue(val) {
 }
 
 function RevenueChart({ data }) {
-  const [activeTooltip, setActiveTooltip] = useState(null);
+  // Default to 2028 AI/ML segment so info panel is always populated
+  const [activeTooltip, setActiveTooltip] = useState({
+    year: 2028,
+    wl: 'aiml',
+    val: 750,
+    pctOfYear: '38',
+    total: 1960
+  });
+
   const maxScale = 2000; // $2,000M scale ceiling
   const workloads = ['aiml', 'hpc', 'analytics', 'sovereign', 'ccus'];
   const yTicks = [2000, 1500, 1000, 500, 0];
@@ -106,12 +114,23 @@ function RevenueChart({ data }) {
                 {formatRevenue(d.total)}
               </div>
 
-              {/* Stacked Segments Container */}
-              <div className="revenue-bar-stack" style={{ width: '48px', height: '180px', display: 'flex', flexDirection: 'column-reverse', borderRadius: '6px 6px 0 0', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', background: 'rgba(255,255,255,0.03)' }}>
+              {/* Stacked Segments Container — Transparent background, no white bar */}
+              <div
+                className="revenue-bar-stack"
+                style={{
+                  width: '48px',
+                  height: '180px',
+                  display: 'flex',
+                  flexDirection: 'column-reverse',
+                  background: 'transparent',
+                  overflow: 'hidden',
+                }}
+              >
                 {workloads.map((wl) => {
                   const val = d[wl];
                   const pctOfYear = ((val / d.total) * 100).toFixed(0);
                   const heightPct = (val / maxScale) * 100;
+                  const isHovered = activeTooltip && activeTooltip.year === d.year && activeTooltip.wl === wl;
                   return (
                     <div
                       key={wl}
@@ -119,11 +138,12 @@ function RevenueChart({ data }) {
                       style={{
                         height: `${heightPct}%`,
                         background: WORKLOAD_COLORS[wl],
-                        transition: 'opacity 0.2s',
+                        transition: 'opacity 0.15s, transform 0.15s',
+                        opacity: isHovered ? 1 : 0.88,
+                        transform: isHovered ? 'scaleX(1.08)' : 'scaleX(1)',
                         cursor: 'pointer',
                       }}
                       onMouseEnter={() => setActiveTooltip({ year: d.year, wl, val, pctOfYear, total: d.total })}
-                      onMouseLeave={() => setActiveTooltip(null)}
                     />
                   );
                 })}
@@ -138,20 +158,44 @@ function RevenueChart({ data }) {
         </div>
       </div>
 
-      {/* Tooltip Callout */}
-      {activeTooltip && (
-        <div className="revenue-tooltip-box" style={{ marginTop: '1rem', padding: '0.6rem 1rem', background: 'var(--bg-elevated)', border: '1px solid var(--google-blue)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyBetween: 'space-between', gap: '1rem', fontSize: '0.8rem', animation: 'fadeIn 0.15s ease' }}>
-          <div>
-            <span className="legend-dot" style={{ background: WORKLOAD_COLORS[activeTooltip.wl], marginRight: '8px' }} />
-            <strong>{activeTooltip.year} {WORKLOAD_LABELS[activeTooltip.wl]}:</strong> ${activeTooltip.val}M ({activeTooltip.pctOfYear}% of total ${activeTooltip.total}M)
+      {/* Permanently Reserved Tooltip Info Box — Zero Layout Shift */}
+      <div
+        className="revenue-tooltip-box"
+        style={{
+          marginTop: '1.25rem',
+          minHeight: '44px',
+          padding: '0.6rem 1rem',
+          background: 'var(--bg-elevated)',
+          border: '1px solid var(--border)',
+          borderRadius: '8px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          fontSize: '0.82rem',
+          boxSizing: 'border-box'
+        }}
+      >
+        {activeTooltip ? (
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <span className="legend-dot" style={{ background: WORKLOAD_COLORS[activeTooltip.wl], marginRight: '8px', width: '10px', height: '10px' }} />
+              <strong style={{ color: 'var(--text-primary)', marginRight: '6px' }}>{activeTooltip.year} {WORKLOAD_LABELS[activeTooltip.wl]}:</strong>
+              <span style={{ color: 'var(--google-blue)', fontWeight: '700' }}>${activeTooltip.val}M</span>
+              <span style={{ color: 'var(--text-muted)', marginLeft: '6px' }}>({activeTooltip.pctOfYear}% of total ${activeTooltip.total}M)</span>
+            </div>
+            <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>Hover over any segment to inspect</span>
           </div>
-        </div>
-      )}
+        ) : (
+          <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>
+            Hover over any bar segment to inspect workload breakdown
+          </span>
+        )}
+      </div>
 
       {/* Legend Footer */}
       <div className="revenue-chart__legend" style={{ display: 'flex', gap: '1.25rem', justifyContent: 'center', marginTop: '1.25rem', flexWrap: 'wrap', paddingTop: '1rem', borderTop: '1px solid var(--border)' }}>
         {workloads.map(wl => (
-          <span key={wl} className="revenue-chart__legend-item" style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <span key={wl} className="revenue-chart__legend-item" style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
             <span className="legend-dot" style={{ background: WORKLOAD_COLORS[wl], width: '10px', height: '10px' }} />
             {WORKLOAD_LABELS[wl]}
           </span>
