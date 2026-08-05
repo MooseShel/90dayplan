@@ -74,6 +74,8 @@ export default function S07Roadmap() {
             'ISV co-innovation reveal — Cognite / SLB / Kongsberg joint',
             'Project Interchange bilateral — 1 MOU/LOI signed',
             'DeepMind Energy Lab — 1 Tier 1 research partnership + GNoME demo',
+            'CCUS Partnership — ≥1 consortium MOU/LOI (ExxonMobil / East Coast / Greensand)',
+            'CCUS MVP — MRV Agent sandbox live with synthetic SCADA data',
           ]}
         />
         <CountdownClock
@@ -89,6 +91,8 @@ export default function S07Roadmap() {
             'North American reference wins — ≥4x pipeline coverage',
             'Interchange portfolio expansion — bilateral OS at scale',
             'DeepMind Energy Lab research results & new vertical reveals',
+            'CCUS — 2nd consortium MOU; Broadwing CCS reference architecture published',
+            'CCUS — East Coast Cluster or Greensand production deployment underway',
           ]}
         />
       </div>

@@ -201,8 +201,8 @@ export const TIMELINE_PHASES = [
       },
       {
         name: "THINK BIG",
-        actions: ["Brief Google Energy Procurement leadership on Project Interchange bilateral framework", "Identify 2 Interchange pilot accounts (EQT + Pertamina) and initiate CEO-level 'two-badge' dialogues", "Internal credibility-building phase for DeepMind Energy Lab — establish stakeholder relationships before engaging DeepMind leadership"],
-        exit: "Interchange framework drafted; 2 pilot account dialogues initiated; internal groundwork laid for DeepMind engagement",
+        actions: ["Brief Google Energy Procurement leadership on Project Interchange bilateral framework", "Identify 2 Interchange pilot accounts (EQT + Pertamina) and initiate CEO-level 'two-badge' dialogues", "Internal credibility-building phase for DeepMind Energy Lab — establish stakeholder relationships before engaging DeepMind leadership", "CCUS: Form SLB × Google Cloud CCUS Steering Committee; build CCUS Agentic Reference Architecture (MRV Agent + Pipeline Flow Agent)", "CCUS: INEOS/Greensand account intelligence deep-dive — map SLB Delfi deployment, IT landscape, decision-makers", "CCUS: Competitive positioning dossier vs. Microsoft (Northern Lights) and AWS (Occidental); prepare EBC demo environment"],
+        exit: "Interchange framework drafted; 2 pilot account dialogues initiated; internal groundwork laid for DeepMind engagement; CCUS Steering Committee formed; Reference Architecture built; INEOS account intel complete",
       },
     ],
   },
@@ -233,8 +233,8 @@ export const TIMELINE_PHASES = [
       },
       {
         name: "THINK BIG",
-        actions: ["Draft bilateral MOU template with legal for Project Interchange; scope power capacity & GCP consumption economics for EQT + Pertamina", "Brief DeepMind leadership on Energy Lab concept; identify 1-2 Tier 1 research partners (Aramco R&D, TotalEnergies R&D, Oxy 1PointFive)", "Scope first DeepMind Energy Lab pilot: CCUS molecular discovery or pipeline corrosion alloy screening", "Initiate Rice Baker Institute / KAUST academic advisory board conversations for DeepMind Energy Lab"],
-        exit: "Interchange MOU template drafted; DeepMind leadership briefed; 1-2 Tier 1 research candidates identified; first pilot scope defined",
+        actions: ["Draft bilateral MOU template with legal for Project Interchange; scope power capacity & GCP consumption economics for EQT + Pertamina", "Brief DeepMind leadership on Energy Lab concept; identify 1-2 Tier 1 research partners (Aramco R&D, TotalEnergies R&D, Oxy 1PointFive)", "Scope first DeepMind Energy Lab pilot: CCUS molecular discovery or pipeline corrosion alloy screening", "Initiate Rice Baker Institute / KAUST academic advisory board conversations for DeepMind Energy Lab", "CCUS: ExxonMobil Low Carbon Solutions executive briefing — present 'Intelligent Gulf Coast Hub' with SLB Sequestri on GCP", "CCUS: East Coast Cluster workshop with BP/Equinor/TotalEnergies — position as neutral multi-operator CCUS Intelligence Platform", "CCUS: INEOS/Greensand engagement — lead with existing GCP connection via SLB Delfi; propose enterprise cloud expansion", "CCUS: Joint SLB co-sell sessions across all three CCUS targets; HyNet (UK) parallel outreach as secondary opportunity"],
+        exit: "Interchange MOU template drafted; DeepMind leadership briefed; 1-2 Tier 1 research candidates identified; first pilot scope defined; CCUS executive briefings delivered to all 3 target consortiums",
       },
     ],
   },
@@ -265,8 +265,8 @@ export const TIMELINE_PHASES = [
       },
       {
         name: "THINK BIG",
-        actions: ["Present Project Interchange framework at ADIPEC 2026 as marquee announcement; target 1 signed MOU or LOI", "Announce DeepMind Energy Lab at ADIPEC 2026; target 1 signed Tier 1 research partnership (Aramco or TotalEnergies)", "GNoME corrosion screening demo live for ADIPEC audience", "Academic advisory board (Rice/KAUST) constituted; position both initiatives for CERAWeek 2027 scale"],
-        exit: "1 Interchange MOU/LOI signed; 1 DeepMind research partnership signed; both announced at ADIPEC; CERAWeek 2027 expansion plan locked",
+        actions: ["Present Project Interchange framework at ADIPEC 2026 as marquee announcement; target 1 signed MOU or LOI", "Announce DeepMind Energy Lab at ADIPEC 2026; target 1 signed Tier 1 research partnership (Aramco or TotalEnergies)", "GNoME corrosion screening demo live for ADIPEC audience", "Academic advisory board (Rice/KAUST) constituted; position all three initiatives for CERAWeek 2027 scale", "CCUS: Secure ≥1 consortium MOU/LOI — Google Cloud as Strategic Technology & AI Platform Partner for ExxonMobil, East Coast Cluster, or Greensand", "CCUS: Deploy MVP MRV Agent sandbox with synthetic SCADA/injection data producing draft compliance reports", "CCUS: Publish Broadwing CCS reference architecture as technical whitepaper; Porthos ops-phase engagement initiated", "CCUS: ADIPEC/COP joint press release with SLB and anchor consortium partner"],
+        exit: "1 Interchange MOU/LOI signed; 1 DeepMind research partnership signed; ≥1 CCUS consortium MOU/LOI signed; all three announced at ADIPEC; CERAWeek 2027 expansion plan locked",
       },
     ],
   },
@@ -323,13 +323,16 @@ export const OKRS = [
   },
   {
     id: "O6",
-    title: "Launch THINK BIG: Interchange & DeepMind Energy Lab",
+    title: "Launch THINK BIG: Interchange, DeepMind Lab & CCUS Partnerships",
     krs: [
       { text: "Project Interchange framework presented to Google Energy Procurement leadership; 2 pilot accounts (EQT + Pertamina) identified with CEO-level dialogues initiated", status: "not-started" },
       { text: "1 Interchange bilateral MOU or LOI signed; power capacity & GCP consumption economics scoped for pilot accounts", status: "not-started" },
       { text: "DeepMind Energy Lab concept briefed to DeepMind leadership (Day 31-60); 1-2 Tier 1 research partner candidates identified (Aramco R&D, TotalEnergies R&D, or Oxy 1PointFive)", status: "not-started" },
       { text: "1 signed DeepMind Tier 1 research partnership; GNoME corrosion screening demo live; academic advisory board (Rice/KAUST) constituted", status: "not-started" },
-      { text: "Both initiatives announced as marquee ADIPEC 2026 reveals; positioned for CERAWeek 2027 scale", status: "not-started" },
+      { text: "SLB × Google CCUS Steering Committee formed; CCUS Agentic Reference Architecture (MRV Agent + Pipeline Flow Agent) built and demoed", status: "not-started" },
+      { text: "Executive briefings delivered to ExxonMobil LCS, East Coast Cluster (BP/Equinor/TotalEnergies), and INEOS/Greensand; joint SLB sessions completed", status: "not-started" },
+      { text: "≥1 CCUS consortium MOU/LOI signed — Google Cloud named as Strategic Technology & AI Platform Partner; MVP MRV Agent sandbox deployed with synthetic data", status: "not-started" },
+      { text: "All three Think Big initiatives announced as marquee ADIPEC 2026 / COP reveals; positioned for CERAWeek 2027 scale", status: "not-started" },
     ],
   },
 ];
@@ -392,6 +395,12 @@ export const EXECUTIVE_DECISIONS = [
   {
     title: "Authorize DeepMind Energy Lab joint research program",
     detail: "Approve the structured DeepMind Energy Lab program applying frontier science (GNoME materials discovery, AlphaFold molecular simulation, TORAX physics, AlphaEvolve) to energy R&D. Requires DeepMind leadership alignment (Day 31-60 after internal credibility established), scoping of Tier 1 research partnerships ($10-50M multi-year), and identification of first pilot (CCUS solvent design or corrosion alloy discovery). Academic advisory board (Rice Baker Institute, KAUST) to be constituted.",
+    owner: "",
+    status: "pending",
+  },
+  {
+    title: "Authorize CCUS Transformation Partnerships — SLB × Google CCUS Steering Committee and consortium engagement",
+    detail: "Approve the formation of the SLB × Google Cloud CCUS Steering Committee and authorize executive engagement with three target consortiums: ExxonMobil Gulf Coast CCS Hub (US), East Coast Cluster — BP/Equinor/TotalEnergies (UK), and Project Greensand — INEOS/Harbour Energy (Denmark/EU). Requires SLB account team alignment, CCUS Agentic Reference Architecture build (MRV Agent + Pipeline Flow Agent), competitive positioning vs Azure (Northern Lights) and AWS (Occidental), and authorization to deploy an MVP MRV Agent sandbox with synthetic data. CCUS wins serve as wedge into enterprise-wide cloud relationships with ExxonMobil, BP, Equinor, TotalEnergies, and INEOS.",
     owner: "",
     status: "pending",
   },
@@ -903,7 +912,7 @@ export const HUMAIN_AI_PARTNERSHIP = {
 
 // ── THINK BIG: Transformative Alphabet-Only Energy Initiatives ──────────
 export const THINK_BIG_INITIATIVES = {
-  headline: "Two strategic initiatives uniquely possible only through the full Alphabet portfolio — ideas that no other hyperscaler can replicate.",
+  headline: "Three strategic initiatives uniquely possible only through the full Alphabet portfolio — ideas that no other hyperscaler can replicate.",
   initiatives: [
     {
       id: "interchange",
@@ -953,6 +962,35 @@ export const THINK_BIG_INITIATIVES = {
         { dimension: "RL for physical control", google: "DeepMind (plasma control, DC cooling)", competitor: "Limited" },
         { dimension: "DOE National Lab partnership", google: "Genesis Mission ($40M)", competitor: "Minimal" },
       ],
+    },
+    {
+      id: "ccus-partnerships",
+      title: "CCUS Transformation Partnerships",
+      subtitle: "AI Agentic Platform for Large-Scale Carbon Capture",
+      icon: "🌍",
+      color: "teal",
+      thesis: "The world's largest CCUS mega-consortiums — ExxonMobil's 9 MTPA Gulf Coast Hub, the UK East Coast Cluster (BP/Equinor/TotalEnergies with 1 billion tonnes storage), and Project Greensand (INEOS-led, EU's first offshore CO₂ storage) — have no dedicated cloud or AI technology partner. Microsoft locked Northern Lights; AWS locked Occidental. But the majority of the market is unplatformed. Google's differentiated stack — Earth Engine (80+ PB, no competitor equivalent), MethaneSAT (3-8m emissions attribution), Gemini Agentic AI (A2A autonomous operations), OSDU v1.0, and SLB Delfi/Sequestri running natively on GCP — makes Google uniquely positioned to become the end-to-end AI Agentic Platform across the full CCUS lifecycle.",
+      mechanism: "Google becomes the Platform, Technology, and AI Agentic Partner to world-leading CCUS consortiums by deploying an integrated stack: SLB Delfi/Sequestri on GCP for subsurface intelligence, Gemini Enterprise Agents for autonomous pipeline monitoring and MRV compliance, Earth Engine + MethaneSAT for emissions detection, BigQuery + Cloud Spanner for multi-tenant carbon accounting, and OSDU v1.0 as the industry-standard data backbone. Each consortium win becomes a wedge into the operator's broader enterprise cloud portfolio — CCUS is the Trojan horse for enterprise-wide relationships.",
+      positioning: "Land-and-expand strategy: win CCUS technology platform → expand into operator's full cloud portfolio (ExxonMobil, BP, Equinor, TotalEnergies, INEOS)",
+      onlyGoogle: [
+        { dimension: "Geospatial / Earth Observation", google: "Earth Engine (80+ PB) + MethaneSAT + Carbon Mapper — no equivalent", competitor: "Azure Planetary Computer (smaller); AWS has none" },
+        { dimension: "Subsurface AI", google: "SLB Delfi + Sequestri + Intersect running natively on GCP", competitor: "No equivalent subsurface domain stack" },
+        { dimension: "AI Agents (Autonomous Ops)", google: "Gemini Enterprise Agent Platform with A2A protocol for MRV, pipeline flow, leak detection", competitor: "Copilot (assistant-mode); Bedrock Agents (limited)" },
+        { dimension: "OSDU Data Platform", google: "OSDU v1.0 Deployment Engine — provisions in hours", competitor: "OSDU support but no accelerated deployment" },
+        { dimension: "CCS Ecosystem Credibility", google: "Broadwing Energy PPA (400MW gas + 90% CCS) — Google as CCS power buyer", competitor: "Northern Lights partnership (vendor); Oxy offtake (buyer)" },
+        { dimension: "Existing CCUS Customer Base", google: "INEOS already on GCP via SLB Delfi; TotalEnergies via 10-yr SLB AI deal", competitor: "Northern Lights consortium; Occidental" },
+      ],
+      targetAccounts: [
+        { name: "ExxonMobil (US Gulf Coast Hub)", powerAsset: "~9 MTPA contracted CO₂ storage; 1,500+ miles CO₂ pipeline", googleNeed: "Unified CCUS-specific AI/data platform (no current platform partner)", play: "SLB Sequestri on GCP for Rose CCS Hub; Gemini pipeline flow AI across 1,500 miles; MethaneSAT corridor monitoring; BigQuery multi-tenant 45Q billing" },
+        { name: "East Coast Cluster (UK)", powerAsset: "4 MTPA → 23 MTPA by 2035; 1B tonnes Endurance aquifer storage", googleNeed: "Multi-operator data platform for BP/Equinor/TotalEnergies JV", play: "OSDU shared governance; SLB Sequestri for Endurance; Earth Engine North Sea monitoring; wedge into BP, Equinor, TotalEnergies enterprise cloud" },
+        { name: "Project Greensand (Denmark)", powerAsset: "0.4 MTPA → 4-8 MTPA by 2030; EU's first offshore CO₂ storage", googleNeed: "INEOS has no cloud partner — already on GCP via SLB Delfi", play: "Formalize INEOS-Google relationship; Carbon Destroyer 1 shipping optimization; EU CCS Directive compliance agents; gateway to INEOS enterprise cloud" },
+      ],
+      commercialStructure: {
+        operatorGives: ["CCUS telemetry access (SCADA, injection, pipeline)", "Multi-tenant consortium data sharing", "Storage site subsurface data", "CO₂ shipping & transport logistics data"],
+        googleGives: ["GCP + Vertex AI as CCUS Agentic Platform", "SLB Delfi/Sequestri on GCP for subsurface", "Earth Engine + MethaneSAT for monitoring", "Gemini Autonomous MRV & Compliance Agents", "BigQuery + Cloud Spanner for carbon accounting", "OSDU v1.0 data backbone"],
+        operatorValue: ["Unified digital backbone across consortium", "Autonomous regulatory compliance (EPA Class VI / EU CCS Directive)", "MethaneSAT leak detection at 3-8m resolution", "Multi-tenant billing & 45Q tax credit allocation", "Accelerated FID through AI-driven reservoir simulation"],
+        googleValue: ["Wedge into ExxonMobil, BP, Equinor, TotalEnergies, INEOS enterprise cloud", "$100M+ anchor deals per consortium", "Market leadership over Azure/AWS in CCUS", "SLB co-sell acceleration", "Broadwing CCS ecosystem credibility"],
+      },
     },
   ],
 };
@@ -1029,7 +1067,7 @@ export const DEEPMIND_LAB_TIERS = [
 ];
 
 export const THINK_BIG_TIMELINE = [
-  { phase: "Days 1–30", interchange: "Brief Google Energy Procurement leadership on Interchange framework; identify 2 pilot accounts (EQT + Pertamina); initiate CEO-level 'two-badge' dialogues", deepmind: "Internal credibility-building phase — establish relationships with Paula Natoli, Anil Jain, and key stakeholders before engaging DeepMind" },
-  { phase: "Days 31–60", interchange: "Draft bilateral MOU template with legal; scope power capacity & GCP consumption economics for pilot accounts; brief DeepMind on energy R&D module packaging", deepmind: "Brief DeepMind leadership on Energy Lab concept; identify 1-2 Tier 1 research partners (Aramco R&D, TotalEnergies R&D, Oxy 1PointFive); scope first CCUS molecular discovery pilot; initiate Rice/KAUST academic conversations" },
-  { phase: "Days 61–90", interchange: "Present Interchange framework at ADIPEC 2026 as marquee announcement; one signed MOU or LOI; position for CERAWeek 2027 expansion", deepmind: "Announce DeepMind Energy Lab at ADIPEC 2026; 1 signed Tier 1 research partnership (target: Aramco or TotalEnergies); GNoME corrosion screening demo live; academic advisory board constituted" },
+  { phase: "Days 1–30", interchange: "Brief Google Energy Procurement leadership on Interchange framework; identify 2 pilot accounts (EQT + Pertamina); initiate CEO-level 'two-badge' dialogues", deepmind: "Internal credibility-building phase — establish relationships with Paula Natoli, Anil Jain, and key stakeholders before engaging DeepMind", ccus: "Form SLB × Google Cloud CCUS Steering Committee; build CCUS Agentic Reference Architecture (MRV Agent + Pipeline Flow Agent); INEOS/Greensand account intelligence deep-dive; competitive dossier vs Azure (Northern Lights) and AWS (Oxy)" },
+  { phase: "Days 31–60", interchange: "Draft bilateral MOU template with legal; scope power capacity & GCP consumption economics for pilot accounts; brief DeepMind on energy R&D module packaging", deepmind: "Brief DeepMind leadership on Energy Lab concept; identify 1-2 Tier 1 research partners (Aramco R&D, TotalEnergies R&D, Oxy 1PointFive); scope first CCUS molecular discovery pilot; initiate Rice/KAUST academic conversations", ccus: "ExxonMobil Low Carbon Solutions executive briefing (Houston); East Coast Cluster workshop with BP/Equinor/TotalEnergies; INEOS/Greensand engagement (Denmark); joint SLB customer sessions across all targets; HyNet parallel outreach" },
+  { phase: "Days 61–90", interchange: "Present Interchange framework at ADIPEC 2026 as marquee announcement; one signed MOU or LOI; position for CERAWeek 2027 expansion", deepmind: "Announce DeepMind Energy Lab at ADIPEC 2026; 1 signed Tier 1 research partnership (target: Aramco or TotalEnergies); GNoME corrosion screening demo live; academic advisory board constituted", ccus: "Secure ≥1 consortium MOU/LOI (Google named as Strategic Technology & AI Platform Partner); deploy MVP MRV Agent sandbox with synthetic data; Porthos ops-phase engagement; publish Broadwing CCS reference architecture; ADIPEC/COP announcement with SLB and anchor consortium partner" },
 ];

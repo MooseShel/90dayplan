@@ -286,11 +286,160 @@ function DeepMindLabSection({ data }) {
   );
 }
 
+function CCUSSection({ data }) {
+  const cs = data.commercialStructure;
+  return (
+    <div className="flex-col" style={{ gap: '16px' }}>
+      {/* Thesis */}
+      <div className="highlight-block" style={{ borderLeftColor: 'var(--teal)' }}>
+        <strong style={{ color: 'var(--teal)', display: 'block', marginBottom: '6px' }}>
+          The Strategic Insight
+        </strong>
+        {data.thesis}
+      </div>
+
+      {/* Mechanism */}
+      <div className="card" style={{ borderColor: 'var(--teal)', boxShadow: '0 0 0 1px rgba(0,150,136,0.2)' }}>
+        <div className="card-title mb-8" style={{ fontSize: '15px' }}>
+          🌍 How It Works
+        </div>
+        <div style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: '1.65' }}>
+          {data.mechanism}
+        </div>
+        <div style={{
+          marginTop: '12px', padding: '8px 12px',
+          background: 'var(--bg-elevated)', borderRadius: 'var(--radius-sm)',
+          fontSize: '11.5px', color: 'var(--teal)',
+        }}>
+          <strong>Positioning:</strong> {data.positioning}
+        </div>
+      </div>
+
+      {/* Why Only Google — competitive moat */}
+      <div className="section-eyebrow mb-8">Competitive Moat — Why Only Google Can Do This</div>
+      <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+        <div className="table-responsive" style={{ marginBottom: 0 }}>
+          <table className="data-table" style={{ minWidth: '500px' }}>
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th style={{ color: 'var(--teal)' }}>Google / Alphabet</th>
+                <th style={{ color: 'var(--red)' }}>AWS / Azure</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.onlyGoogle.map(row => (
+                <tr key={row.dimension}>
+                  <td><strong>{row.dimension}</strong></td>
+                  <td style={{ fontSize: '12px', color: 'var(--green)' }}>{row.google}</td>
+                  <td style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{row.competitor}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Target Consortium Accounts */}
+      <div className="section-eyebrow mb-8">Target CCUS Consortiums</div>
+      <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+        <div className="table-responsive" style={{ marginBottom: 0 }}>
+          <table className="data-table" style={{ minWidth: '600px' }}>
+            <thead>
+              <tr>
+                <th>Consortium</th>
+                <th>Scale & Infrastructure</th>
+                <th>Google Need / Gap</th>
+                <th>CCUS Platform Play</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.targetAccounts.map(a => (
+                <tr key={a.name}>
+                  <td><strong>{a.name}</strong></td>
+                  <td style={{ fontSize: '12px' }}>{a.powerAsset}</td>
+                  <td style={{ fontSize: '12px', color: 'var(--teal)' }}>{a.googleNeed}</td>
+                  <td style={{ fontSize: '12px', color: 'var(--green)' }}>{a.play}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Commercial Structure */}
+      <div className="section-eyebrow mb-8">CCUS Consortium Commercial Structure</div>
+      <div className="grid-2" style={{ gap: '14px' }}>
+        <div className="card" style={{ borderColor: 'var(--teal)' }}>
+          <div className="card-title mb-8" style={{ color: 'var(--teal)', fontSize: '14px' }}>
+            Consortium Operator Provides
+          </div>
+          {cs.operatorGives.map(item => (
+            <div key={item} className="row gap-8 mt-8">
+              <span style={{ color: 'var(--teal)', fontSize: '12px' }}>→</span>
+              <span style={{ fontSize: '12.5px', color: 'var(--text-secondary)' }}>{item}</span>
+            </div>
+          ))}
+          <div style={{ marginTop: '16px', borderTop: '1px solid var(--border)', paddingTop: '12px' }}>
+            <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Value Received</div>
+            {cs.operatorValue.map(item => (
+              <div key={item} className="row gap-8 mt-4">
+                <span style={{ color: 'var(--green)', fontSize: '12px' }}>✓</span>
+                <span style={{ fontSize: '12px', color: 'var(--green)' }}>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="card" style={{ borderColor: 'var(--google-blue)' }}>
+          <div className="card-title mb-8" style={{ color: 'var(--google-blue)', fontSize: '14px' }}>
+            Google / Alphabet Provides
+          </div>
+          {cs.googleGives.map(item => (
+            <div key={item} className="row gap-8 mt-8">
+              <span style={{ color: 'var(--google-blue)', fontSize: '12px' }}>→</span>
+              <span style={{ fontSize: '12.5px', color: 'var(--text-secondary)' }}>{item}</span>
+            </div>
+          ))}
+          <div style={{ marginTop: '16px', borderTop: '1px solid var(--border)', paddingTop: '12px' }}>
+            <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Value Received</div>
+            {cs.googleValue.map(item => (
+              <div key={item} className="row gap-8 mt-4">
+                <span style={{ color: 'var(--amber)', fontSize: '12px' }}>✓</span>
+                <span style={{ fontSize: '12px', color: 'var(--amber)' }}>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Land & Expand Trojan Horse */}
+      <div className="section-eyebrow mb-8">Land-and-Expand Strategy — CCUS as Trojan Horse for Enterprise Cloud</div>
+      <div className="card" style={{ borderColor: 'var(--teal)', background: 'linear-gradient(135deg, var(--bg-card) 0%, var(--bg-elevated) 100%)' }}>
+        <div className="grid-2" style={{ gap: '16px' }}>
+          {[
+            { win: 'ExxonMobil Gulf Coast CCS Hub', expand: '→ ExxonMobil Upstream E&P + Refining + Chemical', color: 'var(--amber)' },
+            { win: 'East Coast Cluster', expand: '→ BP Global + Equinor Offshore + TotalEnergies Global', color: 'var(--google-blue)' },
+            { win: 'Project Greensand', expand: '→ INEOS Petrochemicals + Refining + Manufacturing', color: 'var(--green)' },
+          ].map(item => (
+            <div key={item.win} className="row gap-8" style={{ padding: '8px 12px', borderRadius: 'var(--radius-sm)', background: 'var(--bg-elevated)' }}>
+              <div>
+                <div style={{ fontSize: '12px', fontWeight: 600, color: item.color }}>{item.win}</div>
+                <div style={{ fontSize: '11.5px', color: 'var(--text-muted)', marginTop: '2px' }}>{item.expand}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function S11ThinkBig() {
   const [activeTab, setActiveTab] = useState('interchange');
   const { initiatives } = THINK_BIG_INITIATIVES;
   const interchange = initiatives[0];
   const deepmindLab = initiatives[1];
+  const ccusPartnerships = initiatives[2];
 
   return (
     <div className="section-page">
@@ -303,8 +452,8 @@ export default function S11ThinkBig() {
       </div>
 
       {/* Initiative Selector */}
-      <div className="grid-2 mb-24" style={{ gap: '16px' }}>
-        {[interchange, deepmindLab].map(init => (
+      <div className="grid-3 mb-24" style={{ gap: '16px' }}>
+        {[interchange, deepmindLab, ccusPartnerships].map(init => (
           <div
             key={init.id}
             className="card"
@@ -315,18 +464,21 @@ export default function S11ThinkBig() {
               boxShadow: activeTab === init.id ? `0 0 0 1px ${COLOR_MAP[init.color]}40, 0 4px 16px ${COLOR_MAP[init.color]}15` : 'var(--shadow-card)',
               transition: 'all 0.3s ease',
               transform: activeTab === init.id ? 'translateY(-2px)' : 'none',
+              display: 'flex',
+              flexDirection: 'column',
             }}
           >
-            <div className="row gap-10 mb-8">
-              <span style={{ fontSize: '28px' }}>{init.icon}</span>
-              <div>
-                <div style={{ fontSize: '16px', fontWeight: 700, color: COLOR_MAP[init.color] }}>{init.title}</div>
-                <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{init.subtitle}</div>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', marginBottom: '10px' }}>
+              <span style={{ fontSize: '26px', lineHeight: 1, flexShrink: 0, marginTop: '2px' }}>{init.icon}</span>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ fontSize: '15px', fontWeight: 700, color: COLOR_MAP[init.color], lineHeight: 1.25 }}>{init.title}</div>
+                <div style={{ fontSize: '11.5px', color: 'var(--text-muted)', marginTop: '3px', lineHeight: 1.35 }}>{init.subtitle}</div>
               </div>
             </div>
             <div style={{
               fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.5',
               display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden',
+              marginTop: 'auto',
             }}>
               {init.thesis.substring(0, 180)}…
             </div>
@@ -337,18 +489,20 @@ export default function S11ThinkBig() {
       {/* Active Initiative Detail */}
       {activeTab === 'interchange' && <InterchangeSection data={interchange} />}
       {activeTab === 'deepmind-lab' && <DeepMindLabSection data={deepmindLab} />}
+      {activeTab === 'ccus-partnerships' && <CCUSSection data={ccusPartnerships} />}
 
       {/* Shared Timeline */}
       <div style={{ marginTop: '32px' }}>
-        <div className="section-eyebrow mb-8">Integration Timeline — Both Initiatives</div>
+        <div className="section-eyebrow mb-8">Integration Timeline — All Three Initiatives</div>
         <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
           <div className="table-responsive" style={{ marginBottom: 0 }}>
-            <table className="data-table" style={{ minWidth: '600px' }}>
+            <table className="data-table" style={{ minWidth: '800px' }}>
               <thead>
                 <tr>
                   <th>Phase</th>
                   <th style={{ color: 'var(--amber)' }}>⚡ Project Interchange</th>
                   <th style={{ color: 'var(--purple)' }}>🧬 DeepMind Energy Lab</th>
+                  <th style={{ color: 'var(--teal)' }}>🌍 CCUS Partnerships</th>
                 </tr>
               </thead>
               <tbody>
@@ -357,6 +511,7 @@ export default function S11ThinkBig() {
                     <td><strong>{row.phase}</strong></td>
                     <td style={{ fontSize: '12px' }}>{row.interchange}</td>
                     <td style={{ fontSize: '12px' }}>{row.deepmind}</td>
+                    <td style={{ fontSize: '12px' }}>{row.ccus}</td>
                   </tr>
                 ))}
               </tbody>
@@ -378,11 +533,12 @@ export default function S11ThinkBig() {
             </div>
             <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: '1.65' }}>
               <strong style={{ color: 'var(--text-primary)' }}>Project Interchange</strong> works because Google is
-              simultaneously the world's largest AI company and an industrial-scale power buyer — a position neither
-              AWS nor Azure occupies.{' '}
+              simultaneously the world's largest AI company and an industrial-scale power buyer.{' '}
               <strong style={{ color: 'var(--text-primary)' }}>DeepMind Energy Lab</strong> works because Google owns
-              the only frontier science engine (GNoME, AlphaFold, TORAX, AlphaEvolve) that can solve the molecular and
-              physics problems blocking the energy transition.
+              the only frontier science engine that can solve molecular and physics problems blocking the energy transition.{' '}
+              <strong style={{ color: 'var(--text-primary)' }}>CCUS Transformation Partnerships</strong> works because
+              Google's differentiated stack — Earth Engine, MethaneSAT, Gemini Agents, SLB Delfi on GCP — is
+              the only end-to-end CCUS platform that can serve multi-operator consortiums at global scale.
             </p>
             <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: '1.65', marginTop: '8px' }}>
               Together, they convert Google from a <em>cloud vendor</em> into the energy industry's{' '}
@@ -394,7 +550,8 @@ export default function S11ThinkBig() {
             {[
               { label: 'Pillar 4 · Alphabet Advantage', detail: 'DeepMind Energy Lab elevates from module to platform', color: 'var(--purple)' },
               { label: 'Pillar 5 · Energy Exchange', detail: 'Project Interchange formalizes into bilateral OS', color: 'var(--amber)' },
-              { label: 'ADIPEC 2026', detail: 'Both announced as marquee reveals', color: 'var(--google-blue)' },
+              { label: 'Pillar 6 · CCUS Partnerships', detail: 'AI Agentic Platform for ExxonMobil, East Coast Cluster, Greensand', color: 'var(--teal)' },
+              { label: 'ADIPEC 2026', detail: 'All three announced as marquee reveals', color: 'var(--google-blue)' },
               { label: 'CERAWeek 2027', detail: 'Scale from pilot to portfolio-wide', color: 'var(--green)' },
             ].map(item => (
               <div key={item.label} className="row gap-8">
