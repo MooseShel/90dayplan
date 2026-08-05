@@ -158,7 +158,7 @@ export default function S_IndustryLandscape() {
       </div>
       <SourceFootnote
         source="Maturity scores are directional estimates based on public digital transformation disclosures (TotalEnergies, Shell, BP, Aramco), analyst reports (Gartner/IDC), and SPE conference publications."
-        url="https://www.spe.org/"
+        url="https://www.spe.org/en/jpt/jpt-main-page/"
       />
     </div>
   );
