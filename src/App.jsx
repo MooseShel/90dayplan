@@ -163,6 +163,15 @@ export default function App() {
         <div className="sidebar-logo">
           <GoogleCloudLogo width={160} />
           <div className="logo-title">Global Oil &amp; Gas<br/>Industry Strategy</div>
+          <a
+            href="/google_cloud_og_industry_strategy.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sidebar-pdf-link"
+            title="Download Master Executive Strategy Document (PDF)"
+          >
+            📄 Executive Strategy Doc (PDF) ↗
+          </a>
           <div className="logo-sub">{META.confidential}</div>
         </div>
 

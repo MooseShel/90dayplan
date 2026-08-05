@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Cloud Oil & Gas Industry Strategy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <style>
+    @page {
+      size: A4;
+      margin: 15mm 15mm 20mm 15mm;
+      @bottom-right {
+        content: "Page " counter(page) " of " counter(pages);
+        font-family: 'Roboto', sans-serif;
+        font-size: 9pt;
+        color: #5f6368;
+      }
+    }
+    body {
+      font-family: 'Roboto', 'Google Sans', sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      color: #202124;
+      background: #ffffff;
+      margin: 0;
+      padding: 20px 40px;
+    }
+    .header-banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #4285f4;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+    }
+    .logo-title {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 20pt;
+      font-weight: 700;
+      color: #202124;
+      margin: 0;
+    }
+    .logo-blue { color: #4285f4; }
+    .logo-red { color: #ea4335; }
+    .logo-yellow { color: #fbbc04; }
+    .logo-green { color: #34a853; }
+    
+    .confidential-badge {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 8pt;
+      font-weight: 700;
+      color: #c5221f;
+      background: #fce8e6;
+      border: 1px solid #f5c6cb;
+      padding: 4px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .doc-h1 {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 22pt;
+      font-weight: 700;
+      color: #1a73e8;
+      margin-top: 0;
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+    .doc-h2 {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 15pt;
+      font-weight: 700;
+      color: #202124;
+      border-bottom: 1px solid #dadce0;
+      padding-bottom: 6px;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      page-break-after: avoid;
+    }
+    .doc-h3 {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 12pt;
+      font-weight: 700;
+      color: #1a73e8;
+      margin-top: 16px;
+      margin-bottom: 8px;
+      page-break-after: avoid;
+    }
+    p { margin-top: 0; margin-bottom: 12px; }
+    ul { margin-top: 0; margin-bottom: 12px; padding-left: 20px; }
+    li { margin-bottom: 4px; }
+    strong { font-weight: 700; }
+
+    /* Alerts */
+    .alert {
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      font-size: 10pt;
+    }
+    .alert-important {
+      background: #e8f0fe;
+      border-left: 4px solid #1a73e8;
+      color: #174ea6;
+    }
+    .alert-note {
+      background: #e6f4ea;
+      border-left: 4px solid #137333;
+      color: #0d652d;
+    }
+    .alert-caution {
+      background: #fce8e6;
+      border-left: 4px solid #c5221f;
+      color: #a50e0e;
+    }
+
+    /* Tables */
+    .table-scroll { margin-bottom: 20px; width: 100%; overflow-x: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+      margin-bottom: 16px;
+      page-break-inside: auto;
+    }
+    tr { page-break-inside: avoid; page-break-after: auto; }
+    th {
+      background: #f8f9fa;
+      color: #3c4043;
+      font-weight: 700;
+      text-align: left;
+      padding: 8px 10px;
+      border: 1px solid #dadce0;
+    }
+    td {
+      padding: 7px 10px;
+      border: 1px solid #dadce0;
+      color: #202124;
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: #f8f9fa; }
+
+    /* Links */
+    a { color: #1a73e8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Diagrams */
+    .mermaid-container {
+      text-align: center;
+      margin: 20px 0;
+      padding: 16px;
+      background: #f8f9fa;
+      border: 1px solid #dadce0;
+      border-radius: 8px;
+      page-break-inside: avoid;
+    }
+    
+    hr {
+      border: none;
+      border-top: 1px solid #dadce0;
+      margin: 24px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-banner">
+    <div class="logo-title">
+      <span class="logo-blue">G</span><span class="logo-red">o</span><span class="logo-yellow">o</span><span class="logo-blue">g</span><span class="logo-green">l</span><span class="logo-red">e</span> Cloud
+      <span style="font-size: 12pt; font-weight: 400; color: #5f6368; margin-left: 10px;">| Global Oil & Gas Industry Strategy</span>
+    </div>
+    <div class="confidential-badge">Executive Briefing · Confidential</div>
+  </div>
+
+  <h1 class="doc-h1">Google Cloud Oil & Gas Industry Strategy & Execution Plan</h1>
+
+<p><strong>Document Title</strong>: Executive Strategy & Market Execution Roadmap  
+<strong>Target Audience</strong>: Google Cloud Executive Leadership (C-Suite, VP Industry Solutions, Regional VPs)  
+<strong>Author</strong>: Google Cloud Global Oil & Gas Industry Strategy Team  
+<strong>Date</strong>: August 2026  
+<strong>Classification</strong>: STRATEGIC EXECUTIVE BRIEFING · CONFIDENTIAL</p>
+
+<hr />
+
+<div class="alert alert-important"><strong>IMPORTANT:</strong> <strong>Executive Summary & Sizing the Prize</strong>
+Energy operators represent a <strong>$9.5B Serviceable Addressable Market (SAM)</strong> for Google Cloud by 2028. Driven by the convergence of the <strong>AI inflection point</strong>, an urgent <strong>data fragmentation crisis</strong>, and mandatory <strong>sovereign cloud requirements</strong>, Google Cloud is positioned to expand its market share from <strong>10% today to 20%+ by 2028</strong>, capturing <strong>$1.96B in annual recurring revenue</strong> across named oil & gas accounts.</div>
+
+<hr />
+
+<h2 class="doc-h2">1. The Strategic Imperative: Why Oil & Gas Now?</h2>
+
+<p>The global oil & gas sector generates <strong>$4.9 Trillion in annual revenue</strong> (<a href="https://www.iea.org/topics/world-energy-outlook" target="_blank" rel="noopener noreferrer">IEA World Energy Outlook</a>) and spends <strong>$44 Billion annually on IT and digital infrastructure</strong> (<a href="https://www.gartner.com/en/newsroom" target="_blank" rel="noopener noreferrer">Gartner IT Spending Forecast</a>). However, public cloud adoption in oil & gas currently stands at only <strong>~18%</strong> (<a href="https://www.idc.com/research" target="_blank" rel="noopener noreferrer">IDC Cloud Tracker</a>).</p>
+
+<div class="mermaid-container"><pre class="mermaid">flowchart LR
+    A["Industry Inflection Points"] --> B["1. AI Boom & Compute Demand"]
+    A --> C["2. 20-30 Yrs Data Fragmentation"]
+    A --> D["3. Geoscience Workforce Aging (50+ Avg Age)"]
+    A --> E["4. Sovereign AI & In-Country Laws"]
+    
+    B --> F["Google Cloud Advantage"]
+    C --> F
+    D --> F
+    E --> F
+    
+    F --> G["Agentic OSDU & BigLake In-Place"]
+    F --> H["Dammam, Doha & APAC Sovereign Regions"]
+    F --> I["Gemini 3.5 & DeepMind Science Engine"]</pre></div>
+
+<h3 class="doc-h3">Macro Industry Drivers</h3>
+
+<p>1. <strong>AI Inflection Point & Compute Demand</strong>: Energy operators sit on both sides of the AI boom — as operators requiring AI to optimize field recovery, and as energy suppliers powering the massive power demand of AI data centers.
+2. <strong>Data Fragmentation Crisis</strong>: Operators manage 20–30 years of siloed data across OSDU, PI historians, legacy paper logs, and ERPs. The cost of data fragmentation is now a board-level risk.
+3. <strong>Workforce Aging Crisis</strong>: With the average upstream geoscientist age exceeding <strong>50+ years</strong> (<a href="https://www.spe.org/en/jpt/jpt-main-page/" target="_blank" rel="noopener noreferrer">SPE Workforce Survey</a>), agentic AI that encapsulates domain expertise is a vital workforce continuity strategy.
+4. <strong>Sovereign AI Mandates</strong>: NOCs in Saudi Arabia, Qatar, Indonesia, Thailand, and Japan mandate in-country processing under strict national data residency laws (<a href="https://nca.gov.sa/" target="_blank" rel="noopener noreferrer">Saudi NCA Regulations</a>).
+5. <strong>Energy Transition & CCUS</strong>: Annual CCUS investment surpassed <strong>$5B+</strong> (<a href="https://www.globalccsinstitute.com/resources/global-status-report/" target="_blank" rel="noopener noreferrer">Global CCS Institute</a>), requiring autonomous MRV (Measurement, Reporting, and Verification) software platforms.</p>
+
+<hr />
+
+<h2 class="doc-h2">2. Market Opportunity & Sizing the Prize</h2>
+
+<p>Google Cloud's addressable market in oil & gas is structured across three concentric tiers, representing a total addressable market of <strong>$21.0B by 2028</strong>:</p>
+
+<div class="mermaid-container"><pre class="mermaid">quadrantChart
+    title Google Cloud Market Positioning in O&G
+    x-axis Low Technical Differentiation --> High Technical Differentiation
+    y-axis Low Revenue Opportunity --> High Revenue Opportunity
+    quadrant-1 High-Value Capture (Sovereign NOCs & Upstream AI)
+    quadrant-2 Scaled Commodity Cloud (Generic Storage/VMs)
+    quadrant-3 Low-Margin Legacy (On-Prem Migration)
+    quadrant-4 Wedge Opportunities (BigQuery Omni & Agentic OSDU)
+    "AWS (37% Share)": [0.35, 0.85]
+    "Azure (32% Share)": [0.45, 0.78]
+    "Google Cloud (10% Today)": [0.88, 0.65]
+    "Google Target (20% by 2028)": [0.92, 0.90]</pre></div>
+
+<h3 class="doc-h3">Market Sizing Matrix (TAM / SAM / SOM)</h3>
+
+<div class="table-scroll"><table><thead><tr><th>Market Segment</th><th>2028 Valuation</th><th>Scope & Definition</th><th>Data Source</th></tr></thead><tbody><tr><td><strong>Total Addressable Market (TAM)</strong></td><td><strong>$21.0 Billion</strong></td><td>Total global cloud, data, and AI infrastructure spending across all upstream, midstream, and downstream O&G operators.</td><td><a href="https://www.idc.com/research" target="_blank" rel="noopener noreferrer">IDC Cloud Tracker / Straits Research</a></td></tr><tr><td><strong>Serviceable Addressable Market (SAM)</strong></td><td><strong>$9.5 Billion</strong></td><td>High-margin, Google-winnable workloads: Agentic AI, Sovereign NOC cloud, Subsurface HPC, and CCUS MRV.</td><td><a href="https://www.gartner.com/en/newsroom" target="_blank" rel="noopener noreferrer">Gartner O&G Vertical Analysis</a></td></tr><tr><td><strong>Serviceable Obtainable Market (SOM)</strong></td><td><strong>$3.2 Billion</strong></td><td>3-year realistic capture pipeline across 33 named Tier 1–4 accounts and global NOCs.</td><td>Google Cloud Internal Pipeline Analysis</td></tr></tbody></table></div>
+<h3 class="doc-h3">Cloud Market Share Benchmark (O&G Vertical)</h3>
+
+<div class="table-scroll"><table><thead><tr><th>Cloud Provider</th><th>Current Market Share</th><th>Key Anchor Accounts</th><th>3-Year Target</th></tr></thead><tbody><tr><td><strong>AWS</strong></td><td><strong>37%</strong></td><td>Shell, Oxy, Aker BP, TGS, ENI, Petrobras</td><td>32%</td></tr><tr><td><strong>Azure</strong></td><td><strong>32%</strong></td><td>Chevron, Equinor, Devon, ADNOC, Petronas</td><td>28%</td></tr><tr><td><strong>Google Cloud</strong></td><td><strong>10%</strong></td><td>Pertamina, PTTEP, Reliance, TotalEnergies (via SLB)</td><td><strong>20% ($1.96B ARR)</strong></td></tr><tr><td><strong>Others / On-Prem</strong></td><td><strong>21%</strong></td><td>Regional NOCs, Private Datacenters, National Clouds</td><td>20%</td></tr></tbody></table></div>
+<h3 class="doc-h3">5-Year Revenue Projection by Workload Pillar ($ Millions)</h3>
+
+<div class="table-scroll"><table><thead><tr><th>Workload Category</th><th>2024</th><th>2025</th><th>2026</th><th>2027</th><th>2028</th><th>5-Yr CAGR</th></tr></thead><tbody><tr><td><strong>AI/ML Workloads</strong></td><td>$80M</td><td>$140M</td><td>$250M</td><td>$450M</td><td>$750M</td><td><strong>75%</strong></td></tr><tr><td><strong>HPC Seismic & Simulation</strong></td><td>$40M</td><td>$65M</td><td>$110M</td><td>$180M</td><td>$280M</td><td><strong>63%</strong></td></tr><tr><td><strong>Data Analytics & OSDU</strong></td><td>$120M</td><td>$180M</td><td>$260M</td><td>$380M</td><td>$520M</td><td><strong>44%</strong></td></tr><tr><td><strong>Sovereign Cloud Regions</strong></td><td>$30M</td><td>$55M</td><td>$95M</td><td>$160M</td><td>$260M</td><td><strong>71%</strong></td></tr><tr><td><strong>CCUS & Carbon MRV</strong></td><td>$5M</td><td>$15M</td><td>$40M</td><td>$80M</td><td>$150M</td><td><strong>134%</strong></td></tr><tr><td><strong>TOTAL REVENUE</strong></td><td><strong>$275M</strong></td><td><strong>$455M</strong></td><td><strong>$755M</strong></td><td><strong>$1,250M</strong></td><td><strong>$1,960M</strong></td><td><strong>48%</strong></td></tr></tbody></table></div>
+<hr />
+
+<h2 class="doc-h2">3. The 6-Pillar Operating Strategy</h2>
+
+<div class="mermaid-container"><pre class="mermaid">graph TD
+    P1["1. Customer Offense<br/>(33 Named Accounts)"] --> Core["Google Cloud O&G Strategy"]
+    P2["2. Ecosystem Coalition<br/>(SLB, Cognite, EPAM, HUMAIN)"] --> Core
+    P3["3. Technology Supremacy<br/>(Agentic OSDU & Sovereign Trio)"] --> Core
+    P4["4. Alphabet Advantage<br/>(DeepMind, Earth Engine, Security)"] --> Core
+    P5["5. Energy Exchange<br/>(Power-for-Compute Bilateral OS)"] --> Core
+    P6["6. Think Big Initiatives<br/>(Project Interchange & DeepMind Lab)"] --> Core</pre></div>
+
+<h3 class="doc-h3">Pillar 1: Customer Offense</h3>
+Four-tier account attack strategy prioritizing 33 named operators. High-velocity pursuits in Tier 1A (EQT, Devon, Diamondback, Harbour, TGS) combined with sovereign NOC engagement in Tier 2 (Aramco, KOC, Pertamina, PTTEP, Inpex, QatarEnergy).
+
+<h3 class="doc-h3">Pillar 2: Ecosystem Coalition</h3>
+Deep co-sell integrations with primary energy ISVs (<strong>SLB Delfi/Sequestri</strong>, <strong>Cognite Data Fusion</strong>, <strong>Baker Hughes Cordant</strong>, <strong>AspenTech</strong>), premier GSIs (<strong>EPAM</strong>, <strong>Accenture</strong>, <strong>TCS/Infosys</strong>), and sovereign AI partners (<strong>HUMAIN AI</strong> in Saudi Arabia).
+
+<h3 class="doc-h3">Pillar 3: Technology Supremacy</h3>
+Deploying <strong>Agentic OSDU</strong> and non-OSDU data lakes via BigQuery Omni and BigLake. Providing zero-egress in-place query over incumbent AWS S3 / Azure ADLS repositories paired with TPU v5p/v6 supercomputing clusters for subsurface HPC.
+
+<h3 class="doc-h3">Pillar 4: Alphabet Advantage</h3>
+Packaging cross-Alphabet innovations into industrial offerings: <strong>DeepMind</strong> (molecular discovery and weather risk), <strong>Google Earth Engine</strong> (methane monitoring & ROW pipeline tracking), <strong>Workspace with Gemini</strong> (workforce transformation), and <strong>Mandiant/Wiz</strong> (OT/ICS cybersecurity).
+
+<h3 class="doc-h3">Pillar 5: Energy Exchange</h3>
+Structuring bilateral industrial deals: Leveraging Google's massive clean energy procurement to contract firm power from energy operators in exchange for enterprise GCP compute and AI transformation commitments.
+
+<h3 class="doc-h3">Pillar 6: THINK BIG Initiatives</h3>
+Launching multi-billion-dollar R&D and commercial initiatives: <strong>Project Interchange</strong> (Energy-AI Bilateral OS), <strong>DeepMind Energy Lab</strong> (Frontier materials discovery for hydrogen & CCUS), and <strong>CCUS Transformation Partnerships</strong> with anchor consortia (ExxonMobil LCS, East Coast Cluster, INEOS Greensand).
+
+<hr />
+
+<h2 class="doc-h2">4. Customer Revenue Map (33 Named Accounts)</h2>
+
+<div class="alert alert-note"><strong>NOTE:</strong> <em>Figures below reflect estimated total addressable cloud/AI opportunity per account, 3-year revenue ramp projection, and current pipeline deal stage. "Actual GCP Spend" is managed via CRM/Salesforce records.</em></div>
+
+<div class="table-scroll"><table><thead><tr><th>Account Name</th><th>Tier</th><th>Region</th><th>Incumbent</th><th>Strategy Posture</th><th>Est. Opp ($M)</th><th>3-Yr Ramp (Y1/Y2/Y3) ($M)</th><th>Pipeline Stage</th></tr></thead><tbody><tr><td><strong>Saudi Aramco</strong></td><td>2</td><td>MEA</td><td>CNTXT / Azure</td><td>Lead / Sovereign</td><td><strong>$150M</strong></td><td>[$20M, $60M, $150M]</td><td>Qualified</td></tr><tr><td><strong>ExxonMobil</strong></td><td>3</td><td>Americas</td><td>Azure</td><td>Multicloud Wedge</td><td><strong>$120M</strong></td><td>[$10M, $40M, $80M]</td><td>Prospect</td></tr><tr><td><strong>TotalEnergies</strong></td><td>3</td><td>EMEA</td><td>Multi</td><td>Lead (via SLB)</td><td><strong>$80M</strong></td><td>[$15M, $40M, $80M]</td><td>Qualified</td></tr><tr><td><strong>QatarEnergy</strong></td><td>2</td><td>MEA</td><td>Greenfield</td><td>Sovereign Lead</td><td><strong>$60M</strong></td><td>[$8M, $25M, $60M]</td><td>Prospect</td></tr><tr><td><strong>Reliance Industries</strong></td><td>3</td><td>APAC</td><td>GCP Anchor</td><td>Lead / Expansion</td><td><strong>$60M</strong></td><td>[$18M, $35M, $60M]</td><td>Production</td></tr><tr><td><strong>BP</strong></td><td>3</td><td>EMEA</td><td>Multi (Azure/AWS)</td><td>Multicloud Wedge</td><td><strong>$55M</strong></td><td>[$5M, $20M, $40M]</td><td>Prospect</td></tr><tr><td><strong>ConocoPhillips</strong></td><td>1A</td><td>Americas</td><td>Azure</td><td>Multicloud Wedge</td><td><strong>$50M</strong></td><td>[$5M, $15M, $30M]</td><td>Prospect</td></tr><tr><td><strong>Chevron</strong></td><td>Fortress</td><td>Americas</td><td>Azure</td><td>Co-Exist Wedge</td><td><strong>$50M</strong></td><td>[$5M, $18M, $35M]</td><td>Prospect</td></tr><tr><td><strong>Pertamina</strong></td><td>2</td><td>APAC</td><td>GCP Anchor</td><td>Sovereign Lead</td><td><strong>$45M</strong></td><td>[$12M, $28M, $45M]</td><td>PoC</td></tr><tr><td><strong>ADNOC</strong></td><td>2</td><td>MEA</td><td>Azure / G42</td><td>Co-Exist / Sovereign</td><td><strong>$45M</strong></td><td>[$5M, $15M, $30M]</td><td>Prospect</td></tr><tr><td><strong>Petrobras</strong></td><td>3</td><td>Americas</td><td>AWS</td><td>Multicloud Wedge</td><td><strong>$45M</strong></td><td>[$5M, $15M, $35M]</td><td>Prospect</td></tr><tr><td><strong>Devon Energy</strong></td><td>1A</td><td>Americas</td><td>Azure</td><td>Lead / Win-Back</td><td><strong>$40M</strong></td><td>[$10M, $25M, $40M]</td><td>Prospect</td></tr><tr><td><strong>KOC / KPC</strong></td><td>2</td><td>MEA</td><td>Greenfield</td><td>Sovereign Lead</td><td><strong>$40M</strong></td><td>[$8M, $20M, $40M]</td><td>Prospect</td></tr><tr><td><strong>Shell</strong></td><td>Fortress</td><td>EMEA</td><td>AWS</td><td>Co-Exist Wedge</td><td><strong>$40M</strong></td><td>[$5M, $15M, $30M]</td><td>Qualified</td></tr><tr><td><strong>EQT / Expand Energy</strong></td><td>1A</td><td>Americas</td><td>Greenfield</td><td>Lead / Fast-Track</td><td><strong>$35M</strong></td><td>[$8M, $20M, $35M]</td><td>Qualified</td></tr><tr><td><strong>Petronas</strong></td><td>2</td><td>APAC</td><td>Azure</td><td>Multicloud Wedge</td><td><strong>$35M</strong></td><td>[$5M, $15M, $25M]</td><td>Prospect</td></tr><tr><td><strong>ENI</strong></td><td>3</td><td>EMEA</td><td>AWS</td><td>Multicloud Wedge</td><td><strong>$35M</strong></td><td>[$5M, $15M, $30M]</td><td>Prospect</td></tr><tr><td><strong>Equinor</strong></td><td>Fortress</td><td>EMEA</td><td>Azure</td><td>Co-Exist Wedge</td><td><strong>$35M</strong></td><td>[$3M, $12M, $25M]</td><td>Prospect</td></tr><tr><td><strong>PEMEX</strong></td><td>3</td><td>Americas</td><td>Greenfield</td><td>Sovereign Lead</td><td><strong>$35M</strong></td><td>[$5M, $15M, $25M]</td><td>Prospect</td></tr><tr><td><strong>TGS Energy Data</strong></td><td>1A</td><td>EMEA</td><td>AWS</td><td>Win-Back Pursuit</td><td><strong>$30M</strong></td><td>[$8M, $18M, $30M]</td><td>Qualified</td></tr><tr><td><strong>Oxy</strong></td><td>Fortress</td><td>Americas</td><td>AWS</td><td>Co-Exist Wedge</td><td><strong>$30M</strong></td><td>[$3M, $12M, $25M]</td><td>Prospect</td></tr><tr><td><strong>ONGC</strong></td><td>2</td><td>APAC</td><td>Greenfield</td><td>Sovereign Lead</td><td><strong>$30M</strong></td><td>[$5M, $15M, $30M]</td><td>Prospect</td></tr><tr><td><strong>Diamondback</strong></td><td>1A</td><td>Americas</td><td>Greenfield</td><td>Lead</td><td><strong>$25M</strong></td><td>[$5M, $15M, $25M]</td><td>Prospect</td></tr><tr><td><strong>Quantum Capital Group</strong></td><td>1B</td><td>Americas</td><td>Greenfield</td><td>PE Sponsor Platform</td><td><strong>$25M</strong></td><td>[$8M, $18M, $25M]</td><td>Qualified</td></tr><tr><td><strong>PTTEP</strong></td><td>2</td><td>APAC</td><td>GCP Anchor</td><td>Sovereign Production</td><td><strong>$25M</strong></td><td>[$8M, $16M, $25M]</td><td>Production</td></tr><tr><td><strong>Repsol</strong></td><td>3</td><td>EMEA</td><td>Azure</td><td>Multicloud Wedge</td><td><strong>$25M</strong></td><td>[$3M, $10M, $20M]</td><td>Prospect</td></tr><tr><td><strong>Woodside Energy</strong></td><td>3</td><td>APAC</td><td>AWS</td><td>Multicloud Wedge</td><td><strong>$25M</strong></td><td>[$3M, $10M, $20M]</td><td>Prospect</td></tr><tr><td><strong>Hess Corporation</strong></td><td>3</td><td>Americas</td><td>AWS</td><td>Multicloud Wedge</td><td><strong>$25M</strong></td><td>[$3M, $10M, $20M]</td><td>Prospect</td></tr><tr><td><strong>Harbour Energy</strong></td><td>1A</td><td>EMEA</td><td>Greenfield</td><td>Lead</td><td><strong>$20M</strong></td><td>[$5M, $12M, $20M]</td><td>Prospect</td></tr><tr><td><strong>EOG Resources</strong></td><td>1A</td><td>Americas</td><td>AWS</td><td>Multicloud Wedge</td><td><strong>$20M</strong></td><td>[$3M, $10M, $20M]</td><td>Prospect</td></tr><tr><td><strong>Continental Resources</strong></td><td>1C</td><td>Americas</td><td>Greenfield</td><td>Lead</td><td><strong>$20M</strong></td><td>[$5M, $12M, $20M]</td><td>Prospect</td></tr><tr><td><strong>Inpex</strong></td><td>2</td><td>APAC</td><td>Greenfield</td><td>Sovereign Lead</td><td><strong>$20M</strong></td><td>[$3M, $10M, $20M]</td><td>Prospect</td></tr><tr><td><strong>Santos</strong></td><td>3</td><td>APAC</td><td>AWS</td><td>Multicloud Wedge</td><td><strong>$20M</strong></td><td>[$3M, $8M, $18M]</td><td>Prospect</td></tr><tr><td><strong>YPF</strong></td><td>3</td><td>Americas</td><td>Greenfield</td><td>Lead</td><td><strong>$20M</strong></td><td>[$3M, $10M, $18M]</td><td>Prospect</td></tr><tr><td><strong>Williams Companies</strong></td><td>4</td><td>Americas</td><td>Azure</td><td>Midstream Wedge</td><td><strong>$18M</strong></td><td>[$3M, $8M, $15M]</td><td>Qualified</td></tr><tr><td><strong>Aker BP</strong></td><td>1A</td><td>EMEA</td><td>AWS</td><td>Multicloud Wedge</td><td><strong>$18M</strong></td><td>[$3M, $8M, $18M]</td><td>Qualified</td></tr><tr><td><strong>EnCap Investments</strong></td><td>1B</td><td>Americas</td><td>Greenfield</td><td>PE Sponsor Platform</td><td><strong>$15M</strong></td><td>[$3M, $8M, $15M]</td><td>Prospect</td></tr><tr><td><strong>Mewbourne Oil</strong></td><td>1C</td><td>Americas</td><td>Greenfield</td><td>Lead</td><td><strong>$8M</strong></td><td>[$2M, $5M, $8M]</td><td>Prospect</td></tr></tbody></table></div>
+<hr />
+
+<h2 class="doc-h2">5. Multicloud Wedge & Sovereign Cloud Architecture</h2>
+
+<div class="mermaid-container"><pre class="mermaid">architecture-beta
+    group gcp(logos:google-cloud)[Google Cloud Region]
+    group AWS(logos:aws)[AWS / Azure Data Estate]
+    
+    service bq(logos:google-bigquery)[BigQuery Omni] in gcp
+    service gemini(logos:google-gemini)[Gemini 3.5 Agent] in gcp
+    service tpu(logos:google-cloud)[TPU v6 HPC Cluster] in gcp
+    
+    service s3(logos:aws-s3)[Incumbent S3 / ADLS] in AWS
+    service osdu(logos:osdu)[OSDU Data Lake] in AWS
+    
+    bq -- "In-Place Query (Zero Egress)" --> s3
+    gemini -- "Reasoning over OSDU APIs" --> osdu
+    tpu -- "Seismic Inversion Burst" --> bq</pre></div>
+
+<h3 class="doc-h3">The Co-Existence Wedge Doctrine</h3>
+
+<p>1. <strong>Zero Migration Requirement</strong>: Leave incumbent S3/ADLS repositories untouched. Position BigQuery Omni and BigLake for in-place federated queries over AWS/Azure stores.
+2. <strong>Gemini Agentic Reasoning</strong>: Execute long-context reasoning over unstructured LAS/DLIS well logs, seismic surveys, and production reports without moving raw petabytes.
+3. <strong>Subsurface HPC Bursting</strong>: Provide TPU v5p/v6 supercomputing clusters for reservoir simulation and reverse time migration (RTM) bursting at 40% lower TCO than AWS EC2.</p>
+
+<h3 class="doc-h3">Sovereign Region Footprint Matrix</h3>
+
+<div class="table-scroll"><table><thead><tr><th>Sovereign Region</th><th>Target Accounts</th><th>Governance & Control Model</th></tr></thead><tbody><tr><td><strong>Dammam (`me-central2`)</strong></td><td>Saudi Aramco, CNTXT</td><td>Class C CST/NCA certified; CNTXT-operated External Key Management with Key Access Justifications.</td></tr><tr><td><strong>Doha Region</strong></td><td>QatarEnergy, LNG Ecosystem</td><td>In-country Qatar data boundary; low-latency regional AI inference for LNG shipping & trading.</td></tr><tr><td><strong>Jakarta (`asia-southeast2`)</strong></td><td>Pertamina</td><td>In-country Indonesia data residency; aligned with Pertamina Digital Hub IT Strategic Plan 2025–2029.</td></tr><tr><td><strong>Bangkok (`asia-southeast1`)</strong></td><td>PTTEP</td><td>In-country Thailand data residency; Apigee/BigQuery/GKE architecture for Net Zero analytics.</td></tr><tr><td><strong>Tokyo / Osaka</strong></td><td>Inpex</td><td>In-country Japan data residency; dual-region resilience for Ichthys LNG & CCUS monitoring.</td></tr><tr><td><strong>GDC Air-Gapped</strong></td><td>Kuwait NOCs, ADNOC OT</td><td>Disconnected Google Distributed Cloud hardware deployed directly on-premise at critical OT sites.</td></tr></tbody></table></div>
+<hr />
+
+<h2 class="doc-h2">6. Competitive Intelligence & Capability Matrix</h2>
+
+<div class="mermaid-container"><pre class="mermaid">radar
+    title Capability Comparison: GCP vs AWS vs Azure
+    axes Reasoning AI, Subsurface HPC, Multicloud In-Place, Sovereign Cloud, CCUS MRV, Power Exchange
+    "Google Cloud": [95, 90, 95, 90, 85, 95]
+    "AWS": [70, 85, 60, 65, 75, 40]
+    "Azure": [75, 70, 55, 80, 70, 50]</pre></div>
+
+<h3 class="doc-h3">Head-to-Head Capability Matrix</h3>
+
+<div class="table-scroll"><table><thead><tr><th>Strategic Capability</th><th>Google Cloud</th><th>AWS</th><th>Microsoft Azure</th><th>Google Competitive Advantage</th></tr></thead><tbody><tr><td><strong>Agentic AI & Reasoning</strong></td><td><strong>Gemini 3.5 / 3.6 (1M+ Token)</strong></td><td>Bedrock / Claude 3.5</td><td>Azure OpenAI / GPT-4o</td><td>Long-context multimodal reasoning over full seismic & well log repositories.</td></tr><tr><td><strong>Multicloud In-Place Query</strong></td><td><strong>BigQuery Omni & BigLake</strong></td><td>Redshift Spectrum</td><td>Synapse Link</td><td>Zero-egress query execution over incumbent AWS S3 / Azure ADLS lakes.</td></tr><tr><td><strong>Subsurface HPC Compute</strong></td><td><strong>TPU v5p / v6 Supercomputers</strong></td><td>EC2 UltraClusters</td><td>H100/H200 VMs</td><td>40% lower TCO for massive seismic inversion & reservoir simulation sweeps.</td></tr><tr><td><strong>Sovereign Cloud Controls</strong></td><td><strong>KSA (Dammam), Doha, GDC Airgap</strong></td><td>AWS Top Secret</td><td>Azure Sovereign</td><td>Direct partnership with CNTXT (KSA) and disconnected GDC Air-Gapped hardware.</td></tr><tr><td><strong>Energy Procurement OS</strong></td><td><strong>Project Interchange</strong></td><td>Clean Energy Contracts</td><td>PPA Deals</td><td>Bilateral OS: Swapping data center power demand for enterprise cloud commitments.</td></tr><tr><td><strong>CCUS & Carbon Accounting</strong></td><td><strong>SLB Sequestri + Earth Engine</strong></td><td>AWS Carbon</td><td>Azure Sustainability</td><td>Integrated satellite methane monitoring (MethaneSAT) + SLB reservoir modeling.</td></tr></tbody></table></div>
+<hr />
+
+<h2 class="doc-h2">7. Strategic "Think Big" Initiatives</h2>
+
+<h3 class="doc-h3">Project Interchange: Energy-AI Bilateral Operating System</h3>
+Project Interchange establishes a bilateral commercial framework with energy majors. Google Cloud contracts firm clean power generation (solar, geothermal, nuclear) from operators (e.g., EQT, Pertamina, TotalEnergies) to supply Google's expanding AI data center estate. In return, the operator commits their enterprise IT, OSDU data lakes, and AI workloads to Google Cloud.
+
+<div class="mermaid-container"><pre class="mermaid">sequenceDiagram
+    participant Operator as Energy Operator (e.g. EQT / Pertamina)
+    participant GCP as Google Cloud
+    participant Power as Google Energy Procurement
+    
+    Operator->>Power: Contracts Firm Power (Solar, Geothermal, Gas)
+    Power->>Operator: Guarantees Long-Term Power Purchase Agreement (PPA)
+    Operator->>GCP: Commits Enterprise OSDU & AI Workloads to GCP
+    GCP->>Operator: Deploys Gemini Agentic AI & Subsurface HPC</pre></div>
+
+<h3 class="doc-h3">DeepMind Energy Lab: Frontier Science Engine</h3>
+The DeepMind Energy Lab accelerates frontier R&D for energy transformation:
+<ul><li><strong>Molecular Discovery (GNoME & AlphaFold 3)</strong>: Computational screening of 100,000+ candidate solvent molecules for CCUS carbon capture and novel corrosion-resistant alloys for H₂ pipeline blending.</li>
+<li><strong>Physics Simulation (TORAX Architecture)</strong>: Differentiable neural proxy simulators executing full-physics reservoir simulations <strong>10,000× faster</strong> than legacy solvers.</li>
+<li><strong>Autonomous Operations</strong>: Reinforcement learning policies for real-time autonomous drilling control and process safety precursor detection.</li>
+</ul>
+<h3 class="doc-h3">CCUS Transformation Partnerships</h3>
+In partnership with <strong>SLB (Delfi/Sequestri)</strong>, Google Cloud establishes strategic technology partnerships with anchor CCUS consortiums:
+1. <strong>ExxonMobil Low Carbon Solutions</strong>: Intelligent Gulf Coast Hub platform for multi-tenant carbon accounting and EPA Class VI compliance.
+2. <strong>East Coast Cluster (BP / Equinor / TotalEnergies)</strong>: Neutral multi-operator CCUS intelligence platform.
+3. <strong>INEOS Greensand (Denmark)</strong>: Enterprise cloud expansion leveraging existing SLB Delfi deployment on GCP.
+
+<hr />
+
+<h2 class="doc-h2">8. Execution Roadmap & Leadership Alignment</h2>
+
+<div class="mermaid-container"><pre class="mermaid">gantt
+    title 90-Day Execution Roadmap
+    dateFormat  YYYY-MM-DD
+    axisFormat %b %d
+    
+    section Phase 1: Assess & Align
+    Executive Alignment & Council   :p1_1, 2026-08-01, 30d
+    15 Executive Discovery Tracks   :p1_2, 2026-08-05, 25d
+    ISV & GSI Joint Business Plans  :p1_3, 2026-08-10, 20d
+    
+    section Phase 2: Validate Wedges
+    2 Multicloud Wedge PoCs         :p2_1, 2026-09-01, 30d
+    Sovereign Region Scoping        :p2_2, 2026-09-05, 25d
+    First ISV FM Dataset Onboarding :p2_3, 2026-09-10, 20d
+    
+    section Phase 3: Industrialize
+    GSI Certification (EPAM/Acc)    :p3_1, 2026-10-01, 30d
+    ADIPEC 2026 Keynote & Releases  :p3_2, 2026-10-15, 15d
+    Signed Interchange MOU          :p3_3, 2026-10-20, 10d</pre></div>
+
+<h3 class="doc-h3">30-60-90 Day Execution Workstreams</h3>
+
+<div class="table-scroll"><table><thead><tr><th>Execution Phase</th><th>Focus Theme</th><th>Key Exit Deliverables</th></tr></thead><tbody><tr><td><strong>Days 1–30</strong></td><td><strong>Assess, Align & Activate</strong></td><td>• Global O&G Deal & Product Council operationalized.<br/>• Top 33 accounts scored on priority heat map.<br/>• 15 customer discovery tracks opened (Pertamina, PTTEP, EQT, Devon).<br/>• Project Interchange framework ratified with Google Energy Procurement.</td></tr><tr><td><strong>Days 31–60</strong></td><td><strong>Validate Wedges & Sovereignty</strong></td><td>• 2 multicloud wedge validations live (1 AWS, 1 Azure).<br/>• Sovereign AI roadmaps signed for Aramco (Dammam) and Pertamina (Jakarta).<br/>• First ISV dataset onboarded to Vertex AI for Foundation Model pre-training.</td></tr><tr><td><strong>Days 61–90</strong></td><td><strong>Scale, Accelerate & Penetrate</strong></td><td>• 3 solution kits shipped; EPAM & Accenture certified on Agentic OSDU.<br/>• Marquee customer announcements locked for <strong>ADIPEC 2026</strong>.<br/>• 1 Project Interchange MOU signed; 1 DeepMind Energy Lab partnership signed.</td></tr></tbody></table></div>
+<h3 class="doc-h3">Strategic Objectives (OKRs)</h3>
+
+<ul><li><strong>OKR 1</strong>: Sign <strong>3–5 Tier 1 accounts</strong> (EQT, Devon, Diamondback) with ≥1 live in production on Agentic OSDU.</li>
+<li><strong>OKR 2</strong>: Validate <strong>2 multicloud wedges</strong> in AWS/Azure fortress accounts (Shell, Chevron) with zero migration escalations.</li>
+<li><strong>OKR 3</strong>: Ratify <strong>1 Gulf NOC sovereign PoC</strong> (Aramco/KOC) and launch HUMAIN AI enablement on Dammam `me-central2`.</li>
+<li><strong>OKR 4</strong>: Achieve <strong>≥30% partner-originated pipeline</strong> via SLB, Cognite, Baker Hughes, EPAM, and Accenture.</li>
+<li><strong>OKR 5</strong>: Embed <strong>3 Alphabet modules</strong> (Earth Engine, WeatherNext, Mandiant) across active account pursuits.</li>
+<li><strong>OKR 6</strong>: Execute <strong>1 signed Project Interchange MOU</strong> and <strong>1 DeepMind Energy Lab research partnership</strong> at ADIPEC 2026.</li>
+</ul>
+<h3 class="doc-h3">Executive Decisions Required from Google Leadership</h3>
+
+<div class="alert alert-caution"><strong>CAUTION:</strong> <strong>Executive Alignment & Resource Requests</strong>
+1. <strong>Resource Concentration</strong>: Ratify the 33-account focus model, assigning direct P1 executive sponsors.
+2. <strong>Engineering Staffing</strong>: Formally assign Google product/engineering leads to the 6 Agentic OSDU reference patterns.
+3. <strong>Sovereign Region Investment</strong>: Accelerate feature parity for Dammam (`me-central2`) and Doha regions.
+4. <strong>Project Interchange Approval</strong>: Authorize Google Energy Procurement to structure bilateral power-for-compute deals with EQT and Pertamina.</div>
+
+<hr />
+
+<h3 class="doc-h3">Footnotes & Data Sources</h3>
+<ul><li><a href="https://www.iea.org/topics/world-energy-outlook" target="_blank" rel="noopener noreferrer">IEA World Energy Outlook 2025</a> — Global Energy Demand & Revenue Benchmarks</li>
+<li><a href="https://www.gartner.com/en/newsroom" target="_blank" rel="noopener noreferrer">Gartner IT Spending Forecast Q2 2025</a> — Vertical IT Expenditure Metrics</li>
+<li><a href="https://www.idc.com/research" target="_blank" rel="noopener noreferrer">IDC Cloud Tracker 2025</a> — Enterprise Public Cloud Adoption Rates</li>
+<li><a href="https://www.precedenceresearch.com/artificial-intelligence-in-oil-and-gas-market" target="_blank" rel="noopener noreferrer">Precedence Research</a> — Artificial Intelligence in Oil & Gas Market Projection ($5.4B by 2035)</li>
+<li><a href="https://www.marketsandmarkets.com/Market-Reports/digital-oilfield-solutions-market-528.html" target="_blank" rel="noopener noreferrer">MarketsandMarkets</a> — Digital Oilfield Market Forecast ($43.0B by 2029)</li>
+<li><a href="https://www.globalccsinstitute.com/resources/global-status-report/" target="_blank" rel="noopener noreferrer">Global CCS Institute Status Report</a> — Global CCUS Project & Investment Tracker</li>
+<li><a href="https://www.spe.org/en/jpt/jpt-main-page/" target="_blank" rel="noopener noreferrer">SPE Journal of Petroleum Technology</a> — Upstream Geoscience Workforce & Digital Energy Surveys</li>
+</ul>
+
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'neutral',
+      securityLevel: 'loose',
+      fontFamily: 'Google Sans, Roboto, sans-serif'
+    });
+  </script>
+</body>
+</html>
