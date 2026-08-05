@@ -1286,40 +1286,41 @@ body {
 }
 
 /* ── Metric Cards (Industry Landscape) ───────────────────────────────── */
-.metric-grid { display: grid; gap: 1rem; }
+.metric-grid { display: grid; gap: 0.85rem; }
 .metric-grid--3col { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
 .metric-grid--4col { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.metric-grid--6col { grid-template-columns: repeat(6, minmax(0, 1fr)); }
 
 .metric-card {
   background: var(--bg-card); border: 1px solid var(--border);
-  border-radius: 12px; padding: 1.25rem; text-align: center;
+  border-radius: 12px; padding: 1rem 0.85rem; text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .metric-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
 .metric-card--landscape { text-align: left; }
-.metric-icon { font-size: 1.8rem; display: block; margin-bottom: 0.5rem; }
-.metric-value { font-size: 1.8rem; font-weight: 700; color: var(--google-blue); line-height: 1.2; }
-.metric-label { font-size: 0.85rem; font-weight: 600; color: var(--text-primary); margin-top: 0.25rem; }
-.metric-sub { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem; }
-.metric-source { font-size: 0.65rem; color: var(--text-muted); font-style: italic; margin-top: 0.5rem; opacity: 0.7; }
+.metric-icon { font-size: 1.5rem; display: block; margin-bottom: 0.35rem; }
+.metric-value { font-size: 1.55rem; font-weight: 700; color: var(--google-blue); line-height: 1.2; }
+.metric-label { font-size: 0.82rem; font-weight: 600; color: var(--text-primary); margin-top: 0.25rem; line-height: 1.25; }
+.metric-sub { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.2rem; line-height: 1.3; }
+.metric-source { font-size: 0.65rem; color: var(--text-muted); font-style: italic; margin-top: 0.4rem; opacity: 0.7; }
 
 /* ── Driver Cards ────────────────────────────────────────────────────── */
-.driver-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+.driver-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0.85rem; }
 .driver-card {
   background: var(--bg-card); border: 1px solid var(--border);
-  border-radius: 12px; padding: 1.25rem; cursor: pointer;
+  border-radius: 12px; padding: 1rem 0.85rem; cursor: pointer;
   transition: all 0.25s;
 }
 .driver-card:hover { border-color: var(--google-blue); }
 .driver-card--active { border-color: var(--google-blue); background: var(--bg-elevated); }
-.driver-card__header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
-.driver-card__icon { font-size: 1.6rem; }
-.driver-card__title { font-size: 0.95rem; font-weight: 600; color: var(--text-primary); }
-.driver-card__stat { display: flex; align-items: baseline; gap: 0.5rem; }
-.driver-card__stat-value { font-size: 1.5rem; font-weight: 700; color: var(--google-blue); }
-.driver-card__stat-label { font-size: 0.75rem; color: var(--text-muted); }
-.driver-card__detail { margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border); }
-.driver-card__detail p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; }
+.driver-card__header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+.driver-card__icon { font-size: 1.35rem; flex-shrink: 0; }
+.driver-card__title { font-size: 0.85rem; font-weight: 600; color: var(--text-primary); line-height: 1.25; }
+.driver-card__stat { display: flex; align-items: baseline; gap: 0.4rem; flex-wrap: wrap; }
+.driver-card__stat-value { font-size: 1.35rem; font-weight: 700; color: var(--google-blue); }
+.driver-card__stat-label { font-size: 0.72rem; color: var(--text-muted); line-height: 1.25; }
+.driver-card__detail { margin-top: 0.75rem; padding-top: 0.5rem; border-top: 1px solid var(--border); }
+.driver-card__detail p { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.45; }
 
 /* ── Digital Maturity Bars ───────────────────────────────────────────── */
 .maturity-filters { display: flex; gap: 0.5rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
@@ -1463,8 +1464,13 @@ body {
 .decision-card__detail { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; }
 
 /* ── Responsive: New sections ────────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .metric-grid--6col { grid-template-columns: repeat(3, 1fr); }
+  .driver-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
 @media (max-width: 768px) {
-  .metric-grid--3col, .metric-grid--4col { grid-template-columns: 1fr; }
+  .metric-grid--6col, .metric-grid--3col, .metric-grid--4col { grid-template-columns: 1fr; }
   .driver-grid { grid-template-columns: 1fr; }
   .tam-layout { flex-direction: column; align-items: stretch; }
   .tam-circles { width: 180px; height: 180px; margin: 0 auto; }
