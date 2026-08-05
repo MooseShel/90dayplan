@@ -308,7 +308,7 @@ export default function S_MarketOpportunity() {
         <h1 className="section-title">Sizing the Prize</h1>
         <p className="section-desc">
           The cloud opportunity in oil & gas is projected to reach $21B+ by 2028.
-          Google Cloud's current ~10% share in O&G represents a massive growth runway —
+          Google Cloud's current ~10% share in O&G represents a massive growth runway ,
           with AI, sovereign, and HPC workloads as the primary vectors for share capture.
         </p>
       </div>

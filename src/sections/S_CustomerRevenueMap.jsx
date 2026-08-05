@@ -137,8 +137,8 @@ export default function S_CustomerRevenueMap() {
                 <td>{a.incumbent}</td>
                 <td><span className={`pill ${POSTURE_PILL[a.posture] || ''}`}>{a.posture}</span></td>
                 <td className="col-num">${a.estOpportunity}M</td>
-                <td className="col-num col-placeholder">{a.gcpSpend != null ? `$${a.gcpSpend}M` : '—'}</td>
-                <td className="col-num">{a.competitorSpend != null ? `$${a.competitorSpend}M` : '—'}</td>
+                <td className="col-num col-placeholder">{a.gcpSpend != null ? `$${a.gcpSpend}M` : ','}</td>
+                <td className="col-num">{a.competitorSpend != null ? `$${a.competitorSpend}M` : ','}</td>
                 <td className="cell-ramp">
                   {a.ramp3yr && <span className="ramp-mini">{a.ramp3yr.map(v => `$${v}M`).join(' → ')}</span>}
                 </td>

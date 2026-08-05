@@ -44,8 +44,8 @@ function InterchangeSection({ data }) {
         </div>
       </div>
 
-      {/* Why Only Google — competitive moat */}
-      <div className="section-eyebrow mb-8">Competitive Moat — Why Only Google Can Do This</div>
+      {/* Why Only Google , competitive moat */}
+      <div className="section-eyebrow mb-8">Competitive Moat , Why Only Google Can Do This</div>
       <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
         <div className="table-responsive" style={{ marginBottom: 0 }}>
           <table className="data-table" style={{ minWidth: '500px' }}>
@@ -176,7 +176,7 @@ function DeepMindLabSection({ data }) {
       </div>
 
       {/* Competitive Moat */}
-      <div className="section-eyebrow mb-8">Competitive Moat — No Competitor Can Replicate</div>
+      <div className="section-eyebrow mb-8">Competitive Moat , No Competitor Can Replicate</div>
       <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
         <div className="table-responsive" style={{ marginBottom: 0 }}>
           <table className="data-table" style={{ minWidth: '500px' }}>
@@ -200,7 +200,7 @@ function DeepMindLabSection({ data }) {
         </div>
       </div>
 
-      {/* Research Verticals — tabbed interface */}
+      {/* Research Verticals , tabbed interface */}
       <div className="section-eyebrow mb-8">Research Verticals</div>
       <div className="row gap-8 mb-16" style={{ flexWrap: 'wrap' }}>
         {DEEPMIND_RESEARCH_VERTICALS.map(v => (
@@ -259,7 +259,7 @@ function DeepMindLabSection({ data }) {
       )}
 
       {/* Program Tiers */}
-      <div className="section-eyebrow mb-8">Program Structure — Three Engagement Tiers</div>
+      <div className="section-eyebrow mb-8">Program Structure , Three Engagement Tiers</div>
       <div className="grid-3" style={{ gap: '14px' }}>
         {DEEPMIND_LAB_TIERS.map(tier => (
           <div key={tier.tier} className="card" style={{ borderColor: COLOR_MAP[tier.color], display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -315,8 +315,8 @@ function CCUSSection({ data }) {
         </div>
       </div>
 
-      {/* Why Only Google — competitive moat */}
-      <div className="section-eyebrow mb-8">Competitive Moat — Why Only Google Can Do This</div>
+      {/* Why Only Google , competitive moat */}
+      <div className="section-eyebrow mb-8">Competitive Moat , Why Only Google Can Do This</div>
       <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
         <div className="table-responsive" style={{ marginBottom: 0 }}>
           <table className="data-table" style={{ minWidth: '500px' }}>
@@ -413,7 +413,7 @@ function CCUSSection({ data }) {
       </div>
 
       {/* Land & Expand Trojan Horse */}
-      <div className="section-eyebrow mb-8">Land-and-Expand Strategy — CCUS as Trojan Horse for Enterprise Cloud</div>
+      <div className="section-eyebrow mb-8">Land-and-Expand Strategy , CCUS as Trojan Horse for Enterprise Cloud</div>
       <div className="card" style={{ borderColor: 'var(--teal)', background: 'linear-gradient(135deg, var(--bg-card) 0%, var(--bg-elevated) 100%)' }}>
         <div className="grid-2" style={{ gap: '16px' }}>
           {[
@@ -493,7 +493,7 @@ export default function S11ThinkBig() {
 
       {/* Shared Timeline */}
       <div style={{ marginTop: '32px' }}>
-        <div className="section-eyebrow mb-8">Integration Timeline — All Three Initiatives</div>
+        <div className="section-eyebrow mb-8">Integration Timeline , All Three Initiatives</div>
         <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
           <div className="table-responsive" style={{ marginBottom: 0 }}>
             <table className="data-table" style={{ minWidth: '800px' }}>
@@ -537,12 +537,12 @@ export default function S11ThinkBig() {
               <strong style={{ color: 'var(--text-primary)' }}>DeepMind Energy Lab</strong> works because Google owns
               the only frontier science engine that can solve molecular and physics problems blocking the energy transition.{' '}
               <strong style={{ color: 'var(--text-primary)' }}>CCUS Transformation Partnerships</strong> works because
-              Google's differentiated stack — Earth Engine, MethaneSAT, Gemini Agents, SLB Delfi on GCP — is
+              Google's differentiated stack , Earth Engine, MethaneSAT, Gemini Agents, SLB Delfi on GCP , is
               the only end-to-end CCUS platform that can serve multi-operator consortiums at global scale.
             </p>
             <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: '1.65', marginTop: '8px' }}>
               Together, they convert Google from a <em>cloud vendor</em> into the energy industry's{' '}
-              <strong style={{ color: 'var(--amber)' }}>indispensable strategic partner</strong> — creating
+              <strong style={{ color: 'var(--amber)' }}>indispensable strategic partner</strong> , creating
               relationships that are generational, not transactional.
             </p>
           </div>

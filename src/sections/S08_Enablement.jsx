@@ -25,14 +25,14 @@ export default function S08Enablement() {
         <div className="section-eyebrow">08 · Sales Enablement &amp; GTM Operating Model</div>
         <h1 className="section-title">Scaling the Machine</h1>
         <p className="section-desc">
-          The Market Lead doesn't sell — the Market Lead makes 50 sellers, 40 partners, and 6 engineering teams
+          The Market Lead doesn't sell , the Market Lead makes 50 sellers, 40 partners, and 6 engineering teams
           sell better, faster, and with domain authority they didn't have before. This section maps the operating
           model that scales central O&amp;G strategy across Google Cloud's five supporting functions.
         </p>
       </div>
 
       {/* ── Hub-and-Spoke Diagram ── */}
-      <div className="section-eyebrow mb-16">Operating Model — Hub &amp; Spoke</div>
+      <div className="section-eyebrow mb-16">Operating Model , Hub &amp; Spoke</div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '32px' }}>
         {/* Center Hub */}
@@ -52,7 +52,7 @@ export default function S08Enablement() {
           </div>
         </div>
 
-        {/* Spoke Nodes — clickable function cards */}
+        {/* Spoke Nodes , clickable function cards */}
         <div className="grid-5" style={{ gap: '10px' }}>
           {GTM_OPERATING_MODEL.map(m => (
             <div
@@ -125,7 +125,7 @@ export default function S08Enablement() {
       <div className="sep" />
 
       {/* ── Enablement Kit Tracker ── */}
-      <div className="section-eyebrow mb-16">Enablement Kit Tracker — click status to cycle</div>
+      <div className="section-eyebrow mb-16">Enablement Kit Tracker , click status to cycle</div>
 
       <div className="card" style={{ padding: 0, overflow: 'hidden', width: '100%', marginBottom: '32px' }}>
         <div className="table-responsive" style={{ marginBottom: 0 }}>
@@ -171,7 +171,7 @@ export default function S08Enablement() {
       <div className="sep" />
 
       {/* ── Operating Cadence ── */}
-      <div className="section-eyebrow mb-16">Operating Cadence — Recurring Mechanisms</div>
+      <div className="section-eyebrow mb-16">Operating Cadence , Recurring Mechanisms</div>
 
       <div className="grid-3" style={{ gap: '14px', marginBottom: '32px' }}>
         {SCALING_MECHANISMS.map(m => (
@@ -202,7 +202,7 @@ export default function S08Enablement() {
       <div className="sep" />
 
       {/* ── Field Multiplier Scorecard ── */}
-      <div className="section-eyebrow mb-16">Field Multiplier Scorecard — Day 0 → 90 Targets</div>
+      <div className="section-eyebrow mb-16">Field Multiplier Scorecard , Day 0 → 90 Targets</div>
 
       <div className="card" style={{ marginBottom: '32px' }}>
         <div className="stack" style={{ gap: '18px' }}>
@@ -262,14 +262,14 @@ export default function S08Enablement() {
       {/* ── Philosophy Callout ── */}
       <div className="highlight-block teal" style={{ marginBottom: '24px' }}>
         <strong style={{ fontStyle: 'normal', color: 'var(--teal)' }}>Scaling Philosophy:</strong>{' '}
-        The Market Lead doesn't sell — the Market Lead makes 50 sellers, 40 partners, and 6 engineering
+        The Market Lead doesn't sell , the Market Lead makes 50 sellers, 40 partners, and 6 engineering
         teams sell better, faster, and with domain authority they didn't have before. Every kit, cadence,
         and mechanism exists to remove friction and multiply field impact across Google's global energy practice.
       </div>
 
       <div className="highlight-block" style={{ marginBottom: '0' }}>
         <strong style={{ fontStyle: 'normal', color: 'var(--google-blue)' }}>Existing Asset Leverage:</strong>{' '}
-        This enablement program builds on existing Google Cloud Energy materials — battle cards, pitch decks,
+        This enablement program builds on existing Google Cloud Energy materials , battle cards, pitch decks,
         and certification programs already in-market. The strategy updates, refines, and extends these assets
         with the new agentic OSDU, sovereign, and multicloud wedge positioning where applicable.
       </div>

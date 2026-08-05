@@ -27,11 +27,11 @@ function AccountRow({ a }) {
       <td><span className={`pill ${a.priority === 'P1' ? 'pill-green' : a.priority === 'P2' ? 'pill-blue' : 'pill-muted'}`}>{a.priority}</span></td>
       <td>
         {!a.dataReady
-          ? <span className="pill pill-red">⛔ Data Gate Fail — Accelerator Required</span>
+          ? <span className="pill pill-red">⛔ Data Gate Fail , Accelerator Required</span>
           : <span className="pill pill-green">{score} / 100</span>}
       </td>
       <td style={{ color: POSTURE_COLOR[a.posture] || 'var(--text-muted)', fontWeight: 600, fontSize: '12px' }}>{a.posture}</td>
-      <td><span className="tag">{a.incumbent || '—'}</span></td>
+      <td><span className="tag">{a.incumbent || ','}</span></td>
     </tr>
   );
 }
@@ -54,7 +54,7 @@ export default function S02Offense() {
         <h1 className="section-title">Market Offense &amp; Named-Account Scorecard</h1>
         <p className="section-desc">
           A scored, four-tier named-account attack. Every account is prioritized by a composite score across
-          four dimensions — but data readiness is a binary gate that must be cleared before any pilot begins.
+          four dimensions , but data readiness is a binary gate that must be cleared before any pilot begins.
           Accounts that fail enter a paid Data Readiness Accelerator Track (Gemini Document AI + GSI sprint)
           to unlock them. This prevents under-resourced pilots that damage the brand.
         </p>
@@ -134,7 +134,7 @@ export default function S02Offense() {
       <div className="highlight-block teal mb-24">
         <strong style={{ color: 'var(--teal)' }}>PE Sponsor-Platform Strategy:</strong> One Quantum Capital Group
         or EnCap-class win unlocks the entire portco fleet. Structure the first agreement as a master framework
-        with per-entity activation. Private equity sponsors control data, budget, and exit timeline — they are
+        with per-entity activation. Private equity sponsors control data, budget, and exit timeline , they are
         motivated by demonstrable EBITDA impact within 90 days, not multi-year transformation promises.
         Lead with a Gemini data-room diligence module that shows value before the well is spud.
       </div>
@@ -145,7 +145,7 @@ export default function S02Offense() {
       <div className="section-eyebrow mb-8">Co-Existence Wedge Doctrine (Fortress & Wedge Accounts)</div>
       <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
         Shell, Oxy, Chevron, Equinor, ADNOC, Aker BP, Petronas, ENI, BP, Petrobras, and Williams are deeply
-        committed to AWS or Azure. The wedge doctrine avoids a migration conversation entirely — Google
+        committed to AWS or Azure. The wedge doctrine avoids a migration conversation entirely , Google
         intelligence runs <em>above</em> existing cloud estates. Click each step to see the implementation
         detail and example accounts.
       </p>
@@ -180,7 +180,7 @@ export default function S02Offense() {
 
       <div className="highlight-block mt-16">
         <strong style={{ color: 'var(--google-blue)' }}>Counter-move against AWS:</strong> When AWS discounts
-        in a Tier 1A independent, lead with an outcome-priced pilot anchored to a KPI AWS cannot match —
+        in a Tier 1A independent, lead with an outcome-priced pilot anchored to a KPI AWS cannot match ,
         NPT reduction, interpretations per day, or production cycle time. AWS charges for compute; Google
         charges for results. When Azure deepens ADME at a fortress account: "Your OSDU investment is safe.
         We make it think."

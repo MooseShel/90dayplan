@@ -15,18 +15,18 @@ import S_ExecutionRoadmap from './sections/S_ExecutionRoadmap';
 import './index.css';
 
 const SECTION_MAP = {
-  // Tier 1 — Industry & Market
+  // Tier 1 , Industry & Market
   landscape:   S_IndustryLandscape,
   opportunity: S_MarketOpportunity,
   revenuemap:  S_CustomerRevenueMap,
-  // Tier 2 — Google Cloud Strategy
+  // Tier 2 , Google Cloud Strategy
   thesis:      S01Thesis,
   accounts:    S02Offense,
   technology:  S04Technology,
   partners:    S03Partners,
   initiatives: S11ThinkBig,
   competitive: S_CompetitiveIntel,
-  // Tier 3 — Execution
+  // Tier 3 , Execution
   execution:   S_ExecutionRoadmap,
 };
 

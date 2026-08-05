@@ -51,7 +51,7 @@ export default function S_ExecutionRoadmap() {
                 onClick={() => setActivePhase(p.id)}
                 style={{ fontSize: '0.85rem', padding: '6px 16px' }}
               >
-                <strong>{p.label}</strong> — {p.theme}
+                <strong>{p.label}</strong> , {p.theme}
               </button>
             ))}
           </div>
@@ -110,7 +110,7 @@ export default function S_ExecutionRoadmap() {
       {/* ── Tab: GTM Operating Model ─────────────────────────────── */}
       {tab === 'gtm' && (
         <div className="exec-panel">
-          <h2 className="subsection-title">GTM Operating Model — Hub & Spoke</h2>
+          <h2 className="subsection-title">GTM Operating Model , Hub & Spoke</h2>
           <div className="gtm-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {GTM_OPERATING_MODEL.map((func) => (
               <div key={func.id} className={`gtm-card gtm-card--${func.color}`} style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: '12px', padding: '1.25rem' }}>

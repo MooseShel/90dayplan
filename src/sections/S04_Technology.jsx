@@ -13,25 +13,25 @@ const AGENTS = [
   {
     num: 1, name: 'Subsurface Characterization',
     input: 'Seismic cubes, well logs, formation reports, mud logs',
-    delivers: 'Cross-domain synthesis across seismic, logs, and reports — shorten interpretation cycles from weeks to hours.',
+    delivers: 'Cross-domain synthesis across seismic, logs, and reports , shorten interpretation cycles from weeks to hours.',
     kpi: 'Interpretations per geoscientist-day',
   },
   {
     num: 2, name: 'Well Log Interpretation',
     input: 'Raw LAS / DLIS files, formation tops, offset well database',
-    delivers: 'Evidence-linked interpretation recommendations with traceable reasoning — every recommendation cites the source data.',
+    delivers: 'Evidence-linked interpretation recommendations with traceable reasoning , every recommendation cites the source data.',
     kpi: 'Manual QA hours eliminated per well',
   },
   {
     num: 3, name: 'Drilling Risk &amp; NPT',
     input: 'Real-time rig telemetry, geology prognosis, offset well performance',
-    delivers: 'Risk pattern detection and bounded mitigation recommendations — with operator-approved authority limits and kill switches.',
+    delivers: 'Risk pattern detection and bounded mitigation recommendations , with operator-approved authority limits and kill switches.',
     kpi: 'NPT events avoided; cost per foot',
   },
   {
     num: 4, name: 'Production Optimization',
     input: 'SCADA / PI historian, production allocations, lift curves, ELTs',
-    delivers: 'Ranked exception list and intervention candidates by economic impact — not raw alarms.',
+    delivers: 'Ranked exception list and intervention candidates by economic impact , not raw alarms.',
     kpi: 'Incremental BOE per day; cycle time to decision',
   },
   {
@@ -43,7 +43,7 @@ const AGENTS = [
   {
     num: 6, name: 'Process Safety &amp; Procedures',
     input: 'MOC records, incident reports, regulatory procedures, operating envelopes',
-    delivers: 'Operator guidance grounded in approved procedures with automatic policy citation — reduces procedure deviation risk.',
+    delivers: 'Operator guidance grounded in approved procedures with automatic policy citation , reduces procedure deviation risk.',
     kpi: 'Procedure deviation incidents; audit findings',
   },
 ];
@@ -56,7 +56,7 @@ const OSDU_PATH = {
 };
 const NON_OSDU_PATH = {
   title: 'Path B: Non-OSDU Agentic (NEW)',
-  when: 'Operator has no OSDU estate — legacy SQL, PI/SCADA historians, ESRI/GIS, LAS/DLIS files, unstructured documents',
+  when: 'Operator has no OSDU estate , legacy SQL, PI/SCADA historians, ESRI/GIS, LAS/DLIS files, unstructured documents',
   entry: 'BigQuery Omni / BigLake federated query → Gemini long-context reasoning → bounded agent actions',
   accounts: ['Tier 1A independents (EQT, Devon, Diamondback)', 'PE-backed portcos', 'Tier 1C large privates'],
 };
@@ -150,7 +150,7 @@ export default function S04Technology() {
               <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '10px', lineHeight: '1.6' }}>
                 Operators without a functioning OSDU estate are <strong style={{ color: 'var(--text-primary)' }}>not excluded</strong> from
                 the agentic portfolio. Google provides direct entry via BigQuery Omni + Gemini 3.5/3.6 long-context reasoning
-                directly over existing data assets — requiring <strong style={{ color: 'var(--text-primary)' }}>zero OSDU transformation</strong> before
+                directly over existing data assets , requiring <strong style={{ color: 'var(--text-primary)' }}>zero OSDU transformation</strong> before
                 first operational value.
               </div>
               <div className="row gap-8" style={{ flexWrap: 'wrap' }}>
@@ -163,7 +163,7 @@ export default function S04Technology() {
           <div className="section-eyebrow mb-8">Six-Agent Global Reference Portfolio</div>
           <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
             Click any agent to see inputs, deliverables, and the primary KPI it moves. All agents operate with
-            <strong style={{ color: 'var(--text-primary)' }}> bounded authority</strong> — human approval gates are non-negotiable.
+            <strong style={{ color: 'var(--text-primary)' }}> bounded authority</strong> , human approval gates are non-negotiable.
           </p>
           <div className="grid-2 mb-24">
             {AGENTS.map(a => (
@@ -378,7 +378,7 @@ export default function S04Technology() {
           <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '20px', lineHeight: '1.6' }}>
             Pre-trained domain foundation models for <strong style={{ color: 'var(--text-primary)' }}>Timeseries Telemetry</strong> (drilling,
             production, industrial operations) and <strong style={{ color: 'var(--text-primary)' }}>Subsurface Intelligence</strong> (seismic,
-            well logs, reservoir simulation) — co-developed with leading ISV data partners and hosted natively on Google Cloud.
+            well logs, reservoir simulation) , co-developed with leading ISV data partners and hosted natively on Google Cloud.
           </p>
 
           <div className="highlight-block purple mb-24">

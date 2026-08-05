@@ -12,8 +12,8 @@ const STATUS_META = {
 const STALL_RISK = [
   { decision: 1, stalls: 'Account planning, resource allocation, co-sell motion with partners' },
   { decision: 2, stalls: 'ADIPEC demo build, ISV joint architecture, product roadmap influence' },
-  { decision: 3, stalls: 'Any fortress-account conversation — sellers cannot position what is not sanctioned' },
-  { decision: 4, stalls: 'Aramco/KOC/QatarEnergy/Pertamina/PTTEP/Inpex engagement — NOCs will not proceed without a unified sovereign story' },
+  { decision: 3, stalls: 'Any fortress-account conversation , sellers cannot position what is not sanctioned' },
+  { decision: 4, stalls: 'Aramco/KOC/QatarEnergy/Pertamina/PTTEP/Inpex engagement , NOCs will not proceed without a unified sovereign story' },
   { decision: 5, stalls: 'ISV joint business plans (Cognite, SLB, Baker Hughes, Kongsberg, AspenTech), GSI training, partner pipeline targets' },
   { decision: 6, stalls: 'ADIPEC content team, demo engineering, customer approval workflows for both events' },
   { decision: 7, stalls: 'Foundation Model co-development with ISVs, Vertex AI pre-training pipeline, IP framework negotiations' },
@@ -38,10 +38,10 @@ export default function S09Decisions() {
     <div className="section-page">
       <div className="section-header">
         <div className="section-eyebrow">10 · Governance</div>
-        <h1 className="section-title">Executive Decisions Required — First 30 Days</h1>
+        <h1 className="section-title">Executive Decisions Required , First 30 Days</h1>
         <p className="section-desc">
           Ten decisions that must come from Google Cloud leadership in the first 30 days. These are not
-          requests for guidance — they are hard dependencies for specific workstreams. Each decision
+          requests for guidance , they are hard dependencies for specific workstreams. Each decision
           unresolved past Day 30 becomes a named blocker in the weekly Global O&amp;G Deal &amp; Product Council.
           Click status to cycle. Add owner and target date inline.
         </p>

@@ -31,7 +31,7 @@ function CountdownClock({ event, date, className, announceables, location }) {
       <div className="sep" style={{ margin: '14px 0' }} />
       <div style={{ textAlign: 'left' }}>
         <div style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '8px' }}>
-          Announceable Tracker — click to cycle status
+          Announceable Tracker , click to cycle status
         </div>
         {announceables.map((a, i) => (
           <div key={a} className="row-between" style={{ marginBottom: '9px', gap: '10px', cursor: 'pointer' }} onClick={() => cycle(i)}>
@@ -60,7 +60,7 @@ export default function S07Roadmap() {
         </p>
       </div>
 
-      {/* Countdown clocks — full width side by side */}
+      {/* Countdown clocks , full width side by side */}
       <div className="countdown-grid mb-32">
         <CountdownClock
           event="ADIPEC 2026"
@@ -68,14 +68,14 @@ export default function S07Roadmap() {
           location="Abu Dhabi"
           className="adipec"
           announceables={[
-            'Sovereign NOC story — Aramco / KOC PoC sign-off',
-            'APAC sovereign proof — Pertamina / PTTEP expansion live',
-            'Multicloud fortress proof — Shell or Oxy wedge live',
-            'ISV co-innovation reveal — Cognite / SLB / Kongsberg joint',
-            'Project Interchange bilateral — 1 MOU/LOI signed',
-            'DeepMind Energy Lab — 1 Tier 1 research partnership + GNoME demo',
-            'CCUS Partnership — ≥1 consortium MOU/LOI (ExxonMobil / East Coast / Greensand)',
-            'CCUS MVP — MRV Agent sandbox live with synthetic SCADA data',
+            'Sovereign NOC story , Aramco / KOC PoC sign-off',
+            'APAC sovereign proof , Pertamina / PTTEP expansion live',
+            'Multicloud fortress proof , Shell or Oxy wedge live',
+            'ISV co-innovation reveal , Cognite / SLB / Kongsberg joint',
+            'Project Interchange bilateral , 1 MOU/LOI signed',
+            'DeepMind Energy Lab , 1 Tier 1 research partnership + GNoME demo',
+            'CCUS Partnership , ≥1 consortium MOU/LOI (ExxonMobil / East Coast / Greensand)',
+            'CCUS MVP , MRV Agent sandbox live with synthetic SCADA data',
           ]}
         />
         <CountdownClock
@@ -87,12 +87,12 @@ export default function S07Roadmap() {
             'NOC commercial framework announcement (Gulf + APAC)',
             'Fortress-account production commitment',
             'PE sponsor-platform expansion (Quantum / EnCap)',
-            'APAC Lead expansion — Reliance / Inpex / Harbour Energy',
-            'North American reference wins — ≥4x pipeline coverage',
-            'Interchange portfolio expansion — bilateral OS at scale',
+            'APAC Lead expansion , Reliance / Inpex / Harbour Energy',
+            'North American reference wins , ≥4x pipeline coverage',
+            'Interchange portfolio expansion , bilateral OS at scale',
             'DeepMind Energy Lab research results & new vertical reveals',
-            'CCUS — 2nd consortium MOU; Broadwing CCS reference architecture published',
-            'CCUS — East Coast Cluster or Greensand production deployment underway',
+            'CCUS , 2nd consortium MOU; Broadwing CCS reference architecture published',
+            'CCUS , East Coast Cluster or Greensand production deployment underway',
           ]}
         />
       </div>
@@ -111,7 +111,7 @@ export default function S07Roadmap() {
         ))}
       </div>
 
-      {/* Workstreams — 2-col grid */}
+      {/* Workstreams , 2-col grid */}
       {phase && (
         <div className="grid-2" style={{ gap: '14px', alignItems: 'start' }}>
           {phase.workstreams.map(ws => (

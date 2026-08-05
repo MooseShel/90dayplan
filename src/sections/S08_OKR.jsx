@@ -10,12 +10,12 @@ const STATUS_META = {
 };
 
 const OKR_CONTEXT = {
-  O1: "Establishing market leadership early creates reference pull — the first 3–5 signed customers become the social proof that unblocks the next 20. ADIPEC is the public proof point.",
+  O1: "Establishing market leadership early creates reference pull , the first 3–5 signed customers become the social proof that unblocks the next 20. ADIPEC is the public proof point.",
   O2: "Fortress and Wedge accounts represent ~70% of global upstream production. Proving co-existence at Shell, Oxy, Chevron, Equinor, Aker BP, ENI, or BP removes the 'Google requires migration' objection at scale.",
   O3: "Gulf and APAC NOCs control the world's lowest-cost barrels at national-infrastructure scale. Winning across Aramco, Pertamina, PTTEP, Inpex, and Gulf sovereigns requires deployment capability no other hyperscaler can match.",
-  O4: "≥30% partner-originated pipeline is the multiplier on Google's direct sales force. Without it, the market coverage model breaks — there are not enough direct sellers for 300+ global operators.",
+  O4: "≥30% partner-originated pipeline is the multiplier on Google's direct sales force. Without it, the market coverage model breaks , there are not enough direct sellers for 300+ global operators.",
   O5: "The Alphabet advantage is the one thing AWS and Azure cannot replicate. Not embedded in live pursuits by Day 90 = brand claim, not commercial differentiator.",
-  O6: "Project Interchange, DeepMind Energy Lab, and CCUS Transformation Partnerships are three transformative, Alphabet-only initiatives. Interchange converts Google's power procurement needs into a bilateral partnership engine. DeepMind Energy Lab applies frontier science to energy R&D. CCUS Partnerships position Google as the AI Agentic Platform for the world's largest unplatformed carbon capture consortiums — ExxonMobil, East Coast Cluster (BP/Equinor/TotalEnergies), and Project Greensand (INEOS) — using each win as a wedge into enterprise-wide cloud relationships. Together they make Google the energy industry's indispensable strategic partner.",
+  O6: "Project Interchange, DeepMind Energy Lab, and CCUS Transformation Partnerships are three transformative, Alphabet-only initiatives. Interchange converts Google's power procurement needs into a bilateral partnership engine. DeepMind Energy Lab applies frontier science to energy R&D. CCUS Partnerships position Google as the AI Agentic Platform for the world's largest unplatformed carbon capture consortiums , ExxonMobil, East Coast Cluster (BP/Equinor/TotalEnergies), and Project Greensand (INEOS) , using each win as a wedge into enterprise-wide cloud relationships. Together they make Google the energy industry's indispensable strategic partner.",
 };
 
 export default function S08OKR() {
@@ -69,7 +69,7 @@ export default function S08OKR() {
         <div className="stat-chip"><div className="stat-value" style={{ color: 'var(--text-muted)' }}>{summary.pending}</div><div className="stat-label">Not Started</div></div>
       </div>
 
-      {/* OKR grid — 2 columns */}
+      {/* OKR grid , 2 columns */}
       <div className="grid-2" style={{ gap: '14px', alignItems: 'start' }}>
         {OKRS.map(obj => {
           const objStatus = getObjStatus(obj);

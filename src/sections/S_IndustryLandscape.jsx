@@ -80,7 +80,7 @@ export default function S_IndustryLandscape() {
         <div className="section-eyebrow">01 · Industry & Market</div>
         <h1 className="section-title">Industry Landscape</h1>
         <p className="section-desc">
-          The global oil & gas industry sits at an inflection point — AI adoption is accelerating,
+          The global oil & gas industry sits at an inflection point , AI adoption is accelerating,
           data fragmentation is a board-level crisis, and sovereign cloud requirements are reshaping
           vendor selection. These market dynamics create a once-in-a-decade window for Google Cloud.
         </p>
@@ -88,7 +88,7 @@ export default function S_IndustryLandscape() {
 
       {/* ── Market Size Counters ───────────────────────────────────── */}
       <h2 className="subsection-title">Market at a Glance</h2>
-      <div className="metric-grid metric-grid--3col">
+      <div className="metric-grid metric-grid--6col">
         {INDUSTRY_METRICS.map((m, i) => (
           <div key={i} className="metric-card metric-card--landscape">
             <span className="metric-icon">{m.icon}</span>
@@ -101,7 +101,7 @@ export default function S_IndustryLandscape() {
       </div>
 
       {/* ── Industry Macro Drivers ────────────────────────────────── */}
-      <h2 className="subsection-title" style={{ marginTop: '3rem' }}>Why Now — Five Industry Drivers</h2>
+      <h2 className="subsection-title" style={{ marginTop: '3rem' }}>Why Now , Five Industry Drivers</h2>
       <div className="driver-grid">
         {INDUSTRY_DRIVERS.map((d) => (
           <div

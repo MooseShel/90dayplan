@@ -9,25 +9,25 @@ export default function S05Alphabet() {
         <p className="section-desc">
           No competitor can assemble DeepMind, geospatial, Workspace, Mandiant, Tapestry, and Google's
           own energy-procurement franchise into a single energy proposition. Each capability enters a
-          pursuit as a priced module with a named owner and a KPI — never as a brand tour.
+          pursuit as a priced module with a named owner and a KPI , never as a brand tour.
         </p>
       </div>
 
       <div className="grid-2 mb-24" style={{ gap: '16px' }}>
         <div className="highlight-block" style={{ height: '100%', margin: 0 }}>
           "AWS sells energy companies infrastructure. Azure sells them software. Google shows up as a fellow
-          builder of the energy system — with the whole of Alphabet behind it — then sells them intelligence."
+          builder of the energy system , with the whole of Alphabet behind it , then sells them intelligence."
         </div>
         <div className="highlight-block amber" style={{ height: '100%', margin: 0 }}>
           <strong style={{ color: 'var(--amber)' }}>Alphabet Energy Taskforce (New · Day 1–30):</strong> A dedicated
           coordination body with named contacts from DeepMind, Geospatial, Security/Mandiant, Workspace, and
-          Energy Procurement — with pre-allocated budgets that bypass standard divisional P&amp;L negotiations.
+          Energy Procurement , with pre-allocated budgets that bypass standard divisional P&amp;L negotiations.
           Without this taskforce, Alphabet capabilities remain brand claims, not commercial offers.
         </div>
       </div>
 
       {/* 3-column capability grid */}
-      <div className="section-eyebrow mb-16">Seven Capability Modules — Commercial Plays</div>
+      <div className="section-eyebrow mb-16">Seven Capability Modules , Commercial Plays</div>
       <div className="grid-3 mb-24" style={{ gap: '14px' }}>
         {ALPHABET_CAPABILITIES.map(cap => (
           <div key={cap.name} className="card" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -47,14 +47,14 @@ export default function S05Alphabet() {
         ))}
       </div>
 
-      {/* Two-badge meeting — full width callout */}
+      {/* Two-badge meeting , full width callout */}
       <div className="card" style={{ borderColor: 'var(--google-blue)', boxShadow: 'var(--shadow-glow-blue)' }}>
         <div className="grid-2" style={{ gap: '32px', alignItems: 'center' }}>
           <div>
             <div className="card-title mb-8" style={{ fontSize: '16px' }}>The Two-Badge Meeting No Competitor Can Convene</div>
             <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: '1.65' }}>
               Google energy-procurement leaders join operator executive sessions alongside Google Cloud AI teams.
-              The conversation spans both sides of the energy-compute equation simultaneously — as an{' '}
+              The conversation spans both sides of the energy-compute equation simultaneously , as an{' '}
               <strong style={{ color: 'var(--text-primary)' }}>AI platform provider</strong> and as a{' '}
               <strong style={{ color: 'var(--text-primary)' }}>firm-power anchor customer</strong>.
               AWS and Azure cannot convene this meeting. They are buyers and sellers of compute, not co-builders
@@ -63,11 +63,11 @@ export default function S05Alphabet() {
           </div>
           <div className="stack-sm">
             {[
-              'EQT / Expand Energy — power demand + AI surveillance agent dialogue',
-              'TotalEnergies — GW-scale solar PPA + Gemini agents on Cognite estate',
-              'Baker Hughes — data-center cooling optimization + drilling intelligence',
-              'Saudi Aramco — Alphabet stack + sovereign AI + national grid planning',
-              'Devon / Fervo — geothermal + clean-power synergy + D&C optimization',
+              'EQT / Expand Energy , power demand + AI surveillance agent dialogue',
+              'TotalEnergies , GW-scale solar PPA + Gemini agents on Cognite estate',
+              'Baker Hughes , data-center cooling optimization + drilling intelligence',
+              'Saudi Aramco , Alphabet stack + sovereign AI + national grid planning',
+              'Devon / Fervo , geothermal + clean-power synergy + D&C optimization',
             ].map(item => (
               <div key={item} className="row gap-8">
                 <span style={{ color: 'var(--google-blue)', fontSize: '12px', minWidth: '12px' }}>›</span>

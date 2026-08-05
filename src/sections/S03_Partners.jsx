@@ -5,7 +5,7 @@ const ISVS = [
   {
     name: 'Cognite', layer: 'L1 · Domain ISV', badge: 'pill-teal',
     role: 'Industrial DataOps and contextualization leader. Cognite Data Fusion (CDF) is the fastest path to trustworthy OT/IT data for agentic workflows. Without contextualised data, agents hallucinate or produce unactionable output.',
-    play: 'Connected Operations Agent Suite: production exception management, maintenance investigation, turnaround planning, and cross-domain root-cause analysis — all running on Google Cloud Vertex AI.',
+    play: 'Connected Operations Agent Suite: production exception management, maintenance investigation, turnaround planning, and cross-domain root-cause analysis , all running on Google Cloud Vertex AI.',
     accounts: ['TotalEnergies', 'Saudi Aramco (via CNTXT)', 'Equinor (existing CDF estate)', 'Aker BP (CDF on AWS)'],
     day90: '3 joint ISV charter sessions; TotalEnergies pilot scoped with Cognite; Aker BP Gemini overlay PoC; ADIPEC co-announcement target',
   },
@@ -18,7 +18,7 @@ const ISVS = [
   },
   {
     name: 'Baker Hughes (Cordant)', layer: 'L1 · Domain ISV', badge: 'pill-teal',
-    role: 'Equipment intelligence, autonomous drilling operations, and — critically — data-center power & cooling expertise. Live CERAWeek 2026 Google Cloud collaboration is the proof point.',
+    role: 'Equipment intelligence, autonomous drilling operations, and , critically , data-center power & cooling expertise. Live CERAWeek 2026 Google Cloud collaboration is the proof point.',
     play: 'Autonomous Equipment & Power Optimization: Cordant + Gemini agents across drilling, production, reliability, and data-center energy intensity. The power collaboration creates a two-badge meeting moment.',
     accounts: ['3 shared customers confirmed', 'Data-center operators', 'Gulf upstream fleet'],
     day90: 'Baker Hughes upstream expansion charter signed; power collaboration expanded; shared CERAWeek 2027 narrative confirmed',
@@ -26,7 +26,7 @@ const ISVS = [
   {
     name: 'Palantir AIP', layer: 'L2 · Google-Native AI', badge: 'pill-blue',
     role: 'June 2026 multi-tier partnership: bidirectional BigQuery-Foundry federation and deep Gemini-AIP connectivity. This is the sharpest fortress-account wedge available.',
-    play: 'Foundry ontologies + Gemini agents over existing AWS/Azure estates — zero data relocation. Palantir AIP becomes the operator-facing platform; Google is the underlying intelligence engine.',
+    play: 'Foundry ontologies + Gemini agents over existing AWS/Azure estates , zero data relocation. Palantir AIP becomes the operator-facing platform; Google is the underlying intelligence engine.',
     accounts: ['Shell', 'Oxy', 'Chevron', 'Equinor'],
     day90: '1 fortress wedge live with Palantir AIP layer; joint security + governance architecture published',
   },
@@ -39,14 +39,14 @@ const ISVS = [
   },
   {
     name: 'Quantiphi', layer: 'L2 · Google-Native AI', badge: 'pill-blue',
-    role: 'Google Cloud Premier Partner, multiple Industry Solutions Partner of the Year awards. Pure-play Vertex/Gemini depth — the fastest way to build bespoke agents for lighthouse accounts.',
+    role: 'Google Cloud Premier Partner, multiple Industry Solutions Partner of the Year awards. Pure-play Vertex/Gemini depth , the fastest way to build bespoke agents for lighthouse accounts.',
     play: 'Custom agent build-outs: subsurface document intelligence, geospatial analytics, and production exception agents tailored to individual operator data models.',
     accounts: ['Lighthouse accounts', 'Tier 1A starter engagements'],
     day90: 'Quantiphi on delivery team for 1 Tier 1A Agentic Subsurface Starter; architecture review complete',
   },
   {
     name: 'Kongsberg Digital (Kognitwin)', layer: 'L1 · Domain ISV', badge: 'pill-teal',
-    role: 'Industrial digital twin platform running natively on Google Cloud. Powers real-time operational replicas of physical assets — refineries, LNG plants, pipelines, and power generation facilities.',
+    role: 'Industrial digital twin platform running natively on Google Cloud. Powers real-time operational replicas of physical assets , refineries, LNG plants, pipelines, and power generation facilities.',
     play: 'Kognitwin on GCP: extend digital twin coverage from power gen to full pipeline/midstream operations. Deploy Gemini agents over Kognitwin operational context for predictive optimization and autonomous operations.',
     accounts: ['Williams Companies (active Kognitwin user)', 'PTTEP (LNG)', 'Harbour Energy (North Sea assets)'],
     day90: 'Joint GTM with Kongsberg for midstream; Williams pipeline twin PoC scoped; 1 E&P operator twin demo at ADIPEC',
@@ -54,7 +54,7 @@ const ISVS = [
   {
     name: 'AspenTech', layer: 'L1 · Domain ISV', badge: 'pill-teal',
     role: 'Process industry optimization (refinery, petrochemical, LNG). AspenONE suite for yield optimization, energy management, and planning is deployed across virtually every major refinery globally.',
-    play: 'Gemini co-pilot over AspenONE for refinery margin optimization and process safety — particularly relevant for operators like Reliance Jamnagar (world\'s largest) and Pertamina downstream.',
+    play: 'Gemini co-pilot over AspenONE for refinery margin optimization and process safety , particularly relevant for operators like Reliance Jamnagar (world\'s largest) and Pertamina downstream.',
     accounts: ['Reliance Industries (Jamnagar)', 'Pertamina (refinery & petrochemical)', 'TotalEnergies (refining)'],
     day90: 'AspenTech integration architecture defined; Reliance Jamnagar refinery optimization pilot scoped',
   },
@@ -114,7 +114,7 @@ export default function S03Partners() {
       <div className="highlight-block mb-24">
         <strong style={{ color: 'var(--google-blue)' }}>Ecosystem Economics:</strong> The goal is for
         ≥30% of qualified pipeline to be partner-originated or co-sold by Day 90. Partners outsell the
-        direct force 3–5× in enterprise software — this ratio is the multiplier on the headcount Google
+        direct force 3–5× in enterprise software , this ratio is the multiplier on the headcount Google
         deploys. Every partner charter must include a joint-business-plan with bookings targets, not just
         co-marketing language.
       </div>
@@ -148,7 +148,7 @@ export default function S03Partners() {
       </div>
 
       {/* GSIs */}
-      <div className="section-eyebrow mb-16">Layer 3 · Energy GSIs — Production-Readiness Standard</div>
+      <div className="section-eyebrow mb-16">Layer 3 · Energy GSIs , Production-Readiness Standard</div>
       <div className="highlight-block amber mb-16">
         <strong style={{ color: 'var(--amber)' }}>Controlled Accreditation:</strong> GSI certification is
         deliberately limited to 2 anchor partners (EPAM + Accenture) in the first 90 days. Premature
@@ -179,7 +179,7 @@ export default function S03Partners() {
       <div className="section-eyebrow mb-8">Layer 4 · Academia Consortium Incubator</div>
       <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.65' }}>
         Google's role: <strong style={{ color: 'var(--text-primary)' }}>platform provider only.</strong> Operators purchase commercialised
-        solutions that run on Google Cloud — Google does not compete with the solution or the operator. Development
+        solutions that run on Google Cloud , Google does not compete with the solution or the operator. Development
         occurs in operator-owned GCP accounts. Google provides sandbox credits to a clean, isolated academic
         research environment for pre-competitive research and prototype validation.
       </p>
@@ -245,7 +245,7 @@ export default function S03Partners() {
           </div>
           <div className="highlight-block teal">
             <strong style={{ color: 'var(--teal)' }}>UH Energy Transition Center:</strong> Primary value is
-            technical R&D in CCUS, hydrogen, and grid-AI — domains where operators have deep challenges but limited
+            technical R&D in CCUS, hydrogen, and grid-AI , domains where operators have deep challenges but limited
             internal research capacity. Research occurs in a Google-funded sandbox (separate from operator accounts).
             Any commercialisable output requires a tripartite TTO agreement (Google + University TTO + Operator)
             negotiated before code is written. University receives a defined research fee; operators own
@@ -265,11 +265,11 @@ export default function S03Partners() {
 
       <div className="sep" style={{ margin: '32px 0' }} />
 
-      {/* Layer 5 — Startup Accelerator & Enablement */}
+      {/* Layer 5 , Startup Accelerator & Enablement */}
       <div className="section-eyebrow mb-8">Layer 5 · Energy &amp; Sustainability Startup Accelerator</div>
       <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: '1.65' }}>
         Google's <strong style={{ color: 'var(--text-primary)' }}>Google for Startups Cloud Program</strong> is one of the most
-        generous in the industry — enabling high-promise energy and carbon management startups to go live on GCP
+        generous in the industry , enabling high-promise energy and carbon management startups to go live on GCP
         and become enterprise-procurable for our customers via Google Cloud Marketplace drawdown.
       </p>
 

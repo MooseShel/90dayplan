@@ -1,7 +1,7 @@
 const EXCHANGES = [
-  { asset: 'Gas, generation & grid access', accounts: 'EQT, Expand, Williams, midstream', googleNeed: 'Firm, scalable electricity for AI infrastructure; anchor demand; AI-optimized data-center operations', joint: 'Long-term demand plus AI-optimized generation, cooling, and reliability — a new revenue line with Google on both sides' },
+  { asset: 'Gas, generation & grid access', accounts: 'EQT, Expand, Williams, midstream', googleNeed: 'Firm, scalable electricity for AI infrastructure; anchor demand; AI-optimized data-center operations', joint: 'Long-term demand plus AI-optimized generation, cooling, and reliability , a new revenue line with Google on both sides' },
   { asset: 'Drilling & subsurface expertise', accounts: 'Devon-Fervo, Chevron, Oxy', googleNeed: 'Geothermal and CCS development capability; Google\'s Fervo/Ormat blueprints and geoscience AI', joint: 'New growth platforms built on existing industrial strengths, with Google as reference architect and offtaker' },
-  { asset: 'Industrial equipment & operating data', accounts: 'Baker Hughes, SLB, operators', googleNeed: 'Power, cooling, and reliability optimization for the data-center fleet; Gemini agents on OT data', joint: 'Higher asset availability and lower energy intensity — sold to the fastest-growing industrial customer on earth' },
+  { asset: 'Industrial equipment & operating data', accounts: 'Baker Hughes, SLB, operators', googleNeed: 'Power, cooling, and reliability optimization for the data-center fleet; Gemini agents on OT data', joint: 'Higher asset availability and lower energy intensity , sold to the fastest-growing industrial customer on earth' },
   { asset: 'National infrastructure mandates', accounts: 'Aramco, KOC, QatarEnergy', googleNeed: 'Sovereign AI, local digital capability, grid-planning intelligence (Tapestry), and the sovereign trio', joint: 'Economic development, residency, and controlled innovation aligned to national visions (Vision 2030 etc.)' },
 ];
 
@@ -22,7 +22,7 @@ export default function S06Exchange() {
         <strong style={{color:'var(--amber)'}}>Legal Decoupling (Refined):</strong> Energy off-take agreements (PPAs, geothermal, nuclear) and
         Google Cloud software licensing are structured as wholly separate contracts with independent counterparties
         and procurement processes. No bilateral tie-in language. This satisfies antitrust and regulatory compliance
-        at both Google and the operator — particularly in regulated utility markets and public bidding environments.
+        at both Google and the operator , particularly in regulated utility markets and public bidding environments.
       </div>
 
       <div className="section-eyebrow mb-16">Exchange Framework</div>
@@ -73,7 +73,7 @@ export default function S06Exchange() {
           <div className="card-title mb-8">Two-Badge Meeting No Competitor Can Convene</div>
           <div style={{fontSize:'13px',color:'var(--text-secondary)',lineHeight:'1.65'}}>
             Google energy-procurement leaders join operator executive sessions alongside Google Cloud AI teams.
-            The result is a conversation that spans both sides of the energy-compute equation — simultaneously
+            The result is a conversation that spans both sides of the energy-compute equation , simultaneously
             as an <strong style={{color:'var(--text-primary)'}}>AI platform provider</strong> and as a <strong style={{color:'var(--text-primary)'}}>firm-power anchor customer</strong>.
             AWS and Azure cannot convene this meeting.
           </div>
