@@ -582,13 +582,22 @@ export const ALPHABET_CAPABILITIES = [
 
 export const GOOGLE_AI_DIFFERENTIATORS = [
   {
-    title: "Gemini 3.5 Pro , 2M Token Multimodal Context Window",
-    badge: "Reasoning Lead",
+    title: "Google AI & Gemini Enterprise Platform",
+    badge: "Enterprise AI Leader",
     color: "blue",
-    headline: "Zero-Chunking Subsurface Reasoning",
-    description: "Gemini 3.5 Pro's native 2M-token context allows entire 30-year well logs, high-resolution seismic slice images, mud logs, and MOC document history to be ingested into a single prompt without chunking loss or vector database retrieval collapse. Flash models support up to 1M tokens for cost-optimized workloads.",
-    metric: "2× larger context window than AWS/Azure frontier models (2M vs 1M tokens)",
-    proof: "Applicable to operators using Delfi/OSDU workflows on Google Cloud for cross-domain subsurface interpretation."
+    headline: "End-to-End Governed Industrial AI Engine",
+    description: "Combines Gemini 3.5 Pro's 2M-token multimodal reasoning with Vertex AI Agent Builder, enterprise grounding over OSDU & SCADA data, Model Garden domain FMs, and native Google Workspace change management integration.",
+    metric: "Unified enterprise AI stack spanning models, agent orchestration, and workforce tools",
+    proof: "Powers the 6-agent reference architecture across upstream, midstream, and downstream operations."
+  },
+  {
+    title: "Google Security for Critical Energy Infrastructure",
+    badge: "OT/ICS Defense",
+    color: "red",
+    headline: "Frontline Defense for SCADA & Energy Assets",
+    description: "Combines Mandiant threat intelligence on state-sponsored actors targeting energy infrastructure (Triton, Volt Typhoon, Sandworm) with Chronicle security analytics and Wiz agentless cloud security posture management.",
+    metric: "Unmatched OT/ICS threat visibility and zero-trust monitoring",
+    proof: "Trusted by global energy operators and critical infrastructure defense agencies."
   },
   {
     title: "6th-Gen Trillium (v6e) & 5th-Gen TPU v5p , Custom Energy AI Silicon",
@@ -601,7 +610,7 @@ export const GOOGLE_AI_DIFFERENTIATORS = [
   },
   {
     title: "Vertex AI Agent Builder & Multimodal RAG",
-    badge: "Agent Platform",
+    badge: "Agent Governance",
     color: "purple",
     headline: "Governed Enterprise Agentic Engine",
     description: "Built-in grounding over structured OSDU data, unstructured LAS/DLIS well files, and SCADA historians with real-time tool calling, deterministic human approval gates, and automated audit logging.",
