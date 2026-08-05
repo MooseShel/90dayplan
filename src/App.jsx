@@ -1,31 +1,79 @@
 import { useState, useEffect } from 'react';
-import { NAV_ITEMS, META } from './data';
+import { NAV_ITEMS, NAV_TIERS, META } from './data';
+import S_IndustryLandscape from './sections/S_IndustryLandscape';
+import S_MarketOpportunity from './sections/S_MarketOpportunity';
+import S_CustomerRevenueMap from './sections/S_CustomerRevenueMap';
 import S01Thesis     from './sections/S01_Thesis';
 import S02Offense    from './sections/S02_Offense';
 import S03Partners   from './sections/S03_Partners';
 import S04Technology from './sections/S04_Technology';
 import S05Alphabet   from './sections/S05_Alphabet';
-import S08Enablement from './sections/S08_Enablement';
-import S06Exchange   from './sections/S06_Exchange';
-import S07Roadmap    from './sections/S07_Roadmap';
-import S08OKR        from './sections/S08_OKR';
-import S09Decisions  from './sections/S09_Decisions';
 import S11ThinkBig   from './sections/S11_ThinkBig';
+import S06Exchange   from './sections/S06_Exchange';
+import S_CompetitiveIntel from './sections/S_CompetitiveIntel';
+import S_ExecutionRoadmap from './sections/S_ExecutionRoadmap';
 import './index.css';
 
 const SECTION_MAP = {
-  thesis:     S01Thesis,
-  offense:    S02Offense,
-  partners:   S03Partners,
-  technology: S04Technology,
-  alphabet:   S05Alphabet,
-  enablement: S08Enablement,
-  exchange:   S06Exchange,
-  roadmap:    S07Roadmap,
-  okr:        S08OKR,
-  decisions:  S09Decisions,
-  thinkbig:   S11ThinkBig,
+  // Tier 1 — Industry & Market
+  landscape:   S_IndustryLandscape,
+  opportunity: S_MarketOpportunity,
+  revenuemap:  S_CustomerRevenueMap,
+  // Tier 2 — Google Cloud Strategy
+  thesis:      S01Thesis,
+  accounts:    S02Offense,
+  technology:  S04Technology,
+  partners:    S03Partners,
+  initiatives: S11ThinkBig,
+  competitive: S_CompetitiveIntel,
+  // Tier 3 — Execution
+  execution:   S_ExecutionRoadmap,
 };
+
+// Merge Technology + Alphabet for section 06
+function S06Combined() {
+  return (
+    <>
+      <S04Technology />
+      <div style={{ marginTop: '2rem' }}>
+        <S05Alphabet />
+      </div>
+    </>
+  );
+}
+
+// Merge Think Big + Energy Exchange for section 08
+function S08Combined() {
+  return (
+    <>
+      <S11ThinkBig />
+      <div style={{ marginTop: '2rem' }}>
+        <S06Exchange />
+      </div>
+    </>
+  );
+}
+
+// Override the combined sections
+SECTION_MAP.technology = S06Combined;
+SECTION_MAP.initiatives = S08Combined;
+
+// ── Google Cloud Logo SVG ──────────────────────────────────────────────
+function GoogleCloudLogo({ width = 120 }) {
+  return (
+    <svg width={width} viewBox="0 0 496 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="52" fontFamily="'Google Sans', 'Inter', sans-serif" fontSize="38" fontWeight="500" fill="var(--text-primary)">
+        <tspan fill="#4285F4">G</tspan>
+        <tspan fill="#EA4335">o</tspan>
+        <tspan fill="#FBBC04">o</tspan>
+        <tspan fill="#4285F4">g</tspan>
+        <tspan fill="#34A853">l</tspan>
+        <tspan fill="#EA4335">e</tspan>
+        <tspan fill="var(--text-primary)"> Cloud</tspan>
+      </text>
+    </svg>
+  );
+}
 
 // ── Theme Hook ─────────────────────────────────────────────────────────
 function useTheme() {
@@ -59,7 +107,7 @@ function ThemeToggle({ theme, onToggle }) {
 }
 
 export default function App() {
-  const [active, setActive]       = useState('thesis');
+  const [active, setActive]       = useState('landscape');
   const [mobileOpen, setMobileOpen] = useState(false);
   const { theme, toggle }         = useTheme();
   const ActiveSection             = SECTION_MAP[active];
@@ -113,24 +161,28 @@ export default function App() {
       {/* ── Sidebar / Drawer ── */}
       <aside className={`sidebar${mobileOpen ? ' mobile-open' : ''}`}>
         <div className="sidebar-logo">
-          <span className="logo-tag">Google Cloud</span>
-          <div className="logo-title">Global Oil &amp; Gas<br/>Strategy Dashboard</div>
+          <GoogleCloudLogo width={160} />
+          <div className="logo-title">Global Oil &amp; Gas<br/>Industry Strategy</div>
           <div className="logo-sub">{META.confidential}</div>
         </div>
 
         <nav className="sidebar-nav">
-          <div className="nav-section-label">Strategy Pillars</div>
-          {NAV_ITEMS.map(item => (
-            <div
-              key={item.id}
-              className={`nav-item${active === item.id ? ' active' : ''}`}
-              onClick={() => handleNavClick(item.id)}
-            >
-              <span className="nav-num">{item.num}</span>
-              <div>
-                <div className="nav-label">{item.label}</div>
-                <div style={{fontSize:'10px',color:'var(--text-muted)',marginTop:'1px'}}>{item.sub}</div>
-              </div>
+          {NAV_TIERS.map(tier => (
+            <div key={tier.id} className="nav-tier-group">
+              <div className="nav-tier-label">{tier.label}</div>
+              {NAV_ITEMS.filter(item => item.tier === tier.id).map(item => (
+                <div
+                  key={item.id}
+                  className={`nav-item${active === item.id ? ' active' : ''}`}
+                  onClick={() => handleNavClick(item.id)}
+                >
+                  <span className="nav-num">{item.num}</span>
+                  <div>
+                    <div className="nav-label">{item.label}</div>
+                    <div style={{fontSize:'10px',color:'var(--text-muted)',marginTop:'1px'}}>{item.sub}</div>
+                  </div>
+                </div>
+              ))}
             </div>
           ))}
         </nav>
