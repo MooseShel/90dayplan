@@ -10,7 +10,6 @@ function AnimatedValue({ value, duration = 1200 }) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Parse numeric part
           const cleaned = value.replace(/[^0-9.]/g, '');
           const num = parseFloat(cleaned);
           if (isNaN(num)) { setDisplay(value); return; }
@@ -36,6 +35,23 @@ function AnimatedValue({ value, duration = 1200 }) {
   }, [value, duration]);
 
   return <span ref={ref}>{display || value}</span>;
+}
+
+/* ── Source Link Helper ─────────────────────────────────────────── */
+function SourceFootnote({ source, url }) {
+  if (!source) return null;
+  return (
+    <div className="metric-source">
+      Source:{' '}
+      {url && url !== '#' ? (
+        <a href={url} target="_blank" rel="noopener noreferrer" className="source-link">
+          {source} <span style={{ fontSize: '0.65rem', marginLeft: '2px' }}>↗</span>
+        </a>
+      ) : (
+        <span>{source}</span>
+      )}
+    </div>
+  );
 }
 
 /* ── Maturity stages config ──────────────────────────────────────── */
@@ -79,7 +95,7 @@ export default function S_IndustryLandscape() {
             <div className="metric-value"><AnimatedValue value={m.value} /></div>
             <div className="metric-label">{m.label}</div>
             <div className="metric-sub">{m.sub}</div>
-            <div className="metric-source">Source: {m.source}</div>
+            <SourceFootnote source={m.source} url={m.sourceUrl} />
           </div>
         ))}
       </div>
@@ -104,7 +120,7 @@ export default function S_IndustryLandscape() {
             {selectedDriver === d.id && (
               <div className="driver-card__detail">
                 <p>{d.detail}</p>
-                <div className="metric-source">Source: {d.source}</div>
+                <SourceFootnote source={d.source} url={d.sourceUrl} />
               </div>
             )}
           </div>
@@ -140,9 +156,10 @@ export default function S_IndustryLandscape() {
           </div>
         ))}
       </div>
-      <div className="metric-source" style={{ marginTop: '0.5rem' }}>
-        Maturity scores are directional estimates based on public digital transformation disclosures, analyst reports, and partnership activity.
-      </div>
+      <SourceFootnote
+        source="Maturity scores are directional estimates based on public digital transformation disclosures (TotalEnergies, Shell, BP, Aramco), analyst reports (Gartner/IDC), and SPE conference publications."
+        url="https://www.spe.org/en/events/conference/digital-energy/"
+      />
     </div>
   );
 }

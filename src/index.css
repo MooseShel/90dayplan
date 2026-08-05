@@ -202,16 +202,28 @@
     box-shadow       0.18s ease;
 }
 
-html { font-size: 14px; scroll-behavior: smooth; }
+html { font-size: 15px; scroll-behavior: smooth; }
 
 body {
   font-family: 'Roboto', 'Google Sans', system-ui, sans-serif;
   background: var(--bg-base);
   color: var(--text-primary);
-  line-height: 1.5;
+  line-height: 1.55;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Interactive Source Links ────────────────────────────────────────── */
+.source-link, .metric-source a {
+  color: var(--google-blue) !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  transition: color 0.15s, text-decoration 0.15s;
+}
+.source-link:hover, .metric-source a:hover {
+  text-decoration: underline !important;
+  color: #6ba5ff !important;
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -442,7 +454,7 @@ body {
 
 .section-title {
   font-family: 'DM Sans', 'Roboto', sans-serif;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.25;
@@ -450,7 +462,7 @@ body {
 }
 
 .section-desc {
-  font-size: 13.5px;
+  font-size: 15px;
   color: var(--text-secondary);
   line-height: 1.6;
 }
@@ -476,7 +488,7 @@ body {
 
 .card-title {
   font-family: 'DM Sans', 'Roboto', sans-serif;
-  font-size: 13.5px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 4px;
@@ -485,7 +497,7 @@ body {
   gap: 8px;
   flex-wrap: wrap;
 }
-.card-sub { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; }
+.card-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 12px; }
 
 /* ══════════════════════════════════════════════════════════════════════
    GRID LAYOUTS
