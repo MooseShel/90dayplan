@@ -143,6 +143,11 @@ html_exact = f"""<!DOCTYPE html>
     page-break-inside: avoid;
   }}
 
+  .page-break {{
+    page-break-before: always;
+    break-before: page;
+  }}
+
   table {{
     width: 100%;
     border-collapse: collapse;

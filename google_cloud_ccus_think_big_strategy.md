@@ -237,14 +237,16 @@ Google Cloud focuses its CCUS strategy on three global mega-consortium hubs repr
 
 ### 3.1 Detailed Consortium Cloud Consumption & Enterprise Expansion Potential `[See Appendix A]`
 
-The table below outlines the direct capital commitments, cloud consumption potential, and leveraged enterprise pull-through unlocked by partnering with these three anchor consortiums `[See Appendix A for full quantitative methodology, compute sizing breakdown, and realism sensitivity analysis]`:
+The table below outlines the direct capital commitments, cloud consumption potential, and leveraged enterprise pull-through unlocked by partnering with these three anchor consortiums. **For the complete quantitative methodology, workload compute sizing breakdown (HPC, IoT, satellite, AI agents), and realism sensitivity analysis, see [Appendix A: Detailed Financial Methodology & Realism Analysis](#appendix-a-detailed-financial-methodology-compute-sizing--realism-analysis)**:
 
-| Consortium Target | Total Capital Investment ($B) | Contracted CO₂ Capacity (MTPA) | Direct GCP Annual Cloud Spend ($M/yr) | Leveraged Enterprise Cloud Pull-Through ($M) | Strategic Cloud Positioning & Enterprise Impact |
+| Consortium Target | Total Capital Investment ($B) | Contracted CO₂ Capacity (MTPA) | Direct GCP Annual Cloud Spend ($M/yr) * | Leveraged Enterprise Cloud Pull-Through ($M) * | Strategic Cloud Positioning & Enterprise Impact |
 |:---|:---|:---|:---|:---|:---|
-| **ExxonMobil Gulf Coast Hub** | **$12.0B+** | 9 MTPA (scaling to 50+ MTPA) | **$120M – $200M** | **$450M+** | **ExxonMobil Enterprise Wedge**: Ingests telemetry across 1,500+ miles of pipeline, running BigQuery 45Q audit engine and SLB Sequestri on GCP. Serves as Google Cloud's primary Trojan horse to challenge Azure's incumbent position across ExxonMobil's broader $450M+ IT cloud estate `[Appendix A.2 & A.3]`. |
-| **East Coast Cluster (ECC) / NEP** | **$25.0B+** (£20B) | 4 → 23 MTPA (1B tonnes capacity) | **$150M – $250M** | **$800M+** | **Tri-Majors Shared Platform Wedge**: Multi-tenant OSDU data governance and Earth Engine marine monitoring shared across **BP, Equinor, and TotalEnergies**. Unlocks simultaneous executive relationships and cloud workloads across all three energy majors `[Appendix A.2 & A.3]`. |
-| **Project Greensand (Denmark / EU)** | **$3.8B** (€3.5B) | 0.4 → 8 MTPA | **$45M – $80M** | **$150M+** | **EU Offshore CCS Blueprint**: INEOS GCP platform integration, Carbon Destroyer ship routing AI, and EU CCS Directive automated compliance. Establishes the definitive architectural standard for **30+ upcoming EU North Sea & Baltic hubs** `[Appendix A.2 & A.3]`. |
-| **Consortium Total & Leveraged Impact** | **$40.8B+** | **36+ MTPA** | **$315M – $530M** | **$1,400M+** | **Captures 60%+ of global CCUS digital platform spend** while creating massive pull-through revenue across parent company cloud IT budgets `[Appendix A.1–A.4]`. |
+| **ExxonMobil Gulf Coast Hub** | **$12.0B+** | 9 MTPA (scaling to 50+ MTPA) | **$120M – $200M** | **$450M+** | **ExxonMobil Enterprise Wedge**: Ingests telemetry across 1,500+ miles of pipeline, running BigQuery 45Q audit engine and SLB Sequestri on GCP. Serves as Google Cloud's primary Trojan horse to challenge Azure's incumbent position across ExxonMobil's broader $450M+ IT cloud estate *(Detailed in [Appendix A.2 & A.3](#a2-realism-assessment-direct-spend-ranges-vs-steady-state-operational-baseline))*. |
+| **East Coast Cluster (ECC) / NEP** | **$25.0B+** (£20B) | 4 → 23 MTPA (1B tonnes capacity) | **$150M – $250M** | **$800M+** | **Tri-Majors Shared Platform Wedge**: Multi-tenant OSDU data governance and Earth Engine marine monitoring shared across **BP, Equinor, and TotalEnergies**. Unlocks simultaneous executive relationships and cloud workloads across all three energy majors *(Detailed in [Appendix A.2 & A.3](#a2-realism-assessment-direct-spend-ranges-vs-steady-state-operational-baseline))*. |
+| **Project Greensand (Denmark / EU)** | **$3.8B** (€3.5B) | 0.4 → 8 MTPA | **$45M – $80M** | **$150M+** | **EU Offshore CCS Blueprint**: INEOS GCP platform integration, Carbon Destroyer ship routing AI, and EU CCS Directive automated compliance. Establishes the definitive architectural standard for **30+ upcoming EU North Sea & Baltic hubs** *(Detailed in [Appendix A.2 & A.3](#a2-realism-assessment-direct-spend-ranges-vs-steady-state-operational-baseline))*. |
+| **Consortium Total & Leveraged Impact** | **$40.8B+** | **36+ MTPA** | **$315M – $530M** | **$1,400M+** | **Captures 60%+ of global CCUS digital platform spend** while creating massive pull-through revenue across parent company cloud IT budgets *(Full Workload & Risk Models in [Appendix A.1–A.4](#appendix-a-detailed-financial-methodology-compute-sizing--realism-analysis))*. |
+
+*\* Note: Direct GCP spend targets represent peak buildout and full-stack adoption. Steady-state operational baselines are $70M–$125M/yr across all 3 hubs (see [Appendix A.2](#a2-realism-assessment-direct-spend-ranges-vs-steady-state-operational-baseline) for detailed breakdown).*
 
 ---
 
@@ -344,6 +346,8 @@ To capture our SOM target of $650M by 2028, the Global Oil & Gas team will execu
 - Scale sales enablement across all 50 global energy Account Executives, providing scored CCUS attack playbooks and ROI calculators.
 
 ---
+
+<div class="page-break"></div>
 
 ## Appendix A: Detailed Financial Methodology, Compute Sizing & Realism Analysis
 
