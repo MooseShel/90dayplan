@@ -101,7 +101,7 @@ export default function S_IndustryLandscape() {
       </div>
 
       {/* ── Industry Macro Drivers ────────────────────────────────── */}
-      <h2 className="subsection-title" style={{ marginTop: '3rem' }}>Why Now , Five Industry Drivers</h2>
+      <h2 className="subsection-title" style={{ marginTop: '3rem' }}>Why Now , Six Industry Drivers</h2>
       <div className="driver-grid">
         {INDUSTRY_DRIVERS.map((d) => (
           <div

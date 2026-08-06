@@ -96,6 +96,16 @@ export const INDUSTRY_DRIVERS = [
     source: "National Data Residency Regulations (NCA/KSA, PDPA/Thailand, GR-71/Indonesia)",
     sourceUrl: "https://nca.gov.sa/",
   },
+  {
+    id: "capital-discipline",
+    trigger: "Capital Discipline & ROI",
+    icon: "📈",
+    stat: "15-25%",
+    statLabel: "NPT reduction & lifting cost savings",
+    detail: "Faced with investor pressure for free cash flow over unconstrained growth, operators can no longer afford multi-year, low-ROI IT transformations. AI that delivers immediate reduction in Non-Productive Time (NPT), optimizes well placement, and lowers lifting costs yields board-level financial returns in months rather than years.",
+    source: "McKinsey Energy Insights / SPE Operational Analytics 2025",
+    sourceUrl: "https://www.spe.org/en/jpt/jpt-main-page/",
+  },
 ];
 export const DIGITAL_MATURITY = [
   { name: "TotalEnergies",     stage: "Leader",        score: 92, region: "EMEA" },

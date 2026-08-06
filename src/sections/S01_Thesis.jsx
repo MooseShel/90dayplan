@@ -16,6 +16,7 @@ const WHY_NOW = [
   { trigger: 'Labor Shortage', icon: '👷', detail: 'The average upstream geoscientist is over 50 years old. A significant share of the workforce is expected to retire by 2030 (SPE/AAPG workforce surveys). Agentic AI that augments rather than replaces is a workforce strategy, not just an efficiency play.' },
   { trigger: 'Energy Transition', icon: '🌱', detail: "Operators need to decarbonize while growing production. Google's CCUS, methane-MRV, and grid-AI capabilities address both simultaneously , a combination no competitor can match." },
   { trigger: 'Sovereign AI', icon: '🔒', detail: 'Gulf and APAC NOCs need AI that stays in-country. The Dammam sovereign region, Google Cloud Jakarta/Bangkok/Tokyo regions, and GDC air-gap option give Google a sovereign answer that Azure and AWS cannot replicate at this level of regional trust and coverage.' },
+  { trigger: 'Capital Discipline', icon: '📈', detail: 'Faced with investor pressure for free cash flow over production growth, operators can no longer afford multi-year, low-ROI IT transformations. AI that delivers immediate reduction in Non-Productive Time (NPT), optimizes well placement, and lowers lifting costs yields board-level financial returns in months rather than years.' },
 ];
 
 export default function S01Thesis() {

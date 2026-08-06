@@ -1328,7 +1328,7 @@ body {
 .metric-source { font-size: 0.65rem; color: var(--text-muted); font-style: italic; margin-top: 0.4rem; opacity: 0.7; }
 
 /* ── Driver Cards ────────────────────────────────────────────────────── */
-.driver-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0.85rem; }
+.driver-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0.85rem; }
 .driver-card {
   background: var(--bg-card); border: 1px solid var(--border);
   border-radius: 12px; padding: 1rem 0.85rem; cursor: pointer;
