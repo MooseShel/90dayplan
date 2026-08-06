@@ -107,12 +107,51 @@ function ThemeToggle({ theme, onToggle }) {
 }
 
 export default function App() {
-  const [active, setActive]       = useState('landscape');
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const { theme, toggle }         = useTheme();
-  const ActiveSection             = SECTION_MAP[active];
+  const [active, setActive]           = useState('landscape');
+  const [mobileOpen, setMobileOpen]     = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(
+    () => localStorage.getItem('og-sidebar-collapsed') === 'true'
+  );
+  const [collapsedTiers, setCollapsedTiers] = useState(() => {
+    try {
+      const saved = localStorage.getItem('og-sidebar-collapsed-tiers');
+      return saved ? JSON.parse(saved) : {};
+    } catch {
+      return {};
+    }
+  });
 
-  const currentNav = NAV_ITEMS.find(n => n.id === active);
+  const { theme, toggle } = useTheme();
+  const ActiveSection     = SECTION_MAP[active];
+  const currentNav        = NAV_ITEMS.find(n => n.id === active);
+
+  const toggleSidebar = () => {
+    setSidebarCollapsed(prev => {
+      const next = !prev;
+      localStorage.setItem('og-sidebar-collapsed', String(next));
+      return next;
+    });
+  };
+
+  const toggleTier = (tierId) => {
+    setCollapsedTiers(prev => {
+      const next = { ...prev, [tierId]: !prev[tierId] };
+      localStorage.setItem('og-sidebar-collapsed-tiers', JSON.stringify(next));
+      return next;
+    });
+  };
+
+  // Keyboard shortcut: Ctrl+B / Cmd+B to toggle sidebar
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'b') {
+        e.preventDefault();
+        toggleSidebar();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   // Reset scroll position and close mobile drawer whenever the section changes
   const handleNavClick = (id) => {
@@ -159,9 +198,19 @@ export default function App() {
       )}
 
       {/* ── Sidebar / Drawer ── */}
-      <aside className={`sidebar${mobileOpen ? ' mobile-open' : ''}`}>
+      <aside className={`sidebar${mobileOpen ? ' mobile-open' : ''}${sidebarCollapsed ? ' collapsed' : ''}`}>
         <div className="sidebar-logo">
-          <GoogleCloudLogo width={160} />
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+            <GoogleCloudLogo width={sidebarCollapsed ? 110 : 160} />
+            <button
+              className="sidebar-toggle-btn"
+              onClick={toggleSidebar}
+              title={sidebarCollapsed ? "Expand sidebar (Ctrl+B)" : "Collapse sidebar (Ctrl+B)"}
+              aria-label="Toggle sidebar collapse"
+            >
+              {sidebarCollapsed ? '▸' : '◂'}
+            </button>
+          </div>
           <div className="logo-title">Global Oil &amp; Gas<br/>Industry Strategy</div>
           <a
             href="/google_cloud_og_industry_strategy.pdf"
@@ -176,36 +225,53 @@ export default function App() {
         </div>
 
         <nav className="sidebar-nav">
-          {NAV_TIERS.map(tier => (
-            <div key={tier.id} className="nav-tier-group">
-              <div className="nav-tier-label">{tier.label}</div>
-              {NAV_ITEMS.filter(item => item.tier === tier.id).map(item => (
+          {NAV_TIERS.map(tier => {
+            const isTierCollapsed = !!collapsedTiers[tier.id];
+            const tierItems = NAV_ITEMS.filter(item => item.tier === tier.id);
+            return (
+              <div key={tier.id} className={`nav-tier-group${isTierCollapsed ? ' tier-collapsed' : ''}`}>
                 <div
-                  key={item.id}
-                  className={`nav-item${active === item.id ? ' active' : ''}`}
-                  onClick={() => handleNavClick(item.id)}
+                  className="nav-tier-header"
+                  onClick={() => toggleTier(tier.id)}
+                  title={isTierCollapsed ? `Expand ${tier.label}` : `Collapse ${tier.label}`}
                 >
-                  <span className="nav-num">{item.num}</span>
-                  <div>
-                    <div className="nav-label">{item.label}</div>
-                    <div style={{fontSize:'10px',color:'var(--text-muted)',marginTop:'1px'}}>{item.sub}</div>
-                  </div>
+                  <span className="nav-tier-label">{tier.label}</span>
+                  <span className="nav-tier-icon">{isTierCollapsed ? '►' : '▼'}</span>
+                  <div className="nav-tier-divider" />
                 </div>
-              ))}
-            </div>
-          ))}
+                <div className="nav-tier-items">
+                  {tierItems.map(item => (
+                    <div
+                      key={item.id}
+                      className={`nav-item${active === item.id ? ' active' : ''}`}
+                      onClick={() => handleNavClick(item.id)}
+                      title={sidebarCollapsed ? `${item.num} · ${item.label}` : undefined}
+                    >
+                      <span className="nav-num">{item.num}</span>
+                      <div>
+                        <div className="nav-label">{item.label}</div>
+                        <div style={{fontSize:'10px',color:'var(--text-muted)',marginTop:'1px'}}>{item.sub}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </nav>
 
         <div className="sidebar-footer">
-          <strong>{META.author}</strong>
-          {META.title}<br/>
-          {META.date}
+          <div className="sidebar-footer-text">
+            <strong>{META.author}</strong>
+            {META.title}<br/>
+            {META.date}
+          </div>
           <ThemeToggle theme={theme} onToggle={toggle} />
         </div>
       </aside>
 
       {/* ── Main Content ── */}
-      <main className="main-content">
+      <main className={`main-content${sidebarCollapsed ? ' collapsed' : ''}`}>
         <ActiveSection />
       </main>
     </div>
