@@ -172,6 +172,15 @@ export default function App() {
           >
             📄 Executive Strategy Doc (PDF) ↗
           </a>
+          <a
+            href="/google_cloud_ccus_think_big_strategy.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sidebar-pdf-link ccus"
+            title="Download Dedicated CCUS Strategy Briefing (PDF)"
+          >
+            🌍 CCUS Strategy Doc (PDF) ↗
+          </a>
           <div className="logo-sub">{META.confidential}</div>
         </div>
 

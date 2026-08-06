@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ACCOUNTS, WEDGE_STEPS, TGS_WINBACK_PLAYBOOK } from '../data';
+import { ACCOUNTS, WEDGE_STEPS } from '../data';
 
 const TIER_LABELS = {
   '1A': 'Tier 1A · Public Independents (Lead & Wedge Postures)',

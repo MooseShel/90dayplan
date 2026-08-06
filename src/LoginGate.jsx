@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const VALID_HASH = '9aa44d80e790ce088ec2a8defefb75a75050eed40ca02852a252681f85661f87';
 

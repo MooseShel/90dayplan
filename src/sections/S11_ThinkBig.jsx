@@ -290,6 +290,54 @@ function CCUSSection({ data }) {
   const cs = data.commercialStructure;
   return (
     <div className="flex-col" style={{ gap: '16px' }}>
+      {/* Dedicated CCUS Strategy PDF Executive Briefing Banner */}
+      <div className="card" style={{
+        borderColor: 'var(--teal)',
+        background: 'linear-gradient(135deg, rgba(0,150,136,0.12) 0%, rgba(0,150,136,0.03) 100%)',
+        padding: '16px 20px',
+        display: 'flex',
+        alignItems: 'center',
+        justify: 'space-between',
+        flexWrap: 'wrap',
+        gap: '14px',
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+          <span style={{ fontSize: '28px', lineHeight: 1 }}>📄</span>
+          <div>
+            <div style={{ fontSize: '15px', fontWeight: 700, color: 'var(--teal)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span>Dedicated CCUS Executive Strategy Briefing</span>
+              <span className="badge teal" style={{ fontSize: '10px', padding: '2px 6px' }}>Standalone PDF</span>
+            </div>
+            <div style={{ fontSize: '12.5px', color: 'var(--text-secondary)', marginTop: '3px', lineHeight: '1.4' }}>
+              Download the complete 7-page strategy briefing covering Earth Engine, MethaneSAT, Delfi integration, consortium deal models & 90-day plan.
+            </div>
+          </div>
+        </div>
+        <a
+          href="/google_cloud_ccus_think_big_strategy.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '10px 18px',
+            background: 'var(--teal)',
+            color: '#ffffff',
+            borderRadius: 'var(--radius-sm)',
+            fontSize: '13px',
+            fontWeight: 600,
+            textDecoration: 'none',
+            boxShadow: '0 2px 10px rgba(0,150,136,0.3)',
+            transition: 'all 0.2s ease',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          <span>Open Strategy PDF</span>
+          <span style={{ fontSize: '14px' }}>↗</span>
+        </a>
+      </div>
+
       {/* Thesis */}
       <div className="highlight-block" style={{ borderLeftColor: 'var(--teal)' }}>
         <strong style={{ color: 'var(--teal)', display: 'block', marginBottom: '6px' }}>
@@ -482,6 +530,22 @@ export default function S11ThinkBig() {
             }}>
               {init.thesis.substring(0, 180)}…
             </div>
+            {init.id === 'ccus-partnerships' && (
+              <div style={{ marginTop: '12px', paddingTop: '8px', borderTop: '1px solid rgba(0,150,136,0.2)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <span style={{ fontSize: '11px', color: 'var(--teal)', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '4px' }}>
+                  <span>📄 Standalone Executive Strategy PDF</span>
+                </span>
+                <a
+                  href="/google_cloud_ccus_think_big_strategy.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  style={{ fontSize: '11.5px', color: 'var(--teal)', fontWeight: 600, textDecoration: 'underline' }}
+                >
+                  Download ↗
+                </a>
+              </div>
+            )}
           </div>
         ))}
       </div>

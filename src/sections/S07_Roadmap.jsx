@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { TIMELINE_PHASES } from '../data';
 
 function useCountdown(targetDate) {
-  const [diff, setDiff] = useState(() => Math.max(0, new Date(targetDate) - new Date()));
+  const [diff] = useState(() => Math.max(0, new Date(targetDate) - new Date()));
   const days    = Math.floor(diff / 86400000);
   const hours   = Math.floor((diff % 86400000) / 3600000);
   const minutes = Math.floor((diff % 3600000) / 60000);
