@@ -4,10 +4,10 @@ import subprocess
 import markdown
 import pypdf
 
-md_path = r'c:\Users\Husse\Documents\JobOffer\google_cloud_og_industry_strategy.md'
-html_path = r'c:\Users\Husse\Documents\JobOffer\temp_exact_google.html'
-pdf_public = r'c:\Users\Husse\Documents\JobOffer\public\google_cloud_og_industry_strategy.pdf'
-pdf_dist = r'c:\Users\Husse\Documents\JobOffer\dist\google_cloud_og_industry_strategy.pdf'
+md_path = r'c:\Users\Husse\Documents\Google\google_cloud_og_industry_strategy.md'
+html_path = r'c:\Users\Husse\Documents\Google\temp_exact_google.html'
+pdf_public = r'c:\Users\Husse\Documents\Google\public\google_cloud_og_industry_strategy.pdf'
+pdf_dist = r'c:\Users\Husse\Documents\Google\dist\google_cloud_og_industry_strategy.pdf'
 
 with open(md_path, 'r', encoding='utf-8') as f:
     md_text = f.read()

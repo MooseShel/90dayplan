@@ -161,7 +161,7 @@ Project Interchange leverages Google's dual position as an industrial power buye
 
 1. **Project Interchange**: Bilateral Energy-AI Operating System `[See Appendix D.1]`.
 2. **DeepMind Energy Lab**: Joint frontier science R&D program for molecular discovery and physics simulation `[See Appendix D.2]`.
-3. **CCUS Transformation Partnerships**: End-to-end AI platform for mega-consortiums (ExxonMobil LCS, East Coast Cluster, Project Greensand) `[See Appendix D.3]`.
+3. **CCUS Transformation Partnerships**: End-to-end AI platform for mega-consortiums (**ExxonMobil LCS Gulf Coast Hub**, **UK East Coast Cluster**, and **Project Greensand**). Captures **$315M – $530M/yr in direct GCP cloud spend** across **$40.8B+ in physical CapEx**, unlocking **$1,400M+ in leveraged enterprise cloud pull-through** across parent company IT estates `[See Appendix D.3 & dedicated CCUS Executive Strategy Briefing (google_cloud_ccus_think_big_strategy.pdf)]`.
 
 ---
 
@@ -534,13 +534,18 @@ Focus on establishing Google AI & Gemini Enterprise leadership, proving multiclo
 
 ---
 
-### D.3 CCUS Transformation Consortium Architectural Stack
+### D.3 CCUS Transformation Consortium Architectural Stack & Financial Impact
 
-| Consortium Target | Geographic Region & Storage Scale | Operator Partners | Google Cloud Technology Stack | Strategic Cloud Wedge Value |
-|:---|:---|:---|:---|:---|
-| **ExxonMobil Gulf Coast Hub** | US Gulf Coast (~9 MTPA contracted CO₂ storage, 1,500+ mi pipeline) | ExxonMobil Low Carbon Solutions | SLB Sequestri on GCP + Gemini Pipeline Flow AI + Earth Engine MethaneSAT + BigQuery 45Q Billing | Gateway into ExxonMobil's enterprise cloud portfolio |
-| **East Coast Cluster (ECC)** | UK North Sea (4 → 23 MTPA by 2035; 1B tonnes storage) | BP, Equinor, TotalEnergies | OSDU Shared Data Governance + SLB Sequestri + Earth Engine Marine Monitoring | Multi-operator wedge into BP, Equinor, and TotalEnergies |
-| **Project Greensand** | Denmark / EU (0.4 → 8 MTPA by 2030; EU first offshore CO₂ storage) | INEOS, Harbour Energy | INEOS GCP Platform + Carbon Destroyer Shipping Optimization + EU CCS Compliance Agents | Gateway into INEOS enterprise cloud relationship |
+The table below outlines the direct capital commitments, cloud consumption potential, and leveraged enterprise pull-through unlocked by partnering with these three anchor consortiums `[For full quantitative methodology, compute sizing breakdown (HPC, IoT, satellite, AI agents), and realism sensitivity analysis, see Appendix A of the dedicated CCUS Executive Strategy Briefing (google_cloud_ccus_think_big_strategy.pdf)]`:
+
+| Consortium Target | Geographic Region & Scale | Operator Partners | Total CapEx ($B) | Direct GCP Annual Cloud Spend ($M/yr) * | Leveraged Enterprise Pull-Through ($M) * | Google Cloud Architectural Stack & Enterprise Impact |
+|:---|:---|:---|:---|:---|:---|:---|
+| **ExxonMobil Gulf Coast Hub** | US Gulf Coast corridor (9 → 50+ MTPA, 1,500+ mi pipeline) | ExxonMobil Low Carbon Solutions, CF Industries, Nucor | **$12.0B+** | **$120M – $200M** | **$450M+** | SLB Sequestri on GCP + Gemini Pipeline Flow AI + Earth Engine MethaneSAT + BigQuery 45Q Billing. Trojan horse into ExxonMobil's enterprise cloud estate. |
+| **East Coast Cluster (ECC) / NEP** | UK North Sea (4 → 23 MTPA by 2035; 1B tonnes storage) | BP, Equinor, TotalEnergies | **$25.0B+** (£20B) | **$150M – $250M** | **$800M+** | OSDU Shared Data Governance + SLB Sequestri + Earth Engine Marine Monitoring. Multi-operator wedge into BP, Equinor, and TotalEnergies. |
+| **Project Greensand** | Denmark / EU (0.4 → 8 MTPA by 2030; EU first offshore storage) | INEOS Energy, Harbour Energy | **$3.8B** (€3.5B) | **$45M – $80M** | **$150M+** | INEOS GCP Platform + Carbon Destroyer Shipping Optimization + EU CCS Compliance Agents. Reference blueprint for 30+ upcoming EU CCS hubs. |
+| **Consortium Total & Leveraged Impact** | **36+ MTPA Combined CO₂ Storage Capacity** | **Multi-Operator Anchor JVs** | **$40.8B+** | **$315M – $530M** | **$1,400M+** | **Captures 60%+ of global CCUS digital platform spend** while creating massive pull-through revenue across parent company cloud IT budgets. |
+
+*\* Note: Direct GCP spend targets represent peak buildout and full-stack adoption. Steady-state operational baselines across all 3 hubs range from $70M–$125M/yr (see Appendix A of the dedicated CCUS Strategy Document for detailed sensitivity analysis).*
 
 ---
 
