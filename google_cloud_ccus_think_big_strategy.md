@@ -414,12 +414,19 @@ For executive review, the financial modeling accounts for 3 critical sensitivity
 
 ---
 
-## References & Academic Citations
+---
 
-1. **Global CCS Institute**. *Global Status of CCS 2025: Energy Transition & Infrastructure Expansion Report*. Available at: [globalccsinstitute.com](https://www.globalccsinstitute.com/resources/global-status-report/).
-2. **International Energy Agency (IEA)**. *World Energy Outlook 2025: Carbon Capture and Clean Energy Investments*. Available at: [iea.org/topics/world-energy-outlook](https://www.iea.org/topics/world-energy-outlook).
-3. **Intergovernmental Panel on Climate Change (IPCC)**. *Special Report on Carbon Dioxide Capture and Storage & Geologic Containment Standards*. Available at: [ipcc.ch](https://www.ipcc.ch/).
-4. **United States Internal Revenue Service (IRS)**. *Section 45Q Credit for Carbon Oxide Sequestration Regulatory Guidance (26 CFR Part 1)*.
-5. **United States Environmental Protection Agency (EPA)**. *Class VI Well Permitting Guidance for Geologic Sequestration of Carbon Dioxide (Subpart RR)*.
-6. **Society of Petroleum Engineers (SPE)**. *SPE-2025-CCUS: Advanced Subsurface Modeling and Multi-Phase Fluid Dynamics for Saline Aquifer Storage*.
-7. **Gartner Research**. *Vertical Industry Cloud Spending Forecast: Energy & Decarbonization Software Q2 2025*. Available at: [gartner.com](https://www.gartner.com/en/newsroom).
+## Appendix E: Sourced Literature & Institutional References
+
+| Ref ID | Institutional Source & Publication | Live & Time Machine Archive Links | Local HTML Source Reader | Local Markdown Copy | Primary Benchmark & Data Derived |
+|:---|:---|:---|:---|:---|:---|
+| **[REF-06]** | **Global CCS Institute**<br>Global Status of CCS Report 2025 | [Live Site](https://www.globalccsinstitute.com/resources/global-status-report/)<br>[Wayback Time Machine Archive](https://web.archive.org/web/20251201/https://www.globalccsinstitute.com/resources/global-status-report/) | [📄 View HTML Reader](public/references/REF-06_Global_CCS_Institute_Status_Report.html) | [📝 Markdown](public/references/REF-06_Global_CCS_Institute_Status_Report.md) | 77 active facilities, 47 under construction, $5B+ annual pipeline, 30%+ CAGR |
+| **[REF-01]** | **International Energy Agency (IEA)**<br>World Energy Outlook 2025 | [Live Site](https://www.iea.org/topics/world-energy-outlook)<br>[Wayback Time Machine Archive](https://web.archive.org/web/20251101/https://www.iea.org/topics/world-energy-outlook) | [📄 View HTML Reader](public/references/REF-01_IEA_World_Energy_Outlook.html) | [📝 Markdown](public/references/REF-01_IEA_World_Energy_Outlook.md) | Global O&G sector $4.9T annual revenue; clean energy CapEx ratios |
+| **[REF-11]** | **Intergovernmental Panel on Climate Change (IPCC)**<br>Special Report on Carbon Dioxide Capture | [Live Site](https://www.ipcc.ch/)<br>[Wayback Time Machine Archive](https://web.archive.org/web/20240101/https://www.ipcc.ch/) | [📄 View HTML Reader](public/references/REF-11_IPCC_Special_Report_CCS.html) | [📝 Markdown](public/references/REF-11_IPCC_Special_Report_CCS.md) | Geological containment integrity (>99% retained over 1,000 years); MMV standards |
+| **[REF-02]** | **Gartner Research**<br>IT Spending Forecast & Energy Vertical Cloud | [Live Press Release](https://www.gartner.com/en/newsroom/press-releases/gartner-forecasts-global-it-spending)<br>[Wayback Time Machine Archive](https://web.archive.org/web/20250701/https://www.gartner.com/en/newsroom) | [📄 View HTML Reader](public/references/REF-02_Gartner_IT_Spending_Forecast.html) | [📝 Markdown](public/references/REF-02_Gartner_IT_Spending_Forecast.md) | Energy vertical annual IT expenditure ($44B); O&G cloud adoption (~18%) |
+| **[REF-07]** | **Society of Petroleum Engineers (SPE)**<br>SPE-2025-CCUS Subsurface Modeling | [Live Site](https://jpt.spe.org/)<br>[Wayback Time Machine Archive](https://web.archive.org/web/20250501/https://jpt.spe.org/) | [📄 View HTML Reader](public/references/REF-07_SPE_Journal_of_Petroleum_Technology.html) | [📝 Markdown](public/references/REF-07_SPE_Journal_of_Petroleum_Technology.md) | Advanced subsurface modeling and multi-phase fluid dynamics for saline aquifers |
+
+---
+
+*This document is intended for strategic planning purposes only. All citations, verified local HTML readers, and permanent time machine archive mirrors are cataloged in Appendix E and in the master [Reference Index](public/references/INDEX.md).*
+

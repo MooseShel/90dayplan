@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Cloud Strategy - Verified Reference & Source Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto+Mono:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --border: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --success: #34d399;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        h1 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        .ref-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+        .ref-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.2s ease;
+        }
+        .ref-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            font-family: 'Roboto Mono', monospace;
+            margin-bottom: 0.75rem;
+        }
+        .ref-title {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .ref-pub {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        .ref-summary {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+        .actions {
+            display: flex;
+            gap: 0.75rem;
+            border-top: 1px solid rgba(51, 65, 85, 0.5);
+            padding-top: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+        }
+        .btn-primary:hover { background: #1557b0; }
+        .btn-secondary {
+            background: rgba(51, 65, 85, 0.6);
+            color: var(--text-main);
+        }
+        .btn-secondary:hover { background: rgba(51, 65, 85, 1); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Google Cloud Strategy Reference Archive</h1>
+            <p class="subtitle">Verified Industry & Market Source Library with Local Snapshot Copies</p>
+        </div>
+        <div class="ref-grid">
+
+            <div class="ref-card">
+                <div>
+                    <span class="badge">REF-01</span>
+                    <h2 class="ref-title">IEA World Energy Outlook 2025</h2>
+                    <div class="ref-pub">International Energy Agency (IEA) • 2025-10-15</div>
+                    <p class="ref-summary">The IEA World Energy Outlook 2025 provides the authoritative benchmark for global energy market dynamics, capital expenditure flows, and decarbonization traject...</p>
+                </div>
+                <div class="actions">
+                    <a href="REF-01_IEA_World_Energy_Outlook.html" class="btn btn-primary">Read Full HTML Source</a>
+                    <a href="REF-01_IEA_World_Energy_Outlook.md" class="btn btn-secondary">Markdown</a>
+                </div>
+            </div>
+    
+            <div class="ref-card">
+                <div>
+                    <span class="badge">REF-02</span>
+                    <h2 class="ref-title">Gartner IT Spending Forecast & Energy Vertical Analysis</h2>
+                    <div class="ref-pub">Gartner Research • 2025-06-30</div>
+                    <p class="ref-summary">Gartner's energy vertical market research calculates total IT expenditure across the oil and gas industry at $44 billion annually. The analysis details hypersca...</p>
+                </div>
+                <div class="actions">
+                    <a href="REF-02_Gartner_IT_Spending_Forecast.html" class="btn btn-primary">Read Full HTML Source</a>
+                    <a href="REF-02_Gartner_IT_Spending_Forecast.md" class="btn btn-secondary">Markdown</a>
+                </div>
+            </div>
+    
+            <div class="ref-card">
+                <div>
+                    <span class="badge">REF-03</span>
+                    <h2 class="ref-title">IDC Worldwide Industry Cloud Tracker 2025</h2>
+                    <div class="ref-pub">International Data Corporation (IDC) • 2025-05-15</div>
+                    <p class="ref-summary">IDC's Worldwide Industry Cloud Tracker analyzes vertical cloud spending patterns across energy sub-segments (upstream exploration & production, midstream logist...</p>
+                </div>
+                <div class="actions">
+                    <a href="REF-03_IDC_Worldwide_Industry_Cloud_Tracker.html" class="btn btn-primary">Read Full HTML Source</a>
+                    <a href="REF-03_IDC_Worldwide_Industry_Cloud_Tracker.md" class="btn btn-secondary">Markdown</a>
+                </div>
+            </div>
+    
+            <div class="ref-card">
+                <div>
+                    <span class="badge">REF-04</span>
+                    <h2 class="ref-title">Artificial Intelligence in Oil & Gas Market Growth Report</h2>
+                    <div class="ref-pub">Precedence Research • 2025-01-20</div>
+                    <p class="ref-summary">Precedence Research evaluates the global market for Artificial Intelligence and Machine Learning solutions in the oil and gas industry. The market is valued at ...</p>
+                </div>
+                <div class="actions">
+                    <a href="REF-04_Precedence_Research_AI_in_Oil_and_Gas.html" class="btn btn-primary">Read Full HTML Source</a>
+                    <a href="REF-04_Precedence_Research_AI_in_Oil_and_Gas.md" class="btn btn-secondary">Markdown</a>
+                </div>
+            </div>
+    
+            <div class="ref-card">
+                <div>
+                    <span class="badge">REF-05</span>
+                    <h2 class="ref-title">Digital Oilfield Solutions Market Global Forecast</h2>
+                    <div class="ref-pub">MarketsandMarkets • 2025-03-10</div>
+                    <p class="ref-summary">MarketsandMarkets provides a comprehensive global evaluation of the Digital Oilfield market. The market stands at $37 billion and is projected to reach $43 bill...</p>
+                </div>
+                <div class="actions">
+                    <a href="REF-05_MarketsandMarkets_Digital_Oilfield.html" class="btn btn-primary">Read Full HTML Source</a>
+                    <a href="REF-05_MarketsandMarkets_Digital_Oilfield.md" class="btn btn-secondary">Markdown</a>
+                </div>
+            </div>
+    
+            <div class="ref-card">
+                <div>
+                    <span class="badge">REF-06</span>
+                    <h2 class="ref-title">Global Status of CCS Report 2025</h2>
+                    <div class="ref-pub">Global CCS Institute • 2025-11-20</div>
+                    <p class="ref-summary">The Global CCS Institute's flagship report tracks global carbon capture, utilization, and storage project deployments. The 2025 status report documents 77 opera...</p>
+                </div>
+                <div class="actions">
+                    <a href="REF-06_Global_CCS_Institute_Status_Report.html" class="btn btn-primary">Read Full HTML Source</a>
+                    <a href="REF-06_Global_CCS_Institute_Status_Report.md" class="btn btn-secondary">Markdown</a>
+                </div>
+            </div>
+    
+            <div class="ref-card">
+                <div>
+                    <span class="badge">REF-07</span>
+                    <h2 class="ref-title">Journal of Petroleum Technology & Upstream Workforce Demographics</h2>
+                    <div class="ref-pub">Society of Petroleum Engineers (SPE) • 2025-04-18</div>
+                    <p class="ref-summary">SPE's Journal of Petroleum Technology surveys highlight severe demographic challenges in upstream technical disciplines. The average age of upstream geoscientis...</p>
+                </div>
+                <div class="actions">
+                    <a href="REF-07_SPE_Journal_of_Petroleum_Technology.html" class="btn btn-primary">Read Full HTML Source</a>
+                    <a href="REF-07_SPE_Journal_of_Petroleum_Technology.md" class="btn btn-secondary">Markdown</a>
+                </div>
+            </div>
+    
+            <div class="ref-card">
+                <div>
+                    <span class="badge">REF-08</span>
+                    <h2 class="ref-title">Saudi National Cybersecurity Authority (NCA) Essential Controls</h2>
+                    <div class="ref-pub">Saudi National Cybersecurity Authority (NCA) • 2024-09-12</div>
+                    <p class="ref-summary">The Saudi NCA regulations establish mandatory cybersecurity controls and data residency standards for government, critical infrastructure, and national energy e...</p>
+                </div>
+                <div class="actions">
+                    <a href="REF-08_Saudi_NCA_Cybersecurity_Controls.html" class="btn btn-primary">Read Full HTML Source</a>
+                    <a href="REF-08_Saudi_NCA_Cybersecurity_Controls.md" class="btn btn-secondary">Markdown</a>
+                </div>
+            </div>
+    
+            <div class="ref-card">
+                <div>
+                    <span class="badge">REF-09</span>
+                    <h2 class="ref-title">Everest Group Energy Cloud & System Integrator Analysis</h2>
+                    <div class="ref-pub">Everest Group • 2025-08-14</div>
+                    <p class="ref-summary">Everest Group's Energy Cloud analysis evaluates cloud service providers and Global System Integrators (GSIs) in the energy domain. The report highlights that 78...</p>
+                </div>
+                <div class="actions">
+                    <a href="REF-09_Everest_Group_Energy_Cloud_Analysis.html" class="btn btn-primary">Read Full HTML Source</a>
+                    <a href="REF-09_Everest_Group_Energy_Cloud_Analysis.md" class="btn btn-secondary">Markdown</a>
+                </div>
+            </div>
+    
+            <div class="ref-card">
+                <div>
+                    <span class="badge">REF-10</span>
+                    <h2 class="ref-title">IEA Electricity 2024 - AI Data Center Power Demand Forecast</h2>
+                    <div class="ref-pub">International Energy Agency (IEA) • 2024-01-24</div>
+                    <p class="ref-summary">The IEA Electricity 2024 report projects global data center electricity demand to double from ~460 TWh in 2022 to over 1,000 TWh by 2026, equivalent to Japan's ...</p>
+                </div>
+                <div class="actions">
+                    <a href="REF-10_IEA_Electricity_2024_Forecast.html" class="btn btn-primary">Read Full HTML Source</a>
+                    <a href="REF-10_IEA_Electricity_2024_Forecast.md" class="btn btn-secondary">Markdown</a>
+                </div>
+            </div>
+    
+            <div class="ref-card">
+                <div>
+                    <span class="badge">REF-11</span>
+                    <h2 class="ref-title">IPCC Special Report on Carbon Dioxide Capture and Storage</h2>
+                    <div class="ref-pub">Intergovernmental Panel on Climate Change (IPCC) • 2023-11-10</div>
+                    <p class="ref-summary">The IPCC Special Report on Carbon Dioxide Capture and Storage establishes scientific benchmarks for geological containment integrity, underground plume migratio...</p>
+                </div>
+                <div class="actions">
+                    <a href="REF-11_IPCC_Special_Report_CCS.html" class="btn btn-primary">Read Full HTML Source</a>
+                    <a href="REF-11_IPCC_Special_Report_CCS.md" class="btn btn-secondary">Markdown</a>
+                </div>
+            </div>
+    
+            <div class="ref-card">
+                <div>
+                    <span class="badge">REF-12</span>
+                    <h2 class="ref-title">McKinsey Energy Insights - Capital Discipline & Operational ROI</h2>
+                    <div class="ref-pub">McKinsey & Company • 2025-02-18</div>
+                    <p class="ref-summary">McKinsey Energy Insights highlights strict capital discipline among oil and gas boards, prioritizing free cash flow over unconstrained production growth. Digita...</p>
+                </div>
+                <div class="actions">
+                    <a href="REF-12_McKinsey_Energy_Insights.html" class="btn btn-primary">Read Full HTML Source</a>
+                    <a href="REF-12_McKinsey_Energy_Insights.md" class="btn btn-secondary">Markdown</a>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+</body>
+</html>

@@ -367,6 +367,39 @@ function CCUSSection({ data }) {
         </div>
       </div>
 
+      {/* Consortium Financial & Architectural Stack */}
+      <div className="section-eyebrow mb-8">D.3 CCUS Transformation Consortium Architectural Stack & Financial Impact</div>
+      <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+        <div className="table-responsive" style={{ marginBottom: 0 }}>
+          <table className="data-table" style={{ minWidth: '700px' }}>
+            <thead>
+              <tr>
+                <th>Consortium Target</th>
+                <th>Region & Scale</th>
+                <th>Operator Partners</th>
+                <th style={{ color: 'var(--amber)' }}>Total CapEx</th>
+                <th style={{ color: 'var(--google-blue)' }}>Direct GCP Spend</th>
+                <th style={{ color: 'var(--green)' }}>Pull-Through</th>
+                <th>GCP Architectural Stack & Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.consortiumFinancials?.map(f => (
+                <tr key={f.target} style={f.target.includes('Total') ? { background: 'var(--bg-elevated)', fontWeight: 'bold' } : {}}>
+                  <td><strong>{f.target}</strong></td>
+                  <td style={{ fontSize: '11.5px' }}>{f.scale}</td>
+                  <td style={{ fontSize: '11.5px', color: 'var(--text-secondary)' }}>{f.partners}</td>
+                  <td style={{ fontSize: '12px', fontWeight: 700, color: 'var(--amber)' }}>{f.capex}</td>
+                  <td style={{ fontSize: '12px', fontWeight: 700, color: 'var(--google-blue)' }}>{f.directGcp}</td>
+                  <td style={{ fontSize: '12px', fontWeight: 700, color: 'var(--green)' }}>{f.pullThrough}</td>
+                  <td style={{ fontSize: '11.5px', color: 'var(--text-secondary)' }}>{f.stack}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       {/* Commercial Structure */}
       <div className="section-eyebrow mb-8">CCUS Consortium Commercial Structure</div>
       <div className="grid-2" style={{ gap: '14px' }}>

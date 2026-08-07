@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REF-10 - IEA Electricity 2024 - AI Data Center Power Demand Forecast | Verified Source Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto+Mono:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --primary-dark: #1557b0;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --border: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --success: #34d399;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+        }
+        .header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            font-family: 'Roboto Mono', monospace;
+            margin-bottom: 0.75rem;
+        }
+        .status-badge {
+            display: inline-block;
+            background: rgba(52, 211, 153, 0.15);
+            color: var(--success);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-left: 0.5rem;
+        }
+        h1 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+        .meta-info {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+            margin: 2rem 0;
+        }
+        .metric-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.25rem;
+            transition: transform 0.2s;
+        }
+        .metric-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+        .metric-value {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.25rem;
+        }
+        .metric-label {
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+            color: var(--text-main);
+        }
+        .metric-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .content-section {
+            margin-top: 2rem;
+            font-size: 1.05rem;
+            color: #cbd5e1;
+        }
+        .content-section h2 {
+            font-family: 'Google Sans', sans-serif;
+            color: #fff;
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.75rem 0;
+            border-left: 4px solid var(--primary);
+            padding-left: 0.75rem;
+        }
+        .content-section p {
+            margin-bottom: 1rem;
+        }
+        .content-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+        .links-box {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2.5rem;
+        }
+        .links-box h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+            font-size: 0.95rem;
+        }
+        .link-item:last-child { border-bottom: none; }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            word-break: break-all;
+        }
+        a:hover { text-decoration: underline; }
+        .nav-back {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .nav-back:hover { color: var(--accent); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="nav-back">← Back to Reference Archive Index</a>
+        <div class="header">
+            <div>
+                <span class="badge">REF-10</span>
+                <span class="status-badge">Protected / Verified via Archive Copy</span>
+            </div>
+            <h1>IEA Electricity 2024 - AI Data Center Power Demand Forecast</h1>
+            <div class="meta-info">
+                Publisher: <strong>International Energy Agency (IEA)</strong> &nbsp;|&nbsp; Publication Date: <strong>2024-01-24</strong>
+            </div>
+        </div>
+
+        <div class="metrics-grid">
+            
+        <div class="metric-card">
+            <div class="metric-value">>1,000 TWh by 2026</div>
+            <div class="metric-label">Data Center Power Consumption</div>
+            <div class="metric-desc">Global data center electricity consumption projected to double by 2026</div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-value">10x Power Density</div>
+            <div class="metric-label">AI Load Multiplication</div>
+            <div class="metric-desc">AI server racks require up to 10x the power density of traditional web servers</div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-value">3-7 Years</div>
+            <div class="metric-label">Grid Connection Queue</div>
+            <div class="metric-desc">Average grid interconnection delay for new utility-scale data centers</div>
+        </div>
+        
+        </div>
+
+        <div class="content-section">
+            <h2>Executive Summary</h2>
+            <p>The IEA Electricity 2024 report projects global data center electricity demand to double from ~460 TWh in 2022 to over 1,000 TWh by 2026, equivalent to Japan's total power consumption. This surge creates a bilateral commercial opportunity where energy operators supply power to hyperscaler data centers.</p>
+
+            <h2>Detailed Analysis & Source Data</h2>
+            <div>
+                <br># IEA Electricity 2024 - AI Data Center Power Forecast - Reference Archive<br><br>## Executive Summary<br>This report analyzes global electricity demand dynamics, highlighting the intense power requirements of AI data center buildouts and the strategic role of energy companies in providing dispatchable power.<br><br>## Key Findings<br><br>### 1. Data Center Electricity Demand Surge<br>- Global data center, AI, and cryptocurrency power demand is projected to double from 460 TWh in 2022 to **1,000+ TWh by 2026**.<br>- AI cluster racks consume 40–100 kW per rack, compared to 5–10 kW for standard cloud computing racks.<br><br>### 2. Bilateral Commercial Synergy (Project Interchange)<br>- Hyperscalers need firm, dispatchable power (natural gas with CCS, geothermal, nuclear, solar+storage).<br>- Oil and gas operators possess power generation capacity and land rights, creating opportunities for reciprocal cloud-for-power commercial agreements.<br><br>## Citation & Strategy Alignment<br>Validates Force 1 and forms the strategic foundation for Project Interchange (Appendix D.1).<br>
+            </div>
+        </div>
+
+        <div class="links-box">
+            <h3>Verified Source Links & Permanent Archive Mirrors</h3>
+            <div class="link-item">
+                <span>Original Live Source URL:</span>
+                <a href="https://www.iea.org/reports/electricity-2024" target="_blank" rel="noopener noreferrer">https://www.iea.org/reports/electricity-2024</a>
+            </div>
+            <div class="link-item">
+                <span>Wayback Machine Permanent Archive:</span>
+                <a href="https://web.archive.org/web/20240201/https://www.iea.org/reports/electricity-2024" target="_blank" rel="noopener noreferrer">https://web.archive.org/web/20240201/https://www.iea.org/reports/electricity-2024</a>
+            </div>
+            <div class="link-item">
+                <span>Local Markdown Copy:</span>
+                <a href="REF-10_IEA_Electricity_2024_Forecast.md" target="_blank">REF-10_IEA_Electricity_2024_Forecast.md</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

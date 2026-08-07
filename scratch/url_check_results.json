@@ -1,0 +1,133 @@
+[
+  {
+    "url": "https://nca.gov.sa/",
+    "status": 200,
+    "redirect_url": "https://nca.gov.sa/ar/",
+    "error": null,
+    "files": [
+      ".\\google_cloud_og_industry_strategy.md",
+      ".\\src\\data.js"
+    ]
+  },
+  {
+    "url": "https://www.everestgrp.com/reportstore/",
+    "status": 403,
+    "redirect_url": null,
+    "error": "HTTP Error 403: Forbidden",
+    "files": [
+      ".\\google_cloud_og_industry_strategy.md",
+      ".\\src\\data.js"
+    ]
+  },
+  {
+    "url": "https://www.gartner.com/en/newsroom",
+    "status": 403,
+    "redirect_url": null,
+    "error": "HTTP Error 403: Forbidden",
+    "files": [
+      ".\\google_cloud_ccus_think_big_strategy.md",
+      ".\\google_cloud_og_industry_strategy.md",
+      ".\\src\\data.js"
+    ]
+  },
+  {
+    "url": "https://www.gartner.com/en/newsroom/press-releases/gartner-forecasts-global-it-spending",
+    "status": 403,
+    "redirect_url": null,
+    "error": "HTTP Error 403: Forbidden",
+    "files": [
+      ".\\src\\sections\\S_MarketOpportunity.jsx"
+    ]
+  },
+  {
+    "url": "https://www.globalccsinstitute.com/resources/global-status-report/",
+    "status": 200,
+    "redirect_url": "https://www.globalccsinstitute.com/resources/global-status-report/",
+    "error": null,
+    "files": [
+      ".\\google_cloud_ccus_think_big_strategy.md",
+      ".\\google_cloud_og_industry_strategy.md",
+      ".\\src\\data.js"
+    ]
+  },
+  {
+    "url": "https://www.idc.com/research",
+    "status": 200,
+    "redirect_url": "https://www.idc.com/research/",
+    "error": null,
+    "files": [
+      ".\\google_cloud_og_industry_strategy.md",
+      ".\\src\\data.js"
+    ]
+  },
+  {
+    "url": "https://www.iea.org/reports/electricity-2024",
+    "status": 403,
+    "redirect_url": null,
+    "error": "HTTP Error 403: Forbidden",
+    "files": [
+      ".\\google_cloud_og_industry_strategy.md",
+      ".\\src\\data.js"
+    ]
+  },
+  {
+    "url": "https://www.iea.org/topics/world-energy-outlook",
+    "status": 403,
+    "redirect_url": null,
+    "error": "HTTP Error 403: Forbidden",
+    "files": [
+      ".\\google_cloud_ccus_think_big_strategy.md",
+      ".\\google_cloud_og_industry_strategy.md",
+      ".\\src\\data.js"
+    ]
+  },
+  {
+    "url": "https://www.ipcc.ch/",
+    "status": 200,
+    "redirect_url": "https://www.ipcc.ch/",
+    "error": null,
+    "files": [
+      ".\\google_cloud_ccus_think_big_strategy.md"
+    ]
+  },
+  {
+    "url": "https://www.marketsandmarkets.com/Market-Reports/digital-oilfield-solutions-market-528.html",
+    "status": 200,
+    "redirect_url": "https://www.marketsandmarkets.com/report-search-page.asp?rpt=digital-oilfield-solutions-market",
+    "error": null,
+    "files": [
+      ".\\google_cloud_og_industry_strategy.md",
+      ".\\src\\data.js"
+    ]
+  },
+  {
+    "url": "https://www.mckinsey.com/industries/oil-and-gas/our-insights",
+    "status": "Error",
+    "redirect_url": null,
+    "error": "The read operation timed out",
+    "files": [
+      ".\\google_cloud_og_industry_strategy.md"
+    ]
+  },
+  {
+    "url": "https://www.precedenceresearch.com/artificial-intelligence-in-oil-and-gas-market",
+    "status": 200,
+    "redirect_url": "https://www.precedenceresearch.com/artificial-intelligence-in-oil-and-gas-market",
+    "error": null,
+    "files": [
+      ".\\google_cloud_og_industry_strategy.md",
+      ".\\src\\data.js"
+    ]
+  },
+  {
+    "url": "https://www.spe.org/en/jpt/jpt-main-page/",
+    "status": 200,
+    "redirect_url": "https://jpt.spe.org/",
+    "error": null,
+    "files": [
+      ".\\google_cloud_og_industry_strategy.md",
+      ".\\src\\data.js",
+      ".\\src\\sections\\S_IndustryLandscape.jsx"
+    ]
+  }
+]

@@ -1,18 +1,56 @@
 import React, { useState } from 'react';
-import { TAM_SAM_SOM, MARKET_SHARE, REVENUE_PROJECTIONS, REVENUE_PROJECTIONS_SOURCE } from '../data';
+import { TAM_SAM_SOM, MARKET_SHARE, REVENUE_PROJECTIONS, REVENUE_PROJECTIONS_SOURCE, REFERENCES_REGISTRY } from '../data';
+import SourceModal from '../components/SourceModal';
 
 /* ── Source Link Helper ─────────────────────────────────────────── */
-function SourceFootnote({ source, url }) {
+function SourceFootnote({ source, url, refId, htmlPath, onOpenModal }) {
   if (!source) return null;
   return (
-    <div className="metric-source">
-      Source:{' '}
+    <div className="metric-source" style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap', marginTop: '6px' }}>
+      <span style={{ fontSize: '0.8rem', color: '#94a3b8' }}>Source:</span>
       {url && url !== '#' ? (
         <a href={url} target="_blank" rel="noopener noreferrer" className="source-link">
-          {source} <span style={{ fontSize: '0.65rem', marginLeft: '2px' }}>↗</span>
+          {source} <span style={{ fontSize: '0.65rem' }}>↗</span>
         </a>
       ) : (
         <span>{source}</span>
+      )}
+      {htmlPath && (
+        <a
+          href={htmlPath}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            backgroundColor: 'rgba(56, 189, 248, 0.15)',
+            color: '#38bdf8',
+            padding: '2px 8px',
+            borderRadius: '4px',
+            fontSize: '0.75rem',
+            fontWeight: '600',
+            textDecoration: 'none',
+            border: '1px solid rgba(56, 189, 248, 0.3)'
+          }}
+          title="Read full offline local HTML source document"
+        >
+          📄 Read Source Page
+        </a>
+      )}
+      {refId && onOpenModal && (
+        <button
+          onClick={(e) => { e.stopPropagation(); onOpenModal(refId); }}
+          style={{
+            backgroundColor: 'rgba(52, 211, 153, 0.15)',
+            color: '#34d399',
+            border: '1px solid rgba(52, 211, 153, 0.3)',
+            borderRadius: '4px',
+            padding: '2px 8px',
+            fontSize: '0.75rem',
+            cursor: 'pointer',
+            fontWeight: '500'
+          }}
+        >
+          🔍 View Modal
+        </button>
       )}
     </div>
   );
@@ -300,9 +338,18 @@ function TamCircles({ tam, sam, som }) {
 
 export default function S_MarketOpportunity() {
   const [hoveredProvider, setHoveredProvider] = useState(null);
+  const [activeModalRefId, setActiveModalRefId] = useState(null);
 
   return (
     <div className="section-page">
+      {/* Source Modal */}
+      {activeModalRefId && REFERENCES_REGISTRY[activeModalRefId] && (
+        <SourceModal
+          sourceData={REFERENCES_REGISTRY[activeModalRefId]}
+          onClose={() => setActiveModalRefId(null)}
+        />
+      )}
+
       <div className="section-header">
         <div className="section-eyebrow">02 · Market Opportunity</div>
         <h1 className="section-title">Sizing the Prize</h1>
@@ -325,7 +372,13 @@ export default function S_MarketOpportunity() {
               <div className="tam-detail-value" style={{ fontSize: '1.25rem', fontWeight: '800', color: '#4285F4' }}>${TAM_SAM_SOM.tam.value}B</div>
             </div>
             <div className="tam-detail-desc" style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>{TAM_SAM_SOM.tam.desc}</div>
-            <SourceFootnote source={TAM_SAM_SOM.tam.source} url={TAM_SAM_SOM.tam.sourceUrl} />
+            <SourceFootnote
+              source={TAM_SAM_SOM.tam.source}
+              url={TAM_SAM_SOM.tam.sourceUrl}
+              refId="REF-03"
+              htmlPath="/references/REF-03_IDC_Worldwide_Industry_Cloud_Tracker.html"
+              onOpenModal={(refId) => setActiveModalRefId(refId)}
+            />
           </div>
 
           <div className="tam-detail-card card" style={{ borderLeft: '4px solid #34A853', padding: '1rem 1.25rem' }}>
@@ -334,7 +387,13 @@ export default function S_MarketOpportunity() {
               <div className="tam-detail-value" style={{ fontSize: '1.25rem', fontWeight: '800', color: '#34A853' }}>${TAM_SAM_SOM.sam.value}B</div>
             </div>
             <div className="tam-detail-desc" style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>{TAM_SAM_SOM.sam.desc}</div>
-            <SourceFootnote source={TAM_SAM_SOM.sam.source} url={TAM_SAM_SOM.sam.sourceUrl} />
+            <SourceFootnote
+              source={TAM_SAM_SOM.sam.source}
+              url={TAM_SAM_SOM.sam.sourceUrl}
+              refId="REF-02"
+              htmlPath="/references/REF-02_Gartner_IT_Spending_Forecast.html"
+              onOpenModal={(refId) => setActiveModalRefId(refId)}
+            />
           </div>
 
           <div className="tam-detail-card card" style={{ borderLeft: '4px solid #EA4335', padding: '1rem 1.25rem' }}>
@@ -343,7 +402,13 @@ export default function S_MarketOpportunity() {
               <div className="tam-detail-value" style={{ fontSize: '1.25rem', fontWeight: '800', color: '#EA4335' }}>${TAM_SAM_SOM.som.value}B</div>
             </div>
             <div className="tam-detail-desc" style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>{TAM_SAM_SOM.som.desc}</div>
-            <SourceFootnote source={TAM_SAM_SOM.som.source} url={TAM_SAM_SOM.som.sourceUrl} />
+            <SourceFootnote
+              source={TAM_SAM_SOM.som.source}
+              url={TAM_SAM_SOM.som.sourceUrl}
+              refId="REF-03"
+              htmlPath="/references/REF-03_IDC_Worldwide_Industry_Cloud_Tracker.html"
+              onOpenModal={(refId) => setActiveModalRefId(refId)}
+            />
           </div>
         </div>
       </div>
@@ -375,12 +440,24 @@ export default function S_MarketOpportunity() {
           </div>
         </div>
       </div>
-      <SourceFootnote source={MARKET_SHARE.source} url={MARKET_SHARE.sourceUrl} />
+      <SourceFootnote
+        source={MARKET_SHARE.source}
+        url={MARKET_SHARE.sourceUrl}
+        refId="REF-09"
+        htmlPath="/references/REF-09_Everest_Group_Energy_Cloud_Analysis.html"
+        onOpenModal={(refId) => setActiveModalRefId(refId)}
+      />
 
       {/* ── Revenue Projections ───────────────────────────────────── */}
       <h2 className="subsection-title" style={{ marginTop: '3rem' }}>Revenue Growth Projection by Workload</h2>
       <RevenueChart data={REVENUE_PROJECTIONS} />
-      <SourceFootnote source={REVENUE_PROJECTIONS_SOURCE} url="https://www.gartner.com/en/newsroom/press-releases/gartner-forecasts-global-it-spending" />
+      <SourceFootnote
+        source={REVENUE_PROJECTIONS_SOURCE}
+        url="https://www.gartner.com/en/newsroom/press-releases/gartner-forecasts-global-it-spending"
+        refId="REF-02"
+        htmlPath="/references/REF-02_Gartner_IT_Spending_Forecast.html"
+        onOpenModal={(refId) => setActiveModalRefId(refId)}
+      />
     </div>
   );
 }

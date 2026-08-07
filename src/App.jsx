@@ -95,14 +95,21 @@ function useTheme() {
 function ThemeToggle({ theme, onToggle }) {
   const isLight = theme === 'light';
   return (
-    <div className="theme-toggle" onClick={onToggle} title={`Switch to ${isLight ? 'dark' : 'light'} mode`}>
+    <button
+      type="button"
+      className="theme-toggle"
+      onClick={onToggle}
+      title={`Switch to ${isLight ? 'dark' : 'light'} mode`}
+      aria-label={`Switch to ${isLight ? 'dark' : 'light'} mode`}
+    >
       <span className="theme-toggle-label">
-        {isLight ? '☀️' : '🌙'} {isLight ? 'Light' : 'Dark'} mode
+        <span className="theme-toggle-icon">{isLight ? '☀️' : '🌙'}</span>
+        <span className="theme-toggle-text">{isLight ? 'Light mode' : 'Dark mode'}</span>
       </span>
       <div className={`theme-toggle-track${isLight ? ' on' : ''}`}>
         <div className="theme-toggle-thumb" />
       </div>
-    </div>
+    </button>
   );
 }
 
