@@ -20,6 +20,39 @@ html_body = markdown.markdown(
     extensions=['tables', 'fenced_code', 'toc', 'nl2br', 'sane_lists']
 )
 
+# Normalize reference and local links to GitHub repository URLs so PDF links work universally
+def normalize_links(html):
+    html = re.sub(
+        r'href=["\'](?:/|public/|./)?references/([^"\']+)["\']',
+        r'href="https://github.com/MooseShel/90dayplan/blob/main/public/references/\1"',
+        html
+    )
+    html = re.sub(
+        r'href=["\'](?:/|public/|./)?([^"\']+\.(?:pdf|docx|md|html))["\']',
+        r'href="https://github.com/MooseShel/90dayplan/blob/main/public/\1"',
+        html
+    )
+    html = re.sub(
+        r'href=["\']file:///[^"\']*/public/references/([^"\']+)["\']',
+        r'href="https://github.com/MooseShel/90dayplan/blob/main/public/references/\1"',
+        html
+    )
+    html = re.sub(
+        r'href=["\']file:///[^"\']*/public/([^"\']+)["\']',
+        r'href="https://github.com/MooseShel/90dayplan/blob/main/public/\1"',
+        html
+    )
+    html = re.sub(
+        r'href=["\']file:///[^"\']*/references/([^"\']+)["\']',
+        r'href="https://github.com/MooseShel/90dayplan/blob/main/public/references/\1"',
+        html
+    )
+    return html
+
+html_body = normalize_links(html_body)
+
+
+
 html_exact = f"""<!DOCTYPE html>
 <html>
 <head>

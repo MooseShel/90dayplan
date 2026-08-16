@@ -177,6 +177,43 @@ html_body_clean = re.sub(r'^<p># Google Cloud Global Oil &amp; Gas Industry Stra
 html_body_clean = re.sub(r'<h1>Google Cloud Global Oil &amp; Gas Industry Strategy</h1>\s*<p><strong>Executive Strategy &amp; Market Execution Roadmap[^<]*</strong><br />\s*<strong>Google Cloud · Global Oil &amp; Gas Industry Team[^<]*</strong><br />\s*<strong>August 2026 · STRATEGIC EXECUTIVE BRIEFING · CONFIDENTIAL</strong></p>', '', html_body_clean)
 html_body_clean = re.sub(r'<p><strong>Executive Strategy &amp; Market Execution Roadmap[^<]*</strong><br />\s*<strong>Google Cloud · Global Oil &amp; Gas Industry Team[^<]*</strong><br />\s*<strong>August 2026 · STRATEGIC EXECUTIVE BRIEFING · CONFIDENTIAL</strong></p>', '', html_body_clean)
 
+# Normalize reference and local links to GitHub repository URLs so PDF links work universally
+def normalize_links(html):
+    # Fix any leading relative /references/ or references/ or public/references/
+    html = re.sub(
+        r'href=["\'](?:/|public/|./)?references/([^"\']+)["\']',
+        r'href="https://github.com/MooseShel/90dayplan/blob/main/public/references/\1"',
+        html
+    )
+    # Fix any public/*.pdf or public/*.docx links
+    html = re.sub(
+        r'href=["\'](?:/|public/|./)?([^"\']+\.(?:pdf|docx|md|html))["\']',
+        r'href="https://github.com/MooseShel/90dayplan/blob/main/public/\1"',
+        html
+    )
+    # Fix any stray file:/// links
+    html = re.sub(
+        r'href=["\']file:///[^"\']*/public/references/([^"\']+)["\']',
+        r'href="https://github.com/MooseShel/90dayplan/blob/main/public/references/\1"',
+        html
+    )
+    html = re.sub(
+        r'href=["\']file:///[^"\']*/public/([^"\']+)["\']',
+        r'href="https://github.com/MooseShel/90dayplan/blob/main/public/\1"',
+        html
+    )
+    html = re.sub(
+        r'href=["\']file:///[^"\']*/references/([^"\']+)["\']',
+        r'href="https://github.com/MooseShel/90dayplan/blob/main/public/references/\1"',
+        html
+    )
+    return html
+
+html_body_clean = normalize_links(html_body_clean)
+
+
+
+
 
 # Full Exact Page Layout HTML matching screenshots
 html_exact = f"""<!DOCTYPE html>
