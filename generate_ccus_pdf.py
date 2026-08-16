@@ -20,7 +20,7 @@ html_body = markdown.markdown(
     extensions=['tables', 'fenced_code', 'toc', 'nl2br', 'sane_lists']
 )
 
-# Normalize reference and local links to GitHub repository URLs so PDF links work universally
+# Normalize reference and local links to Railway production URLs so PDF links work universally
 def normalize_links(html):
     def replace_href(match):
         url = match.group(1)
@@ -31,21 +31,22 @@ def normalize_links(html):
         # If it contains references/
         if 'references/' in url:
             ref_file = url.split('references/')[-1]
-            return f'href="https://github.com/MooseShel/90dayplan/blob/main/public/references/{ref_file}"'
+            return f'href="https://energystrategy.up.railway.app/references/{ref_file}"'
         
         # If it contains public/
         if 'public/' in url:
             pub_file = url.split('public/')[-1]
-            return f'href="https://github.com/MooseShel/90dayplan/blob/main/public/{pub_file}"'
+            return f'href="https://energystrategy.up.railway.app/{pub_file}"'
             
         # Clean relative leading chars
         clean_url = url.lstrip('./').lstrip('/')
         if clean_url.endswith(('.pdf', '.docx', '.html', '.md')):
-            return f'href="https://github.com/MooseShel/90dayplan/blob/main/public/{clean_url}"'
+            return f'href="https://energystrategy.up.railway.app/{clean_url}"'
             
         return f'href="{url}"'
 
     return re.sub(r'href=["\']([^"\']+)["\']', replace_href, html)
+
 
 html_body = normalize_links(html_body)
 
