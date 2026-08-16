@@ -522,8 +522,9 @@ def build_word_doc(md_file_path, output_docx_path):
     print(f"Successfully generated: {output_docx_path}")
     
     import shutil
-    public_docx = r'c:\Users\Husse\Documents\Google\public\google_cloud_og_industry_strategy.docx'
-    dist_docx = r'c:\Users\Husse\Documents\Google\dist\google_cloud_og_industry_strategy.docx'
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    public_docx = os.path.join(base_dir, 'public', 'google_cloud_og_industry_strategy.docx')
+    dist_docx = os.path.join(base_dir, 'dist', 'google_cloud_og_industry_strategy.docx')
     
     if os.path.exists(os.path.dirname(public_docx)):
         shutil.copy(output_docx_path, public_docx)
@@ -533,7 +534,9 @@ def build_word_doc(md_file_path, output_docx_path):
         print(f"Copied docx to: {dist_docx}")
 
 if __name__ == '__main__':
-    md_path = r'c:\Users\Husse\Documents\Google\google_cloud_og_industry_strategy.md'
-    out_docx = r'c:\Users\Husse\Documents\Google\google_cloud_og_industry_strategy.docx'
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    md_path = os.path.join(base_dir, 'google_cloud_og_industry_strategy.md')
+    out_docx = os.path.join(base_dir, 'google_cloud_og_industry_strategy.docx')
     build_word_doc(md_path, out_docx)
+
 

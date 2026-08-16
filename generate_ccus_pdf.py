@@ -4,10 +4,12 @@ import subprocess
 import markdown
 import pypdf
 
-md_path = r'c:\Users\Husse\Documents\Google\google_cloud_ccus_think_big_strategy.md'
-html_path = r'c:\Users\Husse\Documents\Google\temp_ccus.html'
-pdf_public = r'c:\Users\Husse\Documents\Google\public\google_cloud_ccus_think_big_strategy.pdf'
-pdf_dist = r'c:\Users\Husse\Documents\Google\dist\google_cloud_ccus_think_big_strategy.pdf'
+base_dir = os.path.dirname(os.path.abspath(__file__))
+md_path = os.path.join(base_dir, 'google_cloud_ccus_think_big_strategy.md')
+html_path = os.path.join(base_dir, 'temp_ccus.html')
+pdf_public = os.path.join(base_dir, 'public', 'google_cloud_ccus_think_big_strategy.pdf')
+pdf_dist = os.path.join(base_dir, 'dist', 'google_cloud_ccus_think_big_strategy.pdf')
+
 
 with open(md_path, 'r', encoding='utf-8') as f:
     md_text = f.read()
