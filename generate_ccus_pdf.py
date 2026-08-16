@@ -22,34 +22,33 @@ html_body = markdown.markdown(
 
 # Normalize reference and local links to GitHub repository URLs so PDF links work universally
 def normalize_links(html):
-    html = re.sub(
-        r'href=["\'](?:/|public/|./)?references/([^"\']+)["\']',
-        r'href="https://github.com/MooseShel/90dayplan/blob/main/public/references/\1"',
-        html
-    )
-    html = re.sub(
-        r'href=["\'](?:/|public/|./)?([^"\']+\.(?:pdf|docx|md|html))["\']',
-        r'href="https://github.com/MooseShel/90dayplan/blob/main/public/\1"',
-        html
-    )
-    html = re.sub(
-        r'href=["\']file:///[^"\']*/public/references/([^"\']+)["\']',
-        r'href="https://github.com/MooseShel/90dayplan/blob/main/public/references/\1"',
-        html
-    )
-    html = re.sub(
-        r'href=["\']file:///[^"\']*/public/([^"\']+)["\']',
-        r'href="https://github.com/MooseShel/90dayplan/blob/main/public/\1"',
-        html
-    )
-    html = re.sub(
-        r'href=["\']file:///[^"\']*/references/([^"\']+)["\']',
-        r'href="https://github.com/MooseShel/90dayplan/blob/main/public/references/\1"',
-        html
-    )
-    return html
+    def replace_href(match):
+        url = match.group(1)
+        # If it's already an absolute http/https or anchor/mailto link, preserve it as-is
+        if url.startswith(('http://', 'https://', '#', 'mailto:')):
+            return f'href="{url}"'
+        
+        # If it contains references/
+        if 'references/' in url:
+            ref_file = url.split('references/')[-1]
+            return f'href="https://github.com/MooseShel/90dayplan/blob/main/public/references/{ref_file}"'
+        
+        # If it contains public/
+        if 'public/' in url:
+            pub_file = url.split('public/')[-1]
+            return f'href="https://github.com/MooseShel/90dayplan/blob/main/public/{pub_file}"'
+            
+        # Clean relative leading chars
+        clean_url = url.lstrip('./').lstrip('/')
+        if clean_url.endswith(('.pdf', '.docx', '.html', '.md')):
+            return f'href="https://github.com/MooseShel/90dayplan/blob/main/public/{clean_url}"'
+            
+        return f'href="{url}"'
+
+    return re.sub(r'href=["\']([^"\']+)["\']', replace_href, html)
 
 html_body = normalize_links(html_body)
+
 
 
 
