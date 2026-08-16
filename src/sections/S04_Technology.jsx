@@ -6,8 +6,10 @@ import {
   BEYOND_OSDU_SERVICES, 
   COMPETITIVE_MATRIX_GRID,
   TGS_WINBACK_PLAYBOOK,
-  OAG_FOUNDATION_MODELS
+  OAG_FOUNDATION_MODELS,
+  SOVEREIGN_DEPLOYMENT_TRADE_OFFS
 } from '../data';
+
 
 const AGENTS = [
   {
@@ -222,7 +224,7 @@ export default function S04Technology() {
           </div>
 
           {match ? (
-            <div className="router-result" style={{ animation: 'fadeSlideIn 0.25s ease' }}>
+            <div className="router-result mb-20" style={{ animation: 'fadeSlideIn 0.25s ease' }}>
               <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '6px', fontFamily: 'Roboto Mono, monospace', letterSpacing: '1px', textTransform: 'uppercase' }}>
                 Recommended Deployment Topology
               </div>
@@ -234,12 +236,57 @@ export default function S04Technology() {
               </div>
             </div>
           ) : (
-            <div className="router-result" style={{ textAlign: 'center' }}>
+            <div className="router-result mb-20" style={{ textAlign: 'center' }}>
               <div style={{ color: 'var(--text-muted)', fontSize: '13px' }}>Select parameters above to route the workload to a topology.</div>
             </div>
           )}
+
+          {/* Sovereign Deployment Spectrum Table */}
+          <div className="section-eyebrow mb-12">Sovereign Deployment Spectrum &amp; Latency / Patching Trade-Offs</div>
+          <div className="card mb-20" style={{ padding: 0, overflow: 'hidden', width: '100%' }}>
+            <div className="table-responsive" style={{ marginBottom: 0 }}>
+              <table className="data-table" style={{ width: '100%', minWidth: '700px' }}>
+                <thead>
+                  <tr>
+                    <th style={{ width: '25%' }}>Deployment Configuration</th>
+                    <th style={{ width: '20%' }}>Data Residency</th>
+                    <th style={{ width: '20%' }}>Latency / Update Cadence</th>
+                    <th style={{ width: '15%' }}>Complexity</th>
+                    <th style={{ width: '20%' }}>Best Fit Accounts</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {SOVEREIGN_DEPLOYMENT_TRADE_OFFS.map((top, idx) => (
+                    <tr key={idx}>
+                      <td>
+                        <strong style={{ color: 'var(--text-primary)', display: 'block', fontSize: '12px', marginBottom: '2px' }}>
+                          {top.config.split('(')[0]}
+                        </strong>
+                        <span className={`pill pill-${top.color}`} style={{ fontSize: '10px' }}>
+                          {top.config.includes('(') ? top.config.split('(')[1].replace(')', '') : ''}
+                        </span>
+                      </td>
+                      <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                        {top.residency}
+                      </td>
+                      <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                        {top.latency}
+                      </td>
+                      <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                        {top.complexity}
+                      </td>
+                      <td style={{ fontSize: '12px', color: 'var(--google-blue)', background: 'rgba(66, 133, 244, 0.03)' }}>
+                        {top.bestFit}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       )}
+
 
       {/* TAB 2: GOOGLE AI DIFFERENTIATION */}
       {activeTab === 'ai' && (

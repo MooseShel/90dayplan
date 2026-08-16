@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PILLARS, COMPETITIVE_ACCOUNTS } from '../data';
+import { PILLARS, COMPETITIVE_ACCOUNTS, PILLARS_ARCHITECTURAL_DEEP_DIVES } from '../data';
 
 const POSTURE_PILL = {
   Lead: 'pill-green', 'Co-Exist': 'pill-blue', Wedge: 'pill-amber', Cede: 'pill-muted',
@@ -21,6 +21,8 @@ const WHY_NOW = [
 
 export default function S01Thesis() {
   const [selected, setSelected] = useState(null);
+  const [selectedPillar, setSelectedPillar] = useState(null);
+
 
   return (
     <div className="section-page">
@@ -51,23 +53,85 @@ export default function S01Thesis() {
 
       <div className="sep" />
 
-      {/* Pillars , 2+3 layout: text on left, cards spanning full */}
-      <div className="section-eyebrow mb-16">Six-Pillar Framework , Day-90 Proof Points</div>
+      {/* Pillars , Interactive 6-Pillar Architecture */}
+      <div className="section-eyebrow mb-16">Six-Pillar Framework · Deep Architectural Analysis</div>
       <div className="grid-2 mb-24" style={{ gap: '14px' }}>
-        {PILLARS.map(p => (
-          <div key={p.num} className="card">
-            <div className="row-between mb-8">
-              <div className="row gap-12">
-                <span className="tag">Pillar {p.num}</span>
-                <span className="card-title" style={{ margin: 0 }}>{p.title}</span>
+        {PILLARS.map(p => {
+          const deep = PILLARS_ARCHITECTURAL_DEEP_DIVES.find(d => d.num === String(p.num));
+          const isExpanded = selectedPillar === p.num;
+          return (
+            <div 
+              key={p.num} 
+              className={`card ${isExpanded ? 'card--active' : ''}`}
+              style={{ 
+                cursor: 'pointer', 
+                transition: 'all 0.2s ease',
+                borderColor: isExpanded ? 'var(--google-blue)' : 'var(--border-color)',
+                boxShadow: isExpanded ? 'var(--shadow-glow-blue)' : 'none'
+              }}
+              onClick={() => setSelectedPillar(isExpanded ? null : p.num)}
+            >
+              <div className="row-between mb-8">
+                <div className="row gap-12" style={{ alignItems: 'center' }}>
+                  <span className="tag">Pillar {p.num}</span>
+                  <span className="card-title" style={{ margin: 0 }}>{p.title}</span>
+                </div>
+                <span className="pill pill-blue" style={{ fontSize: '11px' }}>
+                  {isExpanded ? '▲ Close Deep Dive' : '▼ View Architecture'}
+                </span>
               </div>
+              <div style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '10px' }}>{p.posture}</div>
+              
+              <div style={{ fontSize: '11.5px', color: 'var(--text-muted)', borderLeft: '2px solid var(--border-bright)', paddingLeft: '10px', marginBottom: isExpanded ? '14px' : '0' }}>
+                <strong style={{ color: 'var(--text-secondary)' }}>Day-90 proof: </strong>{p.proof}
+              </div>
+
+              {isExpanded && deep && (
+                <div style={{ marginTop: '12px', borderTop: '1px solid var(--border-color)', paddingTop: '12px', animation: 'fadeSlideIn 0.25s ease' }}>
+                  <div style={{ marginBottom: '10px' }}>
+                    <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', marginBottom: '4px' }}>
+                      🏗️ Core Architecture
+                    </div>
+                    <div style={{ fontSize: '12.5px', color: 'var(--text-secondary)', lineHeight: '1.55' }}>
+                      {deep.coreArchitecture}
+                    </div>
+                  </div>
+
+                  <div style={{ marginBottom: '10px' }}>
+                    <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--google-blue)', textTransform: 'uppercase', marginBottom: '4px' }}>
+                      ⚙️ Deep-Dive Mechanics
+                    </div>
+                    <div style={{ fontSize: '12.5px', color: 'var(--text-secondary)', lineHeight: '1.55' }}>
+                      {deep.deepDiveMechanics}
+                    </div>
+                  </div>
+
+                  <div style={{ marginBottom: '10px' }}>
+                    <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--red)', textTransform: 'uppercase', marginBottom: '4px' }}>
+                      ⚠️ Critical Variables &amp; Edge Cases
+                    </div>
+                    <div className="stack-sm">
+                      {deep.criticalVariables.map((cv, idx) => (
+                        <div key={idx} style={{ fontSize: '12px', color: 'var(--text-muted)', paddingLeft: '8px', borderLeft: '2px solid var(--red)' }}>
+                          {cv}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ background: 'rgba(52, 168, 83, 0.06)', padding: '10px 12px', borderRadius: '6px', borderLeft: '3px solid var(--green)' }}>
+                    <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--green)', textTransform: 'uppercase', marginBottom: '2px' }}>
+                      ⚖️ Comparative Trade-Offs &amp; Implications
+                    </div>
+                    <div style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+                      {deep.tradeOffs}
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
-            <div style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '10px' }}>{p.posture}</div>
-            <div style={{ fontSize: '11.5px', color: 'var(--text-muted)', borderLeft: '2px solid var(--border-bright)', paddingLeft: '10px' }}>
-              <strong style={{ color: 'var(--text-secondary)' }}>Day-90 proof: </strong>{p.proof}
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       <div className="sep" />

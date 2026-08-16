@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { STARTUP_ACCELERATOR_PORTFOLIO, HUMAIN_AI_PARTNERSHIP } from '../data';
+import { STARTUP_ACCELERATOR_PORTFOLIO, HUMAIN_AI_PARTNERSHIP, PARTNER_TRADE_OFFS } from '../data';
+
 
 const ISVS = [
   {
@@ -363,6 +364,51 @@ export default function S03Partners() {
           {HUMAIN_AI_PARTNERSHIP.targetAccounts.map(a => <span key={a} className="tag">{a}</span>)}
         </div>
       </div>
+
+      {/* Partner Layer Trade-Offs Table */}
+      <div className="section-eyebrow mb-12">Comparative Partner Layer Trade-Offs &amp; Strategic Fit</div>
+      <div className="card mb-20" style={{ padding: 0, overflow: 'hidden', width: '100%' }}>
+        <div className="table-responsive" style={{ marginBottom: 0 }}>
+          <table className="data-table" style={{ width: '100%', minWidth: '700px' }}>
+            <thead>
+              <tr>
+                <th style={{ width: '22%' }}>Partner Layer</th>
+                <th style={{ width: '22%' }}>Speed to Credibility</th>
+                <th style={{ width: '20%' }}>Control Over Outcome</th>
+                <th style={{ width: '16%' }}>Margin Impact</th>
+                <th style={{ width: '20%' }}>Best Fit Workloads</th>
+              </tr>
+            </thead>
+            <tbody>
+              {PARTNER_TRADE_OFFS.map((layer, idx) => (
+                <tr key={idx}>
+                  <td>
+                    <strong style={{ color: 'var(--text-primary)', display: 'block', marginBottom: '2px', fontSize: '12.5px' }}>
+                      {layer.layer.split('(')[0]}
+                    </strong>
+                    <span className={`pill pill-${layer.color}`} style={{ fontSize: '10px' }}>
+                      {layer.layer.includes('(') ? layer.layer.split('(')[1].replace(')', '') : ''}
+                    </span>
+                  </td>
+                  <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                    {layer.speedToCredibility}
+                  </td>
+                  <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                    {layer.controlOverOutcome}
+                  </td>
+                  <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                    {layer.marginImpact}
+                  </td>
+                  <td style={{ fontSize: '12px', color: 'var(--google-blue)', background: 'rgba(66, 133, 244, 0.03)' }}>
+                    {layer.bestFit}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 }
+

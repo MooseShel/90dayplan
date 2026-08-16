@@ -1,4 +1,4 @@
-import { ALPHABET_CAPABILITIES } from '../data';
+import { ALPHABET_CAPABILITIES, ALPHABET_SOLUTIONS_TRADE_OFFS } from '../data';
 
 export default function S05Alphabet() {
   return (
@@ -48,7 +48,7 @@ export default function S05Alphabet() {
       </div>
 
       {/* Two-badge meeting , full width callout */}
-      <div className="card" style={{ borderColor: 'var(--google-blue)', boxShadow: 'var(--shadow-glow-blue)' }}>
+      <div className="card mb-24" style={{ borderColor: 'var(--google-blue)', boxShadow: 'var(--shadow-glow-blue)' }}>
         <div className="grid-2" style={{ gap: '32px', alignItems: 'center' }}>
           <div>
             <div className="card-title mb-8" style={{ fontSize: '16px' }}>The Two-Badge Meeting No Competitor Can Convene</div>
@@ -77,6 +77,51 @@ export default function S05Alphabet() {
           </div>
         </div>
       </div>
+
+      {/* Alphabet Composite vs Standalone Trade-Offs Table */}
+      <div className="section-eyebrow mb-12">Comparative Architecture: Hyperscaler Point Solution vs. Alphabet Composite Solution</div>
+      <div className="card mb-20" style={{ padding: 0, overflow: 'hidden', width: '100%' }}>
+        <div className="table-responsive" style={{ marginBottom: 0 }}>
+          <table className="data-table" style={{ width: '100%', minWidth: '700px' }}>
+            <thead>
+              <tr>
+                <th style={{ width: '25%' }}>Solution Model</th>
+                <th style={{ width: '22%' }}>Portfolio Breadth</th>
+                <th style={{ width: '20%' }}>Defensibility</th>
+                <th style={{ width: '15%' }}>Field Risk</th>
+                <th style={{ width: '18%' }}>Executive Perception</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ALPHABET_SOLUTIONS_TRADE_OFFS.map((sol, idx) => (
+                <tr key={idx}>
+                  <td>
+                    <strong style={{ color: 'var(--text-primary)', display: 'block', fontSize: '12px', marginBottom: '2px' }}>
+                      {sol.model.split('(')[0]}
+                    </strong>
+                    <span className={`pill pill-${sol.color}`} style={{ fontSize: '10px' }}>
+                      {sol.model.includes('(') ? sol.model.split('(')[1].replace(')', '') : ''}
+                    </span>
+                  </td>
+                  <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                    {sol.breadth}
+                  </td>
+                  <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                    {sol.differentiation}
+                  </td>
+                  <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                    {sol.fieldRisk}
+                  </td>
+                  <td style={{ fontSize: '12px', color: sol.color === 'green' ? 'var(--green)' : 'var(--amber)', background: sol.color === 'green' ? 'rgba(52, 168, 83, 0.03)' : 'transparent' }}>
+                    {sol.buyerImpression}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 }
+

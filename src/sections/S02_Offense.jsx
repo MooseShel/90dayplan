@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ACCOUNTS, WEDGE_STEPS } from '../data';
+import { ACCOUNTS, WEDGE_STEPS, POSTURE_TRADE_OFFS } from '../data';
+
 
 const TIER_LABELS = {
   '1A': 'Tier 1A · Public Independents (Lead & Wedge Postures)',
@@ -165,7 +166,7 @@ export default function S02Offense() {
       </div>
 
       {activeStep !== null && (
-        <div className="card" style={{ animation: 'fadeSlideIn 0.25s ease' }}>
+        <div className="card mb-16" style={{ animation: 'fadeSlideIn 0.25s ease' }}>
           <div className="card-title mb-8">{WEDGE_STEPS[activeStep].label}</div>
           <div className="stack-sm">
             {WEDGE_STEPS[activeStep].accounts.map(acc => (
@@ -178,6 +179,45 @@ export default function S02Offense() {
         </div>
       )}
 
+      {/* Posture Trade-Offs Table */}
+      <div className="section-eyebrow mb-12">Comparative Posture Trade-Offs &amp; Strategic Implications</div>
+      <div className="card mb-20" style={{ padding: 0, overflow: 'hidden', width: '100%' }}>
+        <div className="table-responsive" style={{ marginBottom: 0 }}>
+          <table className="data-table" style={{ width: '100%', minWidth: '700px' }}>
+            <thead>
+              <tr>
+                <th style={{ width: '12%' }}>Posture</th>
+                <th style={{ width: '22%' }}>Target Type</th>
+                <th style={{ width: '22%' }}>Resource Intensity</th>
+                <th style={{ width: '16%' }}>Time-to-Revenue</th>
+                <th style={{ width: '28%' }}>Strategic Risk if Misdiagnosed</th>
+              </tr>
+            </thead>
+            <tbody>
+              {POSTURE_TRADE_OFFS.map((p, idx) => (
+                <tr key={idx}>
+                  <td>
+                    <span className={`pill pill-${p.color}`}>{p.posture}</span>
+                  </td>
+                  <td style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-primary)' }}>
+                    {p.targetType}
+                  </td>
+                  <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                    {p.resourceIntensity}
+                  </td>
+                  <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                    {p.timeToRevenue}
+                  </td>
+                  <td style={{ fontSize: '12px', color: 'var(--red)', background: 'rgba(234, 67, 53, 0.03)' }}>
+                    {p.strategicRisk}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       <div className="highlight-block mt-16">
         <strong style={{ color: 'var(--google-blue)' }}>Counter-move against AWS:</strong> When AWS discounts
         in a Tier 1A independent, lead with an outcome-priced pilot anchored to a KPI AWS cannot match ,
@@ -188,3 +228,4 @@ export default function S02Offense() {
     </div>
   );
 }
+

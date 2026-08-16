@@ -1,3 +1,5 @@
+import { ENERGY_EXCHANGE_TRADE_OFFS } from '../data';
+
 const EXCHANGES = [
   { asset: 'Gas, generation & grid access', accounts: 'EQT, Expand, Williams, midstream', googleNeed: 'Firm, scalable electricity for AI infrastructure; anchor demand; AI-optimized data-center operations', joint: 'Long-term demand plus AI-optimized generation, cooling, and reliability , a new revenue line with Google on both sides' },
   { asset: 'Drilling & subsurface expertise', accounts: 'Devon-Fervo, Chevron, Oxy', googleNeed: 'Geothermal and CCS development capability; Google\'s Fervo/Ormat blueprints and geoscience AI', joint: 'New growth platforms built on existing industrial strengths, with Google as reference architect and offtaker' },
@@ -51,7 +53,7 @@ export default function S06Exchange() {
         </div>
       </div>
 
-      <div className="grid-2">
+      <div className="grid-2 mb-24">
         <div className="card">
           <div className="card-title mb-8">Google's Energy Procurement Portfolio</div>
           {[
@@ -84,6 +86,51 @@ export default function S06Exchange() {
           </div>
         </div>
       </div>
+
+      {/* Energy Exchange Comparative Trade-Offs Table */}
+      <div className="section-eyebrow mb-12">Commercial Model Comparison: Unilateral Procurement vs. Bilateral Exchange</div>
+      <div className="card mb-20" style={{ padding: 0, overflow: 'hidden', width: '100%' }}>
+        <div className="table-responsive" style={{ marginBottom: 0 }}>
+          <table className="data-table" style={{ width: '100%', minWidth: '700px' }}>
+            <thead>
+              <tr>
+                <th style={{ width: '25%' }}>Commercial Model</th>
+                <th style={{ width: '25%' }}>Counterparty Relationship</th>
+                <th style={{ width: '18%' }}>Target Audience</th>
+                <th style={{ width: '16%' }}>Pricing Leverage</th>
+                <th style={{ width: '16%' }}>Differentiation</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ENERGY_EXCHANGE_TRADE_OFFS.map((m, idx) => (
+                <tr key={idx}>
+                  <td>
+                    <strong style={{ color: 'var(--text-primary)', display: 'block', fontSize: '12.5px', marginBottom: '2px' }}>
+                      {m.model}
+                    </strong>
+                    <span className={`pill pill-${m.color}`} style={{ fontSize: '10px' }}>
+                      {m.color === 'green' ? 'CEO / Strategic Moat' : 'Commodity IT'}
+                    </span>
+                  </td>
+                  <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                    {m.relationship}
+                  </td>
+                  <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                    {m.executiveAudience}
+                  </td>
+                  <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                    {m.pricingLeverage}
+                  </td>
+                  <td style={{ fontSize: '12px', color: m.color === 'green' ? 'var(--green)' : 'var(--amber)', background: m.color === 'green' ? 'rgba(52, 168, 83, 0.03)' : 'transparent' }}>
+                    {m.differentiation}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 }
+

@@ -4,7 +4,9 @@ import {
   DEEPMIND_RESEARCH_VERTICALS,
   DEEPMIND_LAB_TIERS,
   THINK_BIG_TIMELINE,
+  THINK_BIG_TRADE_OFFS,
 } from '../data';
+
 
 const COLOR_MAP = {
   amber: 'var(--amber)',
@@ -570,7 +572,7 @@ export default function S11ThinkBig() {
       </div>
 
       {/* Transformative Callout */}
-      <div className="card mt-24" style={{
+      <div className="card mt-24 mb-24" style={{
         borderColor: 'var(--google-blue)',
         boxShadow: 'var(--shadow-glow-blue)',
         background: 'linear-gradient(135deg, var(--bg-card) 0%, var(--bg-elevated) 100%)',
@@ -614,6 +616,51 @@ export default function S11ThinkBig() {
           </div>
         </div>
       </div>
+
+      {/* Think Big Comparative Trade-Offs Table */}
+      <div className="section-eyebrow mb-12">Strategic Horizon Trade-Offs: Workload Capture vs. Market Creation</div>
+      <div className="card mb-20" style={{ padding: 0, overflow: 'hidden', width: '100%' }}>
+        <div className="table-responsive" style={{ marginBottom: 0 }}>
+          <table className="data-table" style={{ width: '100%', minWidth: '700px' }}>
+            <thead>
+              <tr>
+                <th style={{ width: '25%' }}>Strategic Focus</th>
+                <th style={{ width: '15%' }}>Horizon</th>
+                <th style={{ width: '28%' }}>Core Objective</th>
+                <th style={{ width: '16%' }}>ARR Impact</th>
+                <th style={{ width: '16%' }}>Execution Risk</th>
+              </tr>
+            </thead>
+            <tbody>
+              {THINK_BIG_TRADE_OFFS.map((tb, idx) => (
+                <tr key={idx}>
+                  <td>
+                    <strong style={{ color: 'var(--text-primary)', display: 'block', fontSize: '12.5px', marginBottom: '2px' }}>
+                      {tb.focus.split('(')[0]}
+                    </strong>
+                    <span className={`pill pill-${tb.color}`} style={{ fontSize: '10px' }}>
+                      {tb.focus.includes('(') ? tb.focus.split('(')[1].replace(')', '') : ''}
+                    </span>
+                  </td>
+                  <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                    {tb.horizon}
+                  </td>
+                  <td style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                    {tb.objective}
+                  </td>
+                  <td style={{ fontSize: '12px', color: 'var(--green)', fontWeight: 600 }}>
+                    {tb.arrImpact}
+                  </td>
+                  <td style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
+                    {tb.risk}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 }
+

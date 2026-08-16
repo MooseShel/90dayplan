@@ -1434,3 +1434,366 @@ export const THINK_BIG_TIMELINE = [
   { phase: "Days 31–60", interchange: "Draft bilateral MOU template with legal; scope power capacity & GCP consumption economics for pilot accounts; brief DeepMind on energy R&D module packaging", deepmind: "Brief DeepMind leadership on Energy Lab concept; identify 1-2 Tier 1 research partners (Aramco R&D, TotalEnergies R&D, Oxy 1PointFive); scope first CCUS molecular discovery pilot; initiate Rice/KAUST academic conversations", ccus: "ExxonMobil Low Carbon Solutions executive briefing (Houston); East Coast Cluster workshop with BP/Equinor/TotalEnergies; INEOS/Greensand engagement (Denmark); joint SLB customer sessions across all targets; HyNet parallel outreach" },
   { phase: "Days 61–90", interchange: "Present Interchange framework at ADIPEC 2026 as marquee announcement; one signed MOU or LOI; position for CERAWeek 2027 expansion", deepmind: "Announce DeepMind Energy Lab at ADIPEC 2026; 1 signed Tier 1 research partnership (target: Aramco or TotalEnergies); GNoME corrosion screening demo live; academic advisory board constituted", ccus: "Secure ≥1 consortium MOU/LOI (Google named as Strategic Technology & AI Platform Partner); deploy MVP MRV Agent sandbox with synthetic data; Porthos ops-phase engagement; publish Broadwing CCS reference architecture; ADIPEC/COP announcement with SLB and anchor consortium partner" },
 ];
+
+// ═══════════════════════════════════════════════════════════════════════
+// ── COMPETITIVE INTELLIGENCE & HONEST ASSESSMENT ──────────────────────
+// ═══════════════════════════════════════════════════════════════════════
+
+export const HONEST_COMPETITIVE_GAPS = [
+  {
+    dimension: "Breadth of managed services & regional footprint",
+    assessment: "AWS in particular offers a materially broader catalog of managed infrastructure services and a larger number of global regions/availability zones; this is a genuine, not merely perceived, gap.",
+    whyItMatters: "Large multinational majors (TotalEnergies, BP, Shell) often require broad geographic infrastructure coverage for global operations spanning dozens of countries.",
+    fieldPivot: "Do not contest this claim directly , instead pivot to the Multicloud Co-Existence Wedge (BigQuery Omni/BigLake), which reframes the conversation from 'which cloud has more regions' to 'which cloud can reason across whichever infrastructure you already have.'",
+    tag: "Footprint & Services"
+  },
+  {
+    dimension: "Enterprise software ecosystem lock-in (Microsoft stack)",
+    assessment: "Azure's integration with Office 365, Teams, Dynamics, and Active Directory creates default procurement and identity-management gravity inside operators with deep Microsoft enterprise agreements (e.g., Chevron, Equinor, Devon prior to displacement motion).",
+    whyItMatters: "This is a genuine incumbency advantage, not merely a historical artifact , it is renewed every EA renewal cycle.",
+    fieldPivot: "Lead with Workspace-native Gemini Enterprise integration for the specific personas (field engineers, geoscientists) where Google's UX advantage is real, without overstating displacement of core Microsoft 365 productivity infrastructure where it is entrenched.",
+    tag: "Microsoft Stack Gravity"
+  },
+  {
+    dimension: "ISV marketplace depth and long-tail application catalog",
+    assessment: "AWS Marketplace and Azure Marketplace currently list a larger volume of third-party O&G-specific ISV applications than Google Cloud Marketplace.",
+    whyItMatters: "Buying committees performing marketplace due diligence may perceive a thinner GCP ecosystem, independent of the deeper strategic ISV partnerships (Cognite, SLB, Baker Hughes) described in Pillar 2.",
+    fieldPivot: "Emphasize the depth and technical integration of the smaller number of strategic partnerships over the breadth of the marketplace catalog , this is a 'fewer, deeper' argument, not a 'more' argument.",
+    tag: "Marketplace Depth"
+  },
+  {
+    dimension: "Existing base install / reference customer count in oil & gas specifically",
+    assessment: "At 10% share, Google Cloud has materially fewer O&G reference customers to cite than AWS (37%) or Azure (32%) , this is a real credibility gap in RFP and analyst-briefing contexts.",
+    whyItMatters: "Buying committees, particularly at Tier 2/3 majors, weight peer-reference validation heavily in vendor selection.",
+    fieldPivot: "Use the account-specific technical proof points (TGS RTM benchmark, Reliance Jamnagar AI Region) as concentrated, verifiable evidence rather than attempting to compete on aggregate customer-count volume.",
+    tag: "Reference Base"
+  }
+];
+
+export const COMPETITIVE_CRITICAL_VARIABLES = [
+  {
+    title: "Rate of AWS/Azure Catch-Up",
+    variable: "Catch-Up Velocity on Agentic Governance & OT Security",
+    mechanism: "The rate of AWS/Azure catch-up on agentic governance and OT security is the single largest variable capable of eroding the two most cited advantages (Gemini Enterprise governance, Mandiant OT security) within the three-year strategy horizon.",
+    risk: "Erosion of current-state technical leadership if treated as static.",
+    fieldAction: "Track via a standing quarterly competitive-refresh cadence tied to the Appendix B.1 matrix, not treated as fixed for the duration of the plan."
+  },
+  {
+    title: "Customer Due-Diligence Sophistication",
+    variable: "Account Tier Due-Diligence Rigor",
+    mechanism: "Customer technical due-diligence sophistication varies sharply by account tier. Leaders (TotalEnergies, Shell, BP, Equinor) will stress-test performance claims (RTM benchmark, TCO figures) far more rigorously than Early Adopter or Nascent accounts.",
+    risk: "Deploying claims without appropriate depth of engineering evidence risks credibility loss with sophisticated engineering committees.",
+    fieldAction: "Differentiate claim substantiation depth by account tier , provide reproducible benchmarks for Leaders, outcome summaries for Early Adopters."
+  },
+  {
+    title: "Independent Benchmark Validation Gap",
+    variable: "Third-Party vs Vendor-Reported Metrics",
+    mechanism: "A material share of the quantitative claims (the 50% TCO figure, the 35% RTM improvement) are presented without a cited independent benchmark source, unlike the market-sizing figures in Part I.",
+    risk: "Sophisticated technical buyers will discount vendor-reported performance figures that lack independent third-party substantiation.",
+    fieldAction: "Commission and publish independent, reproducible technical benchmarks as a near-term engineering workstream."
+  }
+];
+
+export const COMPETITIVE_POSITIONING_APPROACHES = [
+  {
+    approach: "Lead with structural/durable advantages",
+    examples: "Google Earth Engine (40+ years of imagery + native ML), Mandiant OT/ICS threat lineage, Energy Exchange bilateral clean energy compute",
+    whenToUse: "Any competitive evaluation, regardless of account tier or sophistication",
+    risk: "Low , these advantages are not time-limited and withstand deep technical scrutiny",
+    color: "green"
+  },
+  {
+    approach: "Lead with current-state technical advantages",
+    examples: "Gemini Enterprise governance (2M context, deterministic human approval gate), Custom TPU silicon economics",
+    whenToUse: "Time-sensitive competitive displacements (TGS win-back, active RFPs)",
+    risk: "Moderate , requires the quarterly competitive-refresh discipline to avoid overclaiming as competitors close gaps",
+    color: "amber"
+  },
+  {
+    approach: "Acknowledge and reframe genuine gaps",
+    examples: "Regional breadth, marketplace depth, reference base install count",
+    whenToUse: "Sophisticated Leader-tier accounts and formal RFP processes where silence on known gaps damages credibility more than a candid reframe",
+    risk: "Low if handled proactively; high if the sales team is unprepared and gets caught flat-footed by a competitor's direct comparison",
+    color: "blue"
+  }
+];
+
+export const DECISIVE_LEADS_DEEP_DIVES = [
+  {
+    id: "gemini",
+    title: "Google AI & Gemini Enterprise Platform",
+    badge: "2M Context · Governed Reasoning",
+    icon: "🧠",
+    color: "blue",
+    architecture: "Vertex AI Agent Builder and Gemini multimodal models orchestrating agentic workflows across OSDU and legacy SCADA systems via a six-stage pipeline (Ingestion → Gemini Reasoning → Agent Orchestration → Human Approval Gate → Action Execution → Audit Logging).",
+    mechanics: "The core mechanical differentiator is the 2-million-token context window with native multimodal comprehension (interpreting 3D seismic cubes, well logs, P&ID schematics, and sensor telemetry simultaneously without chunking artifacts) combined with built-in auditability that links every reasoning step back to source data.",
+    strategicImplication: "Lead with Gemini Enterprise when competing on operational reasoning over complex, heterogeneous data assets, but deliberately frame the engagement around governed augmentation (Human-in-the-Loop) rather than unconstrained autonomy to address OT/ICS safety mandates."
+  },
+  {
+    id: "security",
+    title: "OT/ICS & Critical Energy Infrastructure Security",
+    badge: "Mandiant Lineage · Chronicle · Wiz",
+    icon: "🛡️",
+    color: "red",
+    architecture: "Mandiant frontline threat intelligence integrated with Chronicle Security Operations, Google Threat Intelligence (GTI), and Wiz cloud security posture management.",
+    mechanics: "Direct frontline intelligence derived from investigating energy-sector incidents globally (including state-sponsored campaigns targeting critical infrastructure: Triton/TRISIS, Sandworm, Volt Typhoon) feeds threat-detection rules into Chronicle and informs the Sovereign Trio architecture.",
+    strategicImplication: "Mandiant is the single strongest door-opener for CISO and OT security personas; lead with OT threat posture in sovereign NOC and national-infrastructure accounts where standard IT cloud security messaging fails to resonate."
+  },
+  {
+    id: "multicloud",
+    title: "Multicloud In-Place Analytics",
+    badge: "BigQuery Omni · BigLake · In-Situ",
+    icon: "🌐",
+    color: "purple",
+    architecture: "BigQuery Omni and BigLake running query compute locally in AWS (us-east-1, eu-west-1) and Azure (East US, North Europe) while managing governance and metadata centrally in Google Cloud.",
+    mechanics: "Separates the storage layer from the query execution engine, allowing operators to run analytics across existing AWS S3 and Azure ADLS data lakes without data egress charges, pipeline re-engineering, or data relocation.",
+    strategicImplication: "This is the primary wedge mechanism for Fortress Accounts (Chevron, Shell, TotalEnergies); positioning BigQuery Omni eliminates the 'we are locked into AWS/Azure' objection by allowing Google to deliver value over existing cloud investments without forcing migration."
+  },
+  {
+    id: "silicon",
+    title: "Custom AI Silicon Economics",
+    badge: "Trillium v6e · TPU v5p · 50% TCO",
+    icon: "⚡",
+    color: "amber",
+    architecture: "Trillium (6th gen TPU) and TPU v5p custom ASICs paired with Google's custom Jupiter network fabric delivering multi-pod scaling for inference and domain foundation model training.",
+    mechanics: "Purpose-built matrix multiplication architecture delivering up to 50% lower TCO for optimized AI inference workloads compared to general-purpose GPU alternatives, with deterministic pricing and reserved capacity models.",
+    strategicImplication: "Position this advantage precisely as a strong argument specifically for domain foundation model training/hosting (Pillar 2's Timeseries/Subsurface FM program) and Gemini Enterprise inference, and avoid extending it as a blanket claim to GPU-bound HPC seismic workloads, where the A3 Ultra GPU benchmark is the more defensible claim."
+  },
+  {
+    id: "geospatial",
+    title: "Geospatial Satellite AI",
+    badge: "Earth Engine · 40+ Years · Structurally Durable",
+    icon: "🛰️",
+    color: "teal",
+    architecture: "Google Earth Engine multi-petabyte geospatial data catalog integrated with Vertex AI for environmental monitoring, infrastructure inspection, methane plume detection, and subsidence tracking.",
+    mechanics: "Decades of accumulated satellite imagery with pre-integrated spatial ML algorithms and daily ingestion pipelines, with no equivalent native offering from AWS or Azure. Structurally durable because it depends on decades of accumulated imagery licensing and purpose-built geospatial processing engines.",
+    strategicImplication: "This is the single most defensible, non-time-limited technical advantage in the entire competitive matrix and should be positioned as a permanent structural differentiator rather than a 'current lead.'"
+  }
+];
+
+// ── Comparative Trade-Offs across Strategy Pillars ─────────────────────
+
+export const POSTURE_TRADE_OFFS = [
+  {
+    posture: "Lead",
+    targetType: "Greenfield / merger-forced accounts (EQT, Woodside, Devon)",
+    resourceIntensity: "High , requires full platform proof, migration support, multi-quarter technical validation",
+    timeToRevenue: "Longer (12–24 months to material ARR)",
+    winProbability: "Higher once pursued, but fewer qualifying accounts",
+    strategicRisk: "Over-investing in an account where the 'greenfield' window closes (e.g. competitor signs first)",
+    color: "green"
+  },
+  {
+    posture: "Wedge",
+    targetType: "Fortress / entrenched accounts (Shell, Chevron, Oxy, Equinor)",
+    resourceIntensity: "Lower , targeted workload proof, no migration required",
+    timeToRevenue: "Shorter (often single quarter to first workload)",
+    winProbability: "Very high for the specific workload, but ARR ceiling is structurally capped absent expansion",
+    strategicRisk: "Treating a Wedge win as a platform win and under-resourcing the long-tail expansion motion required to grow it",
+    color: "amber"
+  },
+  {
+    posture: "Co-Exist",
+    targetType: "Geopolitically bound accounts (ADNOC/G42)",
+    resourceIntensity: "Minimal , maintenance-level engagement, no near-term displacement thesis",
+    timeToRevenue: "Not applicable near-term",
+    winProbability: "Low for platform share; moderate for security/analytics attach",
+    strategicRisk: "Ignoring these accounts entirely forfeits attach revenue (Mandiant, BigQuery Omni) that requires no displacement",
+    color: "blue"
+  }
+];
+
+export const PARTNER_TRADE_OFFS = [
+  {
+    layer: "Domain ISVs (Cognite, SLB, Baker Hughes, AspenTech, Kongsberg, TGS)",
+    speedToCredibility: "Highest , immediate domain authority and established software footprint in control rooms and rigs",
+    controlOverOutcome: "Low-to-moderate , partner controls the customer software layer and account pace",
+    marginImpact: "Moderate , revenue share / marketplace discounting required",
+    bestFit: "All Tier 1 and Tier 2 accounts where Google lacks domain-application presence",
+    color: "teal"
+  },
+  {
+    layer: "Global System Integrators (EPAM, Accenture, TCS, Infosys, Wipro)",
+    speedToCredibility: "Moderate , depends on GSI practice depth in energy and certified practitioner pool",
+    controlOverOutcome: "Moderate , joint delivery model with Google Cloud professional services oversight",
+    marginImpact: "Low on GCP margin; GSI bills implementation services directly to customer",
+    bestFit: "Enterprise-wide transformations and large-scale OSDU migrations (TotalEnergies, Aramco, Equinor)",
+    color: "blue"
+  },
+  {
+    layer: "Sovereign / Security Partners (HUMAIN AI, CNTXT, Mandiant Ecosystem)",
+    speedToCredibility: "High within regional jurisdiction; essential for regulatory and national compliance clearance",
+    controlOverOutcome: "Lowest , sovereign partners often hold exclusive local operating rights or equity relationships",
+    marginImpact: "Highest margin concession , partner economics must support local national champion mandate",
+    bestFit: "Tier 2 Middle East NOCs (Aramco, KOC, QatarEnergy, ADNOC)",
+    color: "purple"
+  }
+];
+
+export const SOVEREIGN_DEPLOYMENT_TRADE_OFFS = [
+  {
+    config: "Standard Sovereign Region (Dammam me-central2, Doha, Jakarta, Bangkok, Tokyo/Osaka)",
+    residency: "High , in-country data storage and compute processing, satisfies NCA/CST regulatory mandates",
+    latency: "Low , connected to global control plane with regional data boundary",
+    complexity: "Moderate , standard GCP console and API surface with region-locked boundaries",
+    bestFit: "NOCs requiring strict in-country data residency but not full physical/network isolation (Aramco, Pertamina, PTTEP)",
+    color: "blue"
+  },
+  {
+    config: "Google Distributed Cloud (GDC) Air-Gapped",
+    residency: "Maximum , zero network connectivity to public Google control plane, complete physical/logical isolation",
+    latency: "High for updates , manual out-of-band patching, no real-time cloud model updates",
+    complexity: "High , requires dedicated on-premise hardware management and on-site certified personnel",
+    bestFit: "Accounts with explicit air-gap mandates, classified national infrastructure, and defense-adjacent OT environments (ADNOC-class mandates)",
+    color: "purple"
+  },
+  {
+    config: "Standard Multi-Region (Non-Sovereign)",
+    residency: "Lowest , global cloud infrastructure across multiple global availability zones",
+    latency: "Lowest latency and instantaneous feature currency for latest DeepMind and Gemini models",
+    complexity: "Lowest operational complexity",
+    bestFit: "Fortress-account wedge motions (Shell, Chevron, Oxy) where data residency is not the binding constraint",
+    color: "teal"
+  }
+];
+
+export const ALPHABET_SOLUTIONS_TRADE_OFFS = [
+  {
+    model: "Hyperscaler Standalone Product (AWS or Azure vertical point solutions)",
+    breadth: "Narrow , focused on cloud infrastructure and generic AI APIs",
+    differentiation: "Low-to-moderate , easily matched by competing hyperscalers within 12–18 months",
+    fieldRisk: "High risk of commodity price competition on compute/storage",
+    buyerImpression: "Standard IT vendor RFP submission",
+    color: "amber"
+  },
+  {
+    model: "Alphabet Composite Solution (DeepMind + Earth Engine + Mandiant + Maps + Cloud)",
+    breadth: "Unmatched , spans frontier physics AI, 40-year satellite catalog, nation-state OT threat defense, and global logistics",
+    differentiation: "Structural moat , no competitor has the cross-holding portfolio to construct this composite offer",
+    fieldRisk: "Internal coordination velocity and commercial contracting complexity",
+    buyerImpression: "Transformational strategic partnership with global technology leader",
+    color: "green"
+  }
+];
+
+export const ENERGY_EXCHANGE_TRADE_OFFS = [
+  {
+    model: "Unilateral Cloud Customer Relationship",
+    relationship: "One-way procurement: operator buys cloud services from Google",
+    executiveAudience: "CIO / IT Procurement VP",
+    pricingLeverage: "Standard discount grid against AWS/Azure benchmarks",
+    differentiation: "Low , vulnerable to incumbent EA enterprise discount agreements",
+    color: "amber"
+  },
+  {
+    model: "Bilateral Energy Exchange Partnership",
+    relationship: "Two-way capital allocation: operator supplies firm clean power (PPAs, geothermal, SMRs, gas) while Google supplies AI & cloud compute",
+    executiveAudience: "CEO / Board / Head of Strategy & Energy Transition",
+    pricingLeverage: "Strategic capital alignment and multi-hundred-million-dollar power offtake commitments",
+    differentiation: "Unique to Google , convenes the 'two-badge meeting' that AWS and Azure cannot replicate",
+    color: "green"
+  }
+];
+
+export const THINK_BIG_TRADE_OFFS = [
+  {
+    focus: "Near-Term Workload Capture (Pillars 1–3)",
+    horizon: "0–12 months",
+    objective: "Capture existing cloud migration budgets, displace AWS/Azure in active RFPs, win subsurface HPC workloads",
+    arrImpact: "$275M → $755M ARR progression",
+    risk: "Competitive price erosion and incumbent switching friction",
+    color: "blue"
+  },
+  {
+    focus: "Long-Term Market Creation (Pillar 6 Think Big)",
+    horizon: "12–36+ months",
+    objective: "Create new addressable markets: CCUS Carbon Intelligence Platform, DeepMind Materials Accelerator, Autonomous Facility OS",
+    arrImpact: "$1.96B+ ARR target and global energy transition market leadership",
+    risk: "Longer gestation timelines and regulatory dependency",
+    color: "purple"
+  }
+];
+
+export const PILLARS_ARCHITECTURAL_DEEP_DIVES = [
+  {
+    num: "1",
+    title: "Customer Offense , The 33-Account Attack",
+    posture: "Lead (7) · Wedge (15) · Co-Exist (4) · Cede (7)",
+    coreArchitecture: "A mathematically segmented, four-tier named-account architecture covering 33 key operators. Rejects uniform sales execution in favor of differentiated playbooks anchored to data readiness gates and incumbent switching costs.",
+    deepDiveMechanics: "Tier 1A (Public Independents) pursue Lead/Wedge via non-OSDU BigQuery Omni entry. Tier 1B (PE Sponsors) execute the 1-to-N platform multiplier across portfolio companies. Tier 1C (Large Privates) target data-ready agile operators. Tier 2 (NOCs) deploy sovereign cloud and GDC Air-Gapped. Tier 3 (Affinity Majors) leverage clean-energy reciprocity.",
+    criticalVariables: [
+      "M&A integration timeline (e.g. Diamondback-Endeavor) creating transient windows for platform displacement.",
+      "Sovereign compliance certification currency (Dammam me-central2 CST/NCA attestation) governing addressable NOC pipeline.",
+      "Geopolitical and national champion dynamics (e.g. ADNOC/G42) requiring a Co-Exist rather than Lead posture."
+    ],
+    tradeOffs: "Lead motions require heavy technical investment with long cycles; Wedge motions deliver rapid revenue but require disciplined expansion; Co-Exist motions capture attach without risking primary platform battles."
+  },
+  {
+    num: "2",
+    title: "Ecosystem Coalition , Partners That Outsell the Direct Force",
+    posture: "3-Layer Architecture · Foundation Model Co-Development",
+    coreArchitecture: "Three-tier partner ecosystem spanning Domain ISVs (Cognite, SLB, Baker Hughes, AspenTech, Kongsberg), Global System Integrators (EPAM, Accenture, TCS, Infosys, Wipro), and Sovereign/Security Partners (HUMAIN AI, CNTXT, Mandiant).",
+    deepDiveMechanics: "Industry foundation model co-development program with 6 ISV partners (TGS, SLB, Baker Hughes, Siemens, AspenTech, Enverus) to build GCP-hosted Timeseries and Subsurface FMs. Strict IP Framework: Zero joint bilateral IP; joint IP reserved exclusively for tripartite engagements with customer participation; customer owns fine-tuned weights.",
+    criticalVariables: [
+      "Channel conflict risk with ISVs operating competing hosted cloud services (SLB Delfi, Baker Hughes Cordant).",
+      "GSI delivery capacity and pace of training certified energy-domain GCP practitioners (target: 40 by Day 90).",
+      "Data provenance and consent chain-of-custody for historical well-log and seismic training corpora.",
+      "HUMAIN AI / CNTXT single-point dependency for KSA sovereign execution."
+    ],
+    tradeOffs: "Domain ISVs maximize immediate credibility at the expense of outcome control; GSIs deliver enterprise scale but require governance oversight; Sovereign partners are essential for NOC access but require margin concessions."
+  },
+  {
+    num: "3",
+    title: "Technology Supremacy , Gemini Enterprise, Sovereign Cloud & OT Security",
+    posture: "Agentic Stack · A3 Ultra HPC · 6 Sovereign Options",
+    coreArchitecture: "Three-part defensible technology moat: Governed enterprise AI platform, purpose-built subsurface HPC supercomputing, and unified sovereign/OT security framework.",
+    deepDiveMechanics: "Six-stage agentic execution pipeline featuring a deterministic human approval gate for safety-critical OT decisions. A3 Mega/Ultra GPU clusters with 3.2 Tbps GPUDirect RDMA and Parallelstore (DAOS) delivering a 35% reduction in RTM wall-clock time vs AWS. Slurm hybrid bursting. Six sovereign deployment options including fully disconnected GDC Air-Gapped.",
+    criticalVariables: [
+      "Agent approval-gate latency vs operational tempo in real-time drilling and production workflows.",
+      "GPU/TPU capacity allocation and reservation SLAs under high global AI demand.",
+      "Sovereign region compliance re-certification currency across global jurisdictions.",
+      "GDC Air-Gapped manual update cadence trade-off vs threat intelligence currency."
+    ],
+    tradeOffs: "Standard sovereign regions balance compliance with low latency; GDC Air-Gapped provides maximum isolation at higher operational complexity; Standard multi-region offers maximum velocity for non-regulated workloads."
+  },
+  {
+    num: "4",
+    title: "Alphabet Advantage , Capabilities No Competitor Can Replicate",
+    posture: "DeepMind · Earth Engine · Maps · Chronicle/Mandiant · Waymo/Wing",
+    coreArchitecture: "Full Alphabet portfolio synergy assembling capabilities across frontier science (DeepMind), planetary observation (Earth Engine), physical-world mapping (Google Maps Platform), critical infrastructure defense (Chronicle/Mandiant), autonomous logistics (Waymo/Wing), and government trust (Google Public Sector).",
+    deepDiveMechanics: "DeepMind brings GNoME materials discovery and TORAX plasma simulation to reservoir and catalyst design. Earth Engine brings 40+ years of satellite catalog for methane MRV and asset integrity. Maps powers frac-sand and LNG logistics routing. Mandiant protects ICS/SCADA from nation-state cyber warfare.",
+    criticalVariables: [
+      "Alphabet cross-entity coordination velocity and unified commercial governance.",
+      "Commercial contracting and pricing bundling across distinct Alphabet business units.",
+      "Earth Engine enterprise licensing and commercial-use compliance terms."
+    ],
+    tradeOffs: "Hyperscaler point solutions are simple to procure but easily commoditized; Alphabet composite solutions deliver insurmountable competitive differentiation but require sophisticated deal governance."
+  },
+  {
+    num: "5",
+    title: "Energy Exchange , The Bilateral Operating System",
+    posture: "Bilateral Power-for-Compute Capital Allocation",
+    coreArchitecture: "A bilateral commercial framework where energy operators provide firm, scalable clean power (gas, geothermal, nuclear SMRs, PPAs) for Google's expanding AI data center footprint, while Google provides enterprise AI and cloud compute.",
+    deepDiveMechanics: "Legal decoupling: Power offtake agreements and Google Cloud software licensing are structured as independent contracts to satisfy antitrust and regulatory compliance. Convenes CEO-level 'two-badge' meetings spanning Google energy procurement and cloud executives.",
+    criticalVariables: [
+      "Grid interconnection queues and PPA development timelines across regional ISOs/RTOs.",
+      "Power density vs compute capacity alignment in co-located data center campuses.",
+      "Regulatory variance across competitive and regulated electricity markets."
+    ],
+    tradeOffs: "Unilateral cloud sales compete on commodity discounts with CIOs; Bilateral Energy Exchange elevates engagements to CEO-level capital allocation and long-term energy infrastructure partnership."
+  },
+  {
+    num: "6",
+    title: "THINK BIG , Three Transformative Initiatives",
+    posture: "CCUS Intelligence · DeepMind Materials · Autonomous Facility OS",
+    coreArchitecture: "Three multi-billion-dollar market creation initiatives: 1) CCUS Global Carbon Intelligence Platform (SLB co-development, MRV, pipeline optimization), 2) DeepMind Materials & Catalysis Accelerator (CO₂ conversion, neural simulation), 3) Autonomous Facility OS (RL-driven closed-loop operations).",
+    deepDiveMechanics: "CCUS Platform captures the $250M+ emerging carbon infrastructure software market. DeepMind Accelerator applies GNoME and TORAX to molecular engineering. Autonomous Facility OS integrates physics simulation with agentic RL for unstaffed offshore and onshore facilities.",
+    criticalVariables: [
+      "Capital expenditure intensity and multi-year ROI realization horizons.",
+      "Regulatory stability and carbon compliance credit pricing integrity (45Q, EU ETS).",
+      "Process safety validation and regulatory certification for autonomous closed-loop control."
+    ],
+    tradeOffs: "Near-term workload capture delivers immediate ARR; Think Big market creation builds multi-billion-dollar enterprise value and defines the future operating model of the global energy system."
+  }
+];
+
